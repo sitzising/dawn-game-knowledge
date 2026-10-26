@@ -1,8 +1,54 @@
 {
   "domain": "npcs",
-  "version": 1,
-  "note": "No dialogue executor yet. Templates only — do not treat as shipped NPC system.",
+  "version": 2,
+  "note": "World NPCs are spawned by NpcManager. Templates with requires_executor remain non-executable quest/dialogue stubs.",
   "entries": [
+    {
+      "id": "npc_world_scout",
+      "domain": "npcs",
+      "display_name_key": "NPC_SCOUT",
+      "version": 1,
+      "tags": ["world", "combat"],
+      "data": {
+        "role": "scout",
+        "display_name": "巡逻兵",
+        "faction_id": "faction_survivors",
+        "level": 10,
+        "max_health": 100,
+        "vision_range": 24.0,
+        "vision_fov_deg": 110.0,
+        "hear_range": 30.0,
+        "combat_range": 15.0,
+        "flee_health_frac": 0.32,
+        "courage": 0.62,
+        "patrol_radius": 14.0,
+        "mag_size": 30,
+        "reserve_ammo": 90
+      }
+    },
+    {
+      "id": "npc_world_guard",
+      "domain": "npcs",
+      "display_name_key": "NPC_TRADER",
+      "version": 1,
+      "tags": ["world", "combat"],
+      "data": {
+        "role": "guard",
+        "display_name": "卫兵",
+        "faction_id": "faction_survivors",
+        "level": 12,
+        "max_health": 120,
+        "vision_range": 20.0,
+        "vision_fov_deg": 100.0,
+        "hear_range": 26.0,
+        "combat_range": 13.0,
+        "flee_health_frac": 0.28,
+        "courage": 0.78,
+        "patrol_radius": 10.0,
+        "mag_size": 30,
+        "reserve_ammo": 120
+      }
+    },
     {
       "id": "npc_tpl_trader",
       "domain": "npcs",
