@@ -1,0 +1,35 @@
+{
+  "domain": "quests",
+  "version": 1,
+  "note": "No quest executor yet. Templates only — KnowledgeManager will not grant rewards.",
+  "entries": [
+    {
+      "id": "tpl_clear_area",
+      "domain": "quests",
+      "display_name_key": "QUEST_CLEAR_AREA",
+      "version": 1,
+      "tags": ["template", "combat"],
+      "data": {
+        "type": "clear_infected",
+        "objectives": [{"kind": "kill_zombies", "count": 5}],
+        "rewards": [{"kind": "item", "ref": "TBD", "qty": 1}],
+        "giver_npc_id": "npc_tpl_scout",
+        "requires_executor": true
+      }
+    },
+    {
+      "id": "tpl_scout_report",
+      "domain": "quests",
+      "display_name_key": "QUEST_SCOUT_REPORT",
+      "version": 1,
+      "tags": ["template", "explore"],
+      "data": {
+        "type": "visit_poi",
+        "objectives": [{"kind": "reach_marker", "marker_id": "TBD"}],
+        "rewards": [{"kind": "rep", "faction_id": "faction_survivors", "delta": 5}],
+        "giver_npc_id": "npc_tpl_scout",
+        "requires_executor": true
+      }
+    }
+  ]
+}

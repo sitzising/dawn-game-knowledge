@@ -1,0 +1,34 @@
+{
+  "domain": "npcs",
+  "version": 1,
+  "note": "No dialogue executor yet. Templates only — do not treat as shipped NPC system.",
+  "entries": [
+    {
+      "id": "npc_tpl_trader",
+      "domain": "npcs",
+      "display_name_key": "NPC_TRADER",
+      "version": 1,
+      "tags": ["template", "trade"],
+      "data": {
+        "role": "trader",
+        "faction_id": "faction_survivors",
+        "dialogue_tree": null,
+        "memory_keys": ["met", "trust", "last_trade_unix"],
+        "requires_executor": true
+      }
+    },
+    {
+      "id": "npc_tpl_scout",
+      "domain": "npcs",
+      "display_name_key": "NPC_SCOUT",
+      "version": 1,
+      "tags": ["template", "quest_giver"],
+      "data": {
+        "role": "scout",
+        "faction_id": "faction_survivors",
+        "offers_quest_ids": ["tpl_clear_area"],
+        "requires_executor": true
+      }
+    }
+  ]
+}

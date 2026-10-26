@@ -1,6 +1,79 @@
 {
   "schema_version": 1,
   "knowledge_version": "1.0.0",
-  "min_game_version": "4.0",
-  "files": []
+  "min_game_version": "0.0.0",
+  "source": "github",
+  "generated_at": "2026-10-27",
+  "github_update": {
+    "enabled": true,
+    "manifest_url": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/manifest.json",
+    "base_url": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/",
+    "note": "Public raw URL only. Never commit tokens."
+  },
+  "domains": [
+    "zombies",
+    "weather",
+    "items",
+    "npcs",
+    "quests",
+    "events",
+    "factions",
+    "localization"
+  ],
+  "files": [
+    {
+      "path": "schema/knowledge_entry.schema.json",
+      "required": true,
+      "sha256": "519cd0a102282c4e09fa5bb7f0f89221d2e7638ad7b9f5027172b1ee4055d5e3",
+      "bytes": 662
+    },
+    {
+      "path": "zombies/catalog.json",
+      "required": true,
+      "sha256": "7be5b8ed68de95d577d6a9eaad0c3b9478ed08846ae34f7c002f87b807d43c04",
+      "bytes": 2150
+    },
+    {
+      "path": "weather/catalog.json",
+      "required": true,
+      "sha256": "8fca7f36e9aa05c2c9564ccd4905a5a3d6b69db5558403b4f4380d8693e35d39",
+      "bytes": 1651
+    },
+    {
+      "path": "items/catalog.json",
+      "required": false,
+      "sha256": "e22ada219961c5e58f1424f34e2acc879db140205e5988eb8dd7109e782c6c2a",
+      "bytes": 157
+    },
+    {
+      "path": "npcs/catalog.json",
+      "required": false,
+      "sha256": "ab71a69ab2ba5264e09afd779cbbeadf52d72e366f843c7d2e8c5cb43aab4228",
+      "bytes": 876
+    },
+    {
+      "path": "quests/templates.json",
+      "required": false,
+      "sha256": "e2d8484a4699169bb286fff88257f9121b667485471d99df3c684fb39634dad8",
+      "bytes": 1048
+    },
+    {
+      "path": "events/templates.json",
+      "required": false,
+      "sha256": "8ffa9e0834a0a1c27ec022b100d03fe5b59a94010ea57361bcca91ec476c5f09",
+      "bytes": 995
+    },
+    {
+      "path": "factions/catalog.json",
+      "required": false,
+      "sha256": "b480b3e5c6c1876c8f6a23cd746bf0f85418fd47591a50f15cd6be8a4e11e3d5",
+      "bytes": 873
+    },
+    {
+      "path": "localization/term_index.json",
+      "required": false,
+      "sha256": "264501bd56b1d8c21219860561e40228188d54b95406be22377849325ddf6458",
+      "bytes": 2644
+    }
+  ]
 }

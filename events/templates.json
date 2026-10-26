@@ -1,0 +1,33 @@
+{
+  "domain": "events",
+  "version": 1,
+  "note": "World-event executor not present. Templates only.",
+  "entries": [
+    {
+      "id": "evt_tpl_horde_night",
+      "domain": "events",
+      "display_name_key": "EVENT_HORDE_NIGHT",
+      "version": 1,
+      "tags": ["template", "combat", "night"],
+      "data": {
+        "type": "spawn_wave",
+        "triggers": [{"kind": "time_of_day", "phase": "night", "chance": 0.15}],
+        "payload": {"zombie_pool": ["walker", "stalker"], "count_min": 4, "count_max": 10},
+        "requires_executor": true
+      }
+    },
+    {
+      "id": "evt_tpl_supply_drop",
+      "domain": "events",
+      "display_name_key": "EVENT_SUPPLY_DROP",
+      "version": 1,
+      "tags": ["template", "loot"],
+      "data": {
+        "type": "place_loot",
+        "triggers": [{"kind": "interval_hours", "hours": 24, "chance": 0.35}],
+        "payload": {"loot_table": "TBD", "announce_key": "EVENT_SUPPLY_DROP"},
+        "requires_executor": true
+      }
+    }
+  ]
+}

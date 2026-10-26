@@ -1,0 +1,6 @@
+{
+  "domain": "items",
+  "version": 1,
+  "note": "Placeholder index. Real firearm stats remain in firearm_definitions.gd until migrated.",
+  "entries": []
+}

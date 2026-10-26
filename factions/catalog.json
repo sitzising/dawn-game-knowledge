@@ -1,0 +1,35 @@
+{
+  "domain": "factions",
+  "version": 1,
+  "note": "Reputation runtime not implemented. Catalog is read-only reference.",
+  "entries": [
+    {
+      "id": "faction_survivors",
+      "domain": "factions",
+      "display_name_key": "FACTION_SURVIVORS",
+      "version": 1,
+      "tags": ["template", "friendly_default"],
+      "data": {
+        "rep_min": -100,
+        "rep_max": 100,
+        "rep_default": 10,
+        "hostile_to": ["faction_raiders"],
+        "requires_executor": true
+      }
+    },
+    {
+      "id": "faction_raiders",
+      "domain": "factions",
+      "display_name_key": "FACTION_RAIDERS",
+      "version": 1,
+      "tags": ["template", "hostile_default"],
+      "data": {
+        "rep_min": -100,
+        "rep_max": 100,
+        "rep_default": -40,
+        "hostile_to": ["faction_survivors"],
+        "requires_executor": true
+      }
+    }
+  ]
+}

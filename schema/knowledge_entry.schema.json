@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dawn.knowledge.entry.v1",
+  "title": "DawnKnowledgeEntry",
+  "type": "object",
+  "required": ["id", "domain"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1, "pattern": "^[a-z0-9_\\.\\-]+$"},
+    "domain": {
+      "type": "string",
+      "enum": ["zombies", "weather", "items", "npcs", "quests", "events", "factions", "localization", "world"]
+    },
+    "display_name_key": {"type": "string"},
+    "version": {"type": "integer", "minimum": 1},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "data": {"type": "object"}
+  },
+  "additionalProperties": true
+}

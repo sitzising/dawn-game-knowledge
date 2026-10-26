@@ -1,0 +1,36 @@
+{
+  "domain": "localization",
+  "version": 2,
+  "note": "Maps knowledge display_name_key → DawnFY / pack status. Does not replace DawnFY.",
+  "terms": {
+    "TERM_ZOMBIE": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "TERM_WALKER": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "TERM_STALKER": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "TERM_BAT": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "TERM_TANK": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "TERM_BOOMER": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "WEATHER_CLEAR": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "WEATHER_CLOUDY": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "WEATHER_OVERCAST": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "WEATHER_DRIZZLE": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "WEATHER_RAIN": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "WEATHER_STORM": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "WEATHER_FOG": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "WEATHER_DENSE_FOG": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "WEATHER_WINDY": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "WEATHER_TOXIC": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "QUEST_CLEAR_AREA": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true, "note": "template only; no quest executor"},
+    "QUEST_SCOUT_REPORT": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true, "note": "template only"},
+    "NPC_TRADER": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true, "note": "template only"},
+    "NPC_SCOUT": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true, "note": "template only"},
+    "FACTION_SURVIVORS": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true, "note": "template only"},
+    "FACTION_RAIDERS": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true, "note": "template only"},
+    "EVENT_HORDE_NIGHT": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true, "note": "template only"},
+    "EVENT_SUPPLY_DROP": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true, "note": "template only"}
+  },
+  "ui_wiring": {
+    "weather_hud_admin": "partial — still mostly WeatherProfile.display_name hardcoded",
+    "zombie_spawn_labels": "partial — keys exist; spawn UI may still hardcode",
+    "items_firearms": "missing — firearm_definitions names not keyed"
+  }
+}
