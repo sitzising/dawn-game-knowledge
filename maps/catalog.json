@@ -8,7 +8,7 @@
       "id": "hongkong_city",
       "domain": "maps",
       "display_name_key": "MAP_HONGKONG_CITY",
-      "display_name": "HongKong City",
+      "display_name": "HongKong-Maps",
       "version": 1,
       "tags": ["static", "active", "official", "default"],
       "data": {
