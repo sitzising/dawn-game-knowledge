@@ -1,14 +1,14 @@
 {
   "domain": "world",
-  "version": 1,
-  "note": "Solo population defaults. Player SettingsStore overrides caps at runtime.",
+  "version": 2,
+  "note": "Solo population. SettingsStore overrides at runtime. Zone min target is independent of active instance cap.",
   "entries": [
     {
       "id": "world_population_defaults",
       "domain": "world",
       "display_name_key": "WORLD_POP",
-      "version": 1,
-      "tags": ["solo", "population"],
+      "version": 2,
+      "tags": ["solo", "population", "zones"],
       "data": {
         "npc_preset_low": 4,
         "npc_preset_mid": 8,
@@ -21,11 +21,17 @@
         "zombie_custom_min": 4,
         "zombie_custom_max": 40,
         "sector_cell_m": 80.0,
+        "zone_adaptive_cell_min_m": 80.0,
+        "zone_adaptive_cell_max_m": 220.0,
         "min_actor_spacing_m": 6.5,
         "default_activity_radius_m": 36.0,
+        "zone_min_zombies": 10,
+        "zone_max_zombies": 40,
+        "m2_per_zombie_base": 900.0,
+        "refill_cooldown_sec": 18.0,
         "region_density": {
           "city": 1.15,
-          "industrial": 1.05,
+          "industrial": 1.25,
           "suburb": 0.85,
           "forest": 0.7,
           "default": 1.0

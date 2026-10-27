@@ -50,6 +50,52 @@
       }
     },
     {
+      "id": "npc_world_wanderer",
+      "domain": "npcs",
+      "display_name_key": "NPC_WANDERER",
+      "version": 1,
+      "tags": ["world", "civilian"],
+      "data": {
+        "role": "wanderer",
+        "display_name": "幸存者",
+        "faction_id": "faction_survivors",
+        "level": 6,
+        "max_health": 90,
+        "vision_range": 18.0,
+        "vision_fov_deg": 100.0,
+        "hear_range": 26.0,
+        "combat_range": 10.0,
+        "flee_health_frac": 0.50,
+        "courage": 0.32,
+        "patrol_radius": 18.0,
+        "mag_size": 20,
+        "reserve_ammo": 40
+      }
+    },
+    {
+      "id": "npc_world_hostile",
+      "domain": "npcs",
+      "display_name_key": "NPC_HOSTILE",
+      "version": 1,
+      "tags": ["world", "hostile"],
+      "data": {
+        "role": "hostile",
+        "display_name": "敌对者",
+        "faction_id": "faction_raiders",
+        "level": 9,
+        "max_health": 110,
+        "vision_range": 22.0,
+        "vision_fov_deg": 105.0,
+        "hear_range": 28.0,
+        "combat_range": 14.0,
+        "flee_health_frac": 0.22,
+        "courage": 0.74,
+        "patrol_radius": 16.0,
+        "mag_size": 30,
+        "reserve_ammo": 60
+      }
+    },
+    {
       "id": "npc_tpl_trader",
       "domain": "npcs",
       "display_name_key": "NPC_TRADER",

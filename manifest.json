@@ -1,6 +1,6 @@
 {
     "schema_version":  1,
-    "knowledge_version":  "0.1.3-world-pop",
+    "knowledge_version":  "0.1.4-zone-ledger",
     "min_game_version":  "0.0.0",
     "source":  "github",
     "generated_at":  "2026-10-27",
@@ -49,8 +49,8 @@
                   {
                       "path":  "npcs/catalog.json",
                       "required":  false,
-                      "sha256":  "ffc5c8b6c54ac204aa7c57b6030c03e5b29cab8f19c7eca915fd4ca6a2cf012d",
-                      "bytes":  2111
+                      "sha256":  "c5f3e2dd2637bb35b0cbbfd7a9ebab5d29b14f5bcc5ad4a0fa2b0f6819fd4d08",
+                      "bytes":  3326
                   },
                   {
                       "path":  "quests/templates.json",
@@ -79,8 +79,8 @@
                   {
                       "path":  "world/population.json",
                       "required":  false,
-                      "sha256":  "0f2e78ccdbb8a3c5586e9bee17118a447dbf9bc5041efb4e5143383c798848f2",
-                      "bytes":  937
+                      "sha256":  "bde1abd3ca8dd4eead5c3e3391f100bfa081445b167ebe90a0f1fc86459a8a65",
+                      "bytes":  1203
                   }
               ]
 }
