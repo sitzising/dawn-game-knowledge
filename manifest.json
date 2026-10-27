@@ -1,14 +1,14 @@
 {
     "schema_version":  1,
-    "knowledge_version":  "0.1.4-zone-ledger",
+    "knowledge_version":  "0.1.5-maps",
     "min_game_version":  "0.0.0",
     "source":  "github",
-    "generated_at":  "2026-10-27",
+    "generated_at":  "2026-10-28",
     "github_update":  {
-                          "enabled":  true,
-                          "manifest_url":  "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/manifest.json",
                           "base_url":  "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/",
-                          "note":  "Public raw URL only. Never commit tokens."
+                          "manifest_url":  "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/manifest.json",
+                          "note":  "Public raw URL only. Never commit tokens.",
+                          "enabled":  true
                       },
     "domains":  [
                     "zombies",
@@ -19,68 +19,99 @@
                     "events",
                     "factions",
                     "localization",
-                    "world"
+                    "world",
+                    "maps"
                 ],
     "files":  [
                   {
                       "path":  "schema/knowledge_entry.schema.json",
-                      "required":  true,
-                      "sha256":  "519cd0a102282c4e09fa5bb7f0f89221d2e7638ad7b9f5027172b1ee4055d5e3",
-                      "bytes":  662
+                      "sha256":  "fccf269cbc03187b389c503a8df269c759f705fe30923a434e7170706859a8f9",
+                      "bytes":  689,
+                      "required":  true
+                  },
+                  {
+                      "path":  "schema/maps_catalog.schema.json",
+                      "sha256":  "22734c13bbad4b4dd99eb02d825b5c8ab9add943f03b5ab9fd9a4bf705042b90",
+                      "bytes":  2770,
+                      "required":  false
                   },
                   {
                       "path":  "zombies/catalog.json",
-                      "required":  true,
-                      "sha256":  "7be5b8ed68de95d577d6a9eaad0c3b9478ed08846ae34f7c002f87b807d43c04",
-                      "bytes":  2150
+                      "sha256":  "552bfbd99369b3aa0d432606bf000502813155115444d3bbdd365f41b9bb6a2f",
+                      "bytes":  2231,
+                      "required":  true
                   },
                   {
                       "path":  "weather/catalog.json",
-                      "required":  true,
-                      "sha256":  "8fca7f36e9aa05c2c9564ccd4905a5a3d6b69db5558403b4f4380d8693e35d39",
-                      "bytes":  1651
+                      "sha256":  "1c56eb468a360383e2df533854fbf2b161dbd33ecf76a621f6edefadf36c3cf9",
+                      "bytes":  1668,
+                      "required":  true
                   },
                   {
                       "path":  "items/catalog.json",
-                      "required":  false,
-                      "sha256":  "e22ada219961c5e58f1424f34e2acc879db140205e5988eb8dd7109e782c6c2a",
-                      "bytes":  157
+                      "sha256":  "839b455e095c3a2a1aac7e6b023f77c35cbdb3fec477df46e7070acb854c01e5",
+                      "bytes":  163,
+                      "required":  false
                   },
                   {
                       "path":  "npcs/catalog.json",
-                      "required":  false,
-                      "sha256":  "c5f3e2dd2637bb35b0cbbfd7a9ebab5d29b14f5bcc5ad4a0fa2b0f6819fd4d08",
-                      "bytes":  3326
+                      "sha256":  "c309acea327c6a73447e7c22246122a2cc40cf5d70eade6fc1c32d3399a7fe18",
+                      "bytes":  3452,
+                      "required":  false
                   },
                   {
                       "path":  "quests/templates.json",
-                      "required":  false,
-                      "sha256":  "e2d8484a4699169bb286fff88257f9121b667485471d99df3c684fb39634dad8",
-                      "bytes":  1048
+                      "sha256":  "afcedf56cdb30ec70919b8aae95abd4dcc16a3243f7ec803a10353b03bc84967",
+                      "bytes":  1083,
+                      "required":  false
                   },
                   {
                       "path":  "events/templates.json",
-                      "required":  false,
-                      "sha256":  "8ffa9e0834a0a1c27ec022b100d03fe5b59a94010ea57361bcca91ec476c5f09",
-                      "bytes":  995
+                      "sha256":  "5af04070ad9fe42e8adcd4f8fe3fc957ada7e0d64d92a7c09570e8a42c7ae62a",
+                      "bytes":  1028,
+                      "required":  false
                   },
                   {
                       "path":  "factions/catalog.json",
-                      "required":  false,
-                      "sha256":  "b480b3e5c6c1876c8f6a23cd746bf0f85418fd47591a50f15cd6be8a4e11e3d5",
-                      "bytes":  873
+                      "sha256":  "8fb263f392ca3d21af83cb896d62fe84d32b4279f1b06e1d0f1fc989cd916137",
+                      "bytes":  908,
+                      "required":  false
                   },
                   {
                       "path":  "localization/term_index.json",
-                      "required":  false,
-                      "sha256":  "264501bd56b1d8c21219860561e40228188d54b95406be22377849325ddf6458",
-                      "bytes":  2644
+                      "sha256":  "581f4bfb319f6764eafe77952a21b024f48af27811b4c9a945e9d6393e7e1cfd",
+                      "bytes":  2680,
+                      "required":  false
                   },
                   {
                       "path":  "world/population.json",
-                      "required":  false,
-                      "sha256":  "bde1abd3ca8dd4eead5c3e3391f100bfa081445b167ebe90a0f1fc86459a8a65",
-                      "bytes":  1203
+                      "sha256":  "75d9f2d175163bb5c2e759412cb1c256f60c4c42593dc15eecd2d23a4242ccd6",
+                      "bytes":  1245,
+                      "required":  false
+                  },
+                  {
+                      "path":  "maps/catalog.json",
+                      "sha256":  "9c8443f06893dcc2d396b26792914d87c16ddc99edd711e86f5ab03b6b251621",
+                      "bytes":  3831,
+                      "required":  true
+                  },
+                  {
+                      "path":  "prompts/local_cursor_dev.md",
+                      "sha256":  "575f19a4e96fd6538a5dde17646ad9f39aff4d3bb75878694661f20b7cbd59ee",
+                      "bytes":  1698,
+                      "required":  false
+                  },
+                  {
+                      "path":  "prompts/cloud_admin_web.md",
+                      "sha256":  "a63e7e09e713ef5cba40eab99e1e0333aa63d54060198c0fc065a328d6d6d51c",
+                      "bytes":  1663,
+                      "required":  false
+                  },
+                  {
+                      "path":  "READING_SPEC.md",
+                      "sha256":  "a11d1fcd8e6a347d7f91f8c64de8c4bcabbded5baa8a106260d305c839b07321",
+                      "bytes":  1904,
+                      "required":  false
                   }
               ]
 }

@@ -8,7 +8,7 @@
     "id": {"type": "string", "minLength": 1, "pattern": "^[a-z0-9_\\.\\-]+$"},
     "domain": {
       "type": "string",
-      "enum": ["zombies", "weather", "items", "npcs", "quests", "events", "factions", "localization", "world"]
+      "enum": ["zombies", "weather", "items", "npcs", "quests", "events", "factions", "localization", "world", "maps"]
     },
     "display_name_key": {"type": "string"},
     "version": {"type": "integer", "minimum": 1},

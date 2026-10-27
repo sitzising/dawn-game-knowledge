@@ -1,0 +1,109 @@
+{
+  "domain": "maps",
+  "version": 1,
+  "note": "Official playable-map metadata for lobby / admin room create. Stable id != display name. resource_exists is audited locally; admin listing a map does NOT guarantee the client build shipped the assets.",
+  "source_of_truth_in_client": "res://modules/map_system/map_registry.gd (MAPS const) — this catalog must stay id-compatible; do not auto-rewrite MapRegistry from GitHub without an explicit migration.",
+  "entries": [
+    {
+      "id": "wasteland",
+      "domain": "maps",
+      "display_name_key": "MAP_WASTELAND",
+      "display_name": "废土荒原",
+      "version": 1,
+      "tags": ["voxel", "locked", "official"],
+      "data": {
+        "enabled": false,
+        "status": "LOCKED",
+        "kind": "voxel",
+        "code_name": "RUSTY_SETTLEMENT",
+        "players_min": 1,
+        "players_max": 4,
+        "level_min": 1,
+        "level_max": 5,
+        "scene_path": "res://modules/world_module/world_test_world_player_v2.tscn",
+        "model_path": "",
+        "preview_path": "res://maps/previews/wasteland.jpg",
+        "resource_paths": [
+          "res://modules/world_module/world_test_world_player_v2.tscn",
+          "res://maps/previews/wasteland.jpg"
+        ],
+        "resource_exists": {
+          "scene": true,
+          "model": false,
+          "preview": true
+        },
+        "admin_selectable": false,
+        "client_loadable_when_unlocked": true,
+        "desc": "程序化体素废土（当前锁定）。"
+      }
+    },
+    {
+      "id": "forest_highway",
+      "domain": "maps",
+      "display_name_key": "MAP_FOREST_HIGHWAY",
+      "display_name": "森林公路",
+      "version": 1,
+      "tags": ["static", "locked", "official"],
+      "data": {
+        "enabled": false,
+        "status": "LOCKED",
+        "kind": "static",
+        "code_name": "ABANDONED_FACTORY",
+        "players_min": 1,
+        "players_max": 4,
+        "level_min": 6,
+        "level_max": 10,
+        "scene_path": "res://modules/world_module/world_forest_highway.tscn",
+        "model_path": "res://maps/forest_highway/forest_highway.glb",
+        "preview_path": "res://maps/previews/forest_highway.jpg",
+        "resource_paths": [
+          "res://modules/world_module/world_forest_highway.tscn",
+          "res://maps/forest_highway/forest_highway.glb",
+          "res://maps/previews/forest_highway.jpg"
+        ],
+        "resource_exists": {
+          "scene": true,
+          "model": true,
+          "preview": true
+        },
+        "admin_selectable": false,
+        "client_loadable_when_unlocked": true,
+        "desc": "静态密林公路（当前锁定）。"
+      }
+    },
+    {
+      "id": "hongkong_city",
+      "domain": "maps",
+      "display_name_key": "MAP_HONGKONG_CITY",
+      "display_name": "HongKong City",
+      "version": 1,
+      "tags": ["static", "active", "official", "default"],
+      "data": {
+        "enabled": true,
+        "status": "ACTIVE",
+        "kind": "static",
+        "code_name": "HONGKONG_CITY",
+        "players_min": 1,
+        "players_max": 4,
+        "level_min": 1,
+        "level_max": 15,
+        "scene_path": "res://modules/world_module/world_hongkong_city.tscn",
+        "model_path": "res://maps/hongkong_city/hongkong_city.glb",
+        "preview_path": "res://maps/previews/hongkong_city.jpg",
+        "resource_paths": [
+          "res://modules/world_module/world_hongkong_city.tscn",
+          "res://maps/hongkong_city/hongkong_city.glb",
+          "res://maps/previews/hongkong_city.jpg"
+        ],
+        "resource_exists": {
+          "scene": true,
+          "model": true,
+          "preview": true
+        },
+        "admin_selectable": true,
+        "client_loadable_when_unlocked": true,
+        "desc": "香港城市场景：当前默认可游玩地图。"
+      }
+    }
+  ]
+}

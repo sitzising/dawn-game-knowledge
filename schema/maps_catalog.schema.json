@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dawn.knowledge.maps_catalog.v1",
+  "title": "DawnMapsCatalog",
+  "type": "object",
+  "required": ["domain", "entries"],
+  "properties": {
+    "domain": { "const": "maps" },
+    "version": { "type": "integer", "minimum": 1 },
+    "note": { "type": "string" },
+    "source_of_truth_in_client": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "domain", "data"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_\\.\\-]+$",
+            "description": "Stable map id (never the localized display name)."
+          },
+          "domain": { "const": "maps" },
+          "display_name_key": { "type": "string" },
+          "display_name": { "type": "string" },
+          "version": { "type": "integer", "minimum": 1 },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "data": {
+            "type": "object",
+            "required": [
+              "enabled",
+              "status",
+              "kind",
+              "scene_path",
+              "resource_paths",
+              "admin_selectable"
+            ],
+            "properties": {
+              "enabled": { "type": "boolean" },
+              "status": { "type": "string", "enum": ["ACTIVE", "LOCKED", "DEPRECATED", "WIP"] },
+              "kind": { "type": "string", "enum": ["static", "voxel", "procedural", "other"] },
+              "code_name": { "type": "string" },
+              "players_min": { "type": "integer", "minimum": 1 },
+              "players_max": { "type": "integer", "minimum": 1 },
+              "level_min": { "type": "integer" },
+              "level_max": { "type": "integer" },
+              "scene_path": { "type": "string", "pattern": "^res://" },
+              "model_path": { "type": "string" },
+              "preview_path": { "type": "string" },
+              "resource_paths": {
+                "type": "array",
+                "items": { "type": "string", "pattern": "^res://" },
+                "minItems": 1
+              },
+              "resource_exists": {
+                "type": "object",
+                "additionalProperties": { "type": "boolean" }
+              },
+              "admin_selectable": {
+                "type": "boolean",
+                "description": "Whether cloud admin may create official rooms with this map id."
+              },
+              "client_loadable_when_unlocked": { "type": "boolean" },
+              "desc": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
