@@ -1,0 +1,36 @@
+{
+  "domain": "world",
+  "version": 1,
+  "note": "Solo population defaults. Player SettingsStore overrides caps at runtime.",
+  "entries": [
+    {
+      "id": "world_population_defaults",
+      "domain": "world",
+      "display_name_key": "WORLD_POP",
+      "version": 1,
+      "tags": ["solo", "population"],
+      "data": {
+        "npc_preset_low": 4,
+        "npc_preset_mid": 8,
+        "npc_preset_high": 12,
+        "npc_custom_min": 1,
+        "npc_custom_max": 16,
+        "zombie_preset_low": 12,
+        "zombie_preset_mid": 20,
+        "zombie_preset_high": 28,
+        "zombie_custom_min": 4,
+        "zombie_custom_max": 40,
+        "sector_cell_m": 80.0,
+        "min_actor_spacing_m": 6.5,
+        "default_activity_radius_m": 36.0,
+        "region_density": {
+          "city": 1.15,
+          "industrial": 1.05,
+          "suburb": 0.85,
+          "forest": 0.7,
+          "default": 1.0
+        }
+      }
+    }
+  ]
+}
