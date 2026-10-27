@@ -17,7 +17,7 @@
         "kind": "static",
         "code_name": "HONGKONG_CITY",
         "players_min": 1,
-        "players_max": 4,
+        "players_max": 64,
         "level_min": 1,
         "level_max": 15,
         "scene_path": "res://modules/world_module/world_hongkong_city.tscn",
