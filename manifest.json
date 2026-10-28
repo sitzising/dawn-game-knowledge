@@ -1,6 +1,6 @@
 {
     "schema_version":  1,
-    "knowledge_version":  "0.1.5-maps",
+    "knowledge_version":  "0.1.6-zombie-roster",
     "min_game_version":  "0.0.0",
     "source":  "github",
     "generated_at":  "2026-10-28",
@@ -37,8 +37,8 @@
                   },
                   {
                       "path":  "zombies/catalog.json",
-                      "sha256":  "552bfbd99369b3aa0d432606bf000502813155115444d3bbdd365f41b9bb6a2f",
-                      "bytes":  2231,
+                      "sha256":  "51bd0ac4601019294440d156b7a34a179477451df8a43e7416d93f7613ebf5a5",
+                      "bytes":  1243,
                       "required":  true
                   },
                   {
@@ -67,8 +67,8 @@
                   },
                   {
                       "path":  "events/templates.json",
-                      "sha256":  "5af04070ad9fe42e8adcd4f8fe3fc957ada7e0d64d92a7c09570e8a42c7ae62a",
-                      "bytes":  1028,
+                      "sha256":  "5f02f00b4bb20d388a88aebe1334834627a3d9697dba09b48af421c1e30cb690",
+                      "bytes":  1024,
                       "required":  false
                   },
                   {

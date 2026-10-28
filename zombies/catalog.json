@@ -1,81 +1,44 @@
-{
-  "domain": "zombies",
-  "version": 1,
-  "entries": [
-    {
-      "id": "walker",
-      "domain": "zombies",
-      "display_name_key": "TERM_WALKER",
-      "version": 1,
-      "tags": ["ground", "default"],
-      "data": {
-        "special_kind": "",
-        "scene": "res://game/entities/zombie_base.tscn",
-        "max_health": 100,
-        "attack_damage": 16,
-        "detection_radius": 20.0,
-        "vision_fov_deg": 110.0,
-        "hearing_mul": 1.0,
-        "chase_speed_multiplier": 2.5,
-        "attack_range": 1.5,
-        "search_duration_min": 5.5,
-        "search_duration_max": 8.5,
-        "flight": false
-      }
-    },
-    {
-      "id": "stalker",
-      "domain": "zombies",
-      "display_name_key": "TERM_STALKER",
-      "version": 1,
-      "tags": ["ground", "special"],
-      "data": {
-        "special_kind": "stalker",
-        "scene": "res://game/entities/zombie_base.tscn",
-        "max_health": 90,
-        "attack_damage": 18,
-        "detection_radius": 28.0,
-        "vision_fov_deg": 110.0,
-        "hearing_mul": 1.1,
-        "chase_speed_multiplier": 3.2,
-        "attack_range": 1.5,
-        "search_duration_min": 6.0,
-        "search_duration_max": 9.0,
-        "flight": false,
-        "notes": "Stare hesitation + flank; runtime in ZombieBase"
-      }
-    },
-    {
-      "id": "bat",
-      "domain": "zombies",
-      "display_name_key": "TERM_BAT",
-      "version": 1,
-      "tags": ["air"],
-      "data": {
-        "special_kind": "",
-        "scene": "res://game/entities/zombie_bat.tscn",
-        "flight": true,
-        "flight_hover_height": 3.5,
-        "flight_speed_mult": 1.15,
-        "detection_radius": 22.0,
-        "hearing_mul": 1.0
-      }
-    },
-    {
-      "id": "tank",
-      "domain": "zombies",
-      "display_name_key": "TERM_TANK",
-      "version": 1,
-      "tags": ["ground", "special", "not_in_procedural_roster"],
-      "data": {
-        "special_kind": "tank",
-        "scene": "res://game/entities/zombie_tank.tscn",
-        "max_health": 320,
-        "armor_hp": 140,
-        "attack_damage": 28,
-        "chase_speed_multiplier": 1.6,
-        "flight": false
-      }
-    }
-  ]
-}
+{
+  "domain": "zombies",
+  "version": 2,
+  "entries": [
+    {
+      "id": "walker",
+      "domain": "zombies",
+      "display_name_key": "TERM_WALKER",
+      "version": 1,
+      "tags": ["ground", "default", "active_roster"],
+      "data": {
+        "special_kind": "",
+        "scene": "res://game/entities/zombie_base.tscn",
+        "max_health": 100,
+        "attack_damage": 16,
+        "detection_radius": 20.0,
+        "vision_fov_deg": 110.0,
+        "hearing_mul": 1.0,
+        "chase_speed_multiplier": 2.5,
+        "attack_range": 1.5,
+        "search_duration_min": 5.5,
+        "search_duration_max": 8.5,
+        "flight": false
+      }
+    },
+    {
+      "id": "bat",
+      "domain": "zombies",
+      "display_name_key": "TERM_BAT",
+      "version": 1,
+      "tags": ["air", "active_roster"],
+      "data": {
+        "special_kind": "",
+        "scene": "res://game/entities/zombie_bat.tscn",
+        "flight": true,
+        "flight_hover_height": 3.5,
+        "flight_speed_mult": 1.15,
+        "detection_radius": 22.0,
+        "hearing_mul": 1.0,
+        "notes": "Terrain floor ray cached; soft cap in EntityManager"
+      }
+    }
+  ]
+}
