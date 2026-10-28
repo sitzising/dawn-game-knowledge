@@ -88,13 +88,19 @@
         "level_min": 1,
         "level_max": 15,
         "scene_path": "res://modules/world_module/world_hongkong_city.tscn",
-        "model_path": "res://maps/hongkong_city/hongkong_city.glb",
+        "model_path": "res://maps/hongkong_city/Hongkongcity.glb",
         "preview_path": "res://maps/previews/hongkong_city.jpg",
         "resource_paths": [
           "res://modules/world_module/world_hongkong_city.tscn",
-          "res://maps/hongkong_city/hongkong_city.glb",
+          "res://maps/hongkong_city/Hongkongcity.glb",
           "res://maps/previews/hongkong_city.jpg"
         ],
+        "city_gate": {
+          "id": "hk_city_gate_metallic",
+          "leaves": ["Doormetallic_2_door_0", "Doormetallic_door_0"],
+          "open_sfx": "res://game/sound/world/city_gate_open.mp3",
+          "interact": "E"
+        },
         "resource_exists": {
           "scene": true,
           "model": true,
