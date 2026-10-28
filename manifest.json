@@ -1,6 +1,6 @@
-{
+﻿{
     "schema_version":  1,
-    "knowledge_version":  "0.1.6-zombie-roster",
+    "knowledge_version":  "0.1.7-garage-safezone",
     "min_game_version":  "0.0.0",
     "source":  "github",
     "generated_at":  "2026-10-28",
@@ -91,8 +91,8 @@
                   },
                   {
                       "path":  "maps/catalog.json",
-                      "sha256":  "9c8443f06893dcc2d396b26792914d87c16ddc99edd711e86f5ab03b6b251621",
-                      "bytes":  3831,
+                      "sha256":  "4c9c001ee9a2e5c7d1374e27f88a080c1595128a94abd673c8cff78dabb56e3b",
+                      "bytes":  4349,
                       "required":  true
                   },
                   {

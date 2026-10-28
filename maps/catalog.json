@@ -5,10 +5,77 @@
   "source_of_truth_in_client": "res://modules/map_system/map_registry.gd (MAPS const) — this catalog must stay id-compatible; do not auto-rewrite MapRegistry from GitHub without an explicit migration.",
   "entries": [
     {
+      "id": "wasteland",
+      "domain": "maps",
+      "display_name_key": "MAP_WASTELAND",
+      "display_name": "废土荒原",
+      "version": 1,
+      "tags": ["voxel", "locked", "official"],
+      "data": {
+        "enabled": false,
+        "status": "LOCKED",
+        "kind": "voxel",
+        "code_name": "RUSTY_SETTLEMENT",
+        "players_min": 1,
+        "players_max": 4,
+        "level_min": 1,
+        "level_max": 5,
+        "scene_path": "res://modules/world_module/world_test_world_player_v2.tscn",
+        "model_path": "",
+        "preview_path": "res://maps/previews/wasteland.jpg",
+        "resource_paths": [
+          "res://modules/world_module/world_test_world_player_v2.tscn",
+          "res://maps/previews/wasteland.jpg"
+        ],
+        "resource_exists": {
+          "scene": true,
+          "model": false,
+          "preview": true
+        },
+        "admin_selectable": false,
+        "client_loadable_when_unlocked": true,
+        "desc": "程序化体素废土（当前锁定）。"
+      }
+    },
+    {
+      "id": "forest_highway",
+      "domain": "maps",
+      "display_name_key": "MAP_FOREST_HIGHWAY",
+      "display_name": "森林公路",
+      "version": 1,
+      "tags": ["static", "locked", "official"],
+      "data": {
+        "enabled": false,
+        "status": "LOCKED",
+        "kind": "static",
+        "code_name": "ABANDONED_FACTORY",
+        "players_min": 1,
+        "players_max": 4,
+        "level_min": 6,
+        "level_max": 10,
+        "scene_path": "res://modules/world_module/world_forest_highway.tscn",
+        "model_path": "res://maps/forest_highway/forest_highway.glb",
+        "preview_path": "res://maps/previews/forest_highway.jpg",
+        "resource_paths": [
+          "res://modules/world_module/world_forest_highway.tscn",
+          "res://maps/forest_highway/forest_highway.glb",
+          "res://maps/previews/forest_highway.jpg"
+        ],
+        "resource_exists": {
+          "scene": true,
+          "model": true,
+          "preview": true
+        },
+        "admin_selectable": false,
+        "client_loadable_when_unlocked": true,
+        "desc": "静态密林公路（当前锁定）。"
+      }
+    },
+    {
       "id": "hongkong_city",
       "domain": "maps",
       "display_name_key": "MAP_HONGKONG_CITY",
-      "display_name": "HongKongMap",
+      "display_name": "HongKong City",
       "version": 1,
       "tags": ["static", "active", "official", "default"],
       "data": {
@@ -17,7 +84,7 @@
         "kind": "static",
         "code_name": "HONGKONG_CITY",
         "players_min": 1,
-        "players_max": 64,
+        "players_max": 4,
         "level_min": 1,
         "level_max": 15,
         "scene_path": "res://modules/world_module/world_hongkong_city.tscn",
@@ -35,7 +102,20 @@
         },
         "admin_selectable": true,
         "client_loadable_when_unlocked": true,
-        "desc": "香港城市场景：当前默认可游玩地图。"
+        "desc": "香港城市场景：当前默认可游玩地图。",
+        "safe_zones": [
+          {
+            "id": "hk_garage_b2",
+            "display_name": "地下车库 B2",
+            "kind": "garage",
+            "door_mesh": "Object_22",
+            "parent_hint": "zma_carpark",
+            "icon": "hud_garage.png",
+            "approach_show_m": 90,
+            "spawn_in_zone": true,
+            "open_door_on_boot": true
+          }
+        ]
       }
     }
   ]
