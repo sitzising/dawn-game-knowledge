@@ -91,8 +91,8 @@
                   },
                   {
                       "path":  "world/ammo_supply.json",
-                      "sha256":  "cb0a9756f174318d74f4038cfa4c518bdf36feb4f2c73d7762ebd8cf4092a2c4",
-                      "bytes":  691,
+                      "sha256":  "dcc1bd14f25494ceef28f769271cd978c0179d6b0f66a220919d98d50320a688",
+                      "bytes":  764,
                       "required":  false
                   },
                   {
@@ -121,4 +121,3 @@
                   }
               ]
 }
-

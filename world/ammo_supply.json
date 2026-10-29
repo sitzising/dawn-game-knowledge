@@ -15,6 +15,8 @@
         "approach_show_m": 8.0,
         "interact_range_m": 2.8,
         "model": "res://models/props/ammo_supply/old_ammo_crate.glb",
+        "map_icon": "hud_ammo_supply.png",
+        "map_kind": "supply",
         "refill": {
           "ammo_556": 60,
           "ammo_9mm": 45,
