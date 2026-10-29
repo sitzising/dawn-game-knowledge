@@ -1,0 +1,27 @@
+{
+  "domain": "world",
+  "version": 1,
+  "note": "Ammo supply crate defaults — admin-placed world resupply points.",
+  "entries": [
+    {
+      "id": "ammo_supply_crate_defaults",
+      "domain": "world",
+      "display_name_key": "AMMO_SUPPLY",
+      "version": 1,
+      "tags": ["supply", "ammo", "crate"],
+      "data": {
+        "display_name": "弹药补给箱",
+        "cooldown_sec": 90.0,
+        "approach_show_m": 8.0,
+        "interact_range_m": 2.8,
+        "model": "res://models/props/ammo_supply/old_ammo_crate.glb",
+        "refill": {
+          "ammo_556": 60,
+          "ammo_9mm": 45,
+          "ammo_12g": 16,
+          "default_mags": 2
+        }
+      }
+    }
+  ]
+}

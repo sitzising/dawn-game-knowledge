@@ -1,6 +1,6 @@
 ﻿{
     "schema_version":  1,
-    "knowledge_version":  "0.1.8-city-gate",
+    "knowledge_version":  "0.1.9-ammo-supply",
     "min_game_version":  "0.0.0",
     "source":  "github",
     "generated_at":  "2026-10-28",
@@ -87,6 +87,12 @@
                       "path":  "world/population.json",
                       "sha256":  "75d9f2d175163bb5c2e759412cb1c256f60c4c42593dc15eecd2d23a4242ccd6",
                       "bytes":  1245,
+                      "required":  false
+                  },
+                  {
+                      "path":  "world/ammo_supply.json",
+                      "sha256":  "cb0a9756f174318d74f4038cfa4c518bdf36feb4f2c73d7762ebd8cf4092a2c4",
+                      "bytes":  691,
                       "required":  false
                   },
                   {
