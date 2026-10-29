@@ -1,0 +1,8 @@
+{
+    "domain":  "items",
+    "version":  2,
+    "note":  "Medical entries merged into items/catalog.json to avoid KnowledgeManager duplicate ids.",
+    "entries":  [
+
+                ]
+}

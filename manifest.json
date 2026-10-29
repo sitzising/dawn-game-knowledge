@@ -1,123 +1,135 @@
-﻿{
-    "schema_version":  1,
-    "knowledge_version":  "0.1.9-ammo-supply",
-    "min_game_version":  "0.0.0",
-    "source":  "github",
-    "generated_at":  "2026-10-28",
-    "github_update":  {
-                          "base_url":  "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/",
-                          "manifest_url":  "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/manifest.json",
-                          "note":  "Public raw URL only. Never commit tokens.",
-                          "enabled":  true
-                      },
-    "domains":  [
-                    "zombies",
-                    "weather",
-                    "items",
-                    "npcs",
-                    "quests",
-                    "events",
-                    "factions",
-                    "localization",
-                    "world",
-                    "maps"
-                ],
-    "files":  [
-                  {
-                      "path":  "schema/knowledge_entry.schema.json",
-                      "sha256":  "fccf269cbc03187b389c503a8df269c759f705fe30923a434e7170706859a8f9",
-                      "bytes":  689,
-                      "required":  true
-                  },
-                  {
-                      "path":  "schema/maps_catalog.schema.json",
-                      "sha256":  "22734c13bbad4b4dd99eb02d825b5c8ab9add943f03b5ab9fd9a4bf705042b90",
-                      "bytes":  2770,
-                      "required":  false
-                  },
-                  {
-                      "path":  "zombies/catalog.json",
-                      "sha256":  "51bd0ac4601019294440d156b7a34a179477451df8a43e7416d93f7613ebf5a5",
-                      "bytes":  1243,
-                      "required":  true
-                  },
-                  {
-                      "path":  "weather/catalog.json",
-                      "sha256":  "1c56eb468a360383e2df533854fbf2b161dbd33ecf76a621f6edefadf36c3cf9",
-                      "bytes":  1668,
-                      "required":  true
-                  },
-                  {
-                      "path":  "items/catalog.json",
-                      "sha256":  "839b455e095c3a2a1aac7e6b023f77c35cbdb3fec477df46e7070acb854c01e5",
-                      "bytes":  163,
-                      "required":  false
-                  },
-                  {
-                      "path":  "npcs/catalog.json",
-                      "sha256":  "c309acea327c6a73447e7c22246122a2cc40cf5d70eade6fc1c32d3399a7fe18",
-                      "bytes":  3452,
-                      "required":  false
-                  },
-                  {
-                      "path":  "quests/templates.json",
-                      "sha256":  "afcedf56cdb30ec70919b8aae95abd4dcc16a3243f7ec803a10353b03bc84967",
-                      "bytes":  1083,
-                      "required":  false
-                  },
-                  {
-                      "path":  "events/templates.json",
-                      "sha256":  "5f02f00b4bb20d388a88aebe1334834627a3d9697dba09b48af421c1e30cb690",
-                      "bytes":  1024,
-                      "required":  false
-                  },
-                  {
-                      "path":  "factions/catalog.json",
-                      "sha256":  "8fb263f392ca3d21af83cb896d62fe84d32b4279f1b06e1d0f1fc989cd916137",
-                      "bytes":  908,
-                      "required":  false
-                  },
-                  {
-                      "path":  "localization/term_index.json",
-                      "sha256":  "581f4bfb319f6764eafe77952a21b024f48af27811b4c9a945e9d6393e7e1cfd",
-                      "bytes":  2680,
-                      "required":  false
-                  },
-                  {
-                      "path":  "world/population.json",
-                      "sha256":  "75d9f2d175163bb5c2e759412cb1c256f60c4c42593dc15eecd2d23a4242ccd6",
-                      "bytes":  1245,
-                      "required":  false
-                  },
-                  {
-                      "path":  "world/ammo_supply.json",
-                      "sha256":  "dcc1bd14f25494ceef28f769271cd978c0179d6b0f66a220919d98d50320a688",
-                      "bytes":  764,
-                      "required":  false
-                  },
-                  {
-                      "path":  "maps/catalog.json",
-                      "sha256":  "4cc63f542db0db270b6771d329609d48de4d4e158e4567ce91988ab9910300d7",
-                      "bytes":  4591,
-                      "required":  true
-                  },
-                  {
-                      "path":  "prompts/local_cursor_dev.md",
-                      "sha256":  "575f19a4e96fd6538a5dde17646ad9f39aff4d3bb75878694661f20b7cbd59ee",
-                      "bytes":  1698,
-                      "required":  false
-                  },
-                  {
-                      "path":  "prompts/cloud_admin_web.md",
-                      "sha256":  "a63e7e09e713ef5cba40eab99e1e0333aa63d54060198c0fc065a328d6d6d51c",
-                      "bytes":  1663,
-                      "required":  false
-                  },
-                  {
-                      "path":  "READING_SPEC.md",
-                      "sha256":  "a11d1fcd8e6a347d7f91f8c64de8c4bcabbded5baa8a106260d305c839b07321",
-                      "bytes":  1904,
-                      "required":  false
-                  }
-              ]
+{
+  "schema_version": 1,
+  "knowledge_version": "0.1.11-zombie-loot",
+  "min_game_version": "0.0.0",
+  "source": "packaged",
+  "generated_at": "2026-10-29",
+  "github_update": {
+    "base_url": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/",
+    "manifest_url": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/manifest.json",
+    "note": "Public raw URL only. Never commit tokens.",
+    "enabled": true
+  },
+  "domains": [
+    "zombies",
+    "weather",
+    "items",
+    "npcs",
+    "quests",
+    "events",
+    "factions",
+    "localization",
+    "world",
+    "maps"
+  ],
+  "files": [
+    {
+      "path": "READING_SPEC.md",
+      "sha256": "34a207060fa34c1a4303f59852462fe7f0058f40265f3a16a4f3c508c3dc0adb",
+      "bytes": 1954,
+      "required": false
+    },
+    {
+      "path": "localization/term_index.json",
+      "sha256": "581f4bfb319f6764eafe77952a21b024f48af27811b4c9a945e9d6393e7e1cfd",
+      "bytes": 2680,
+      "required": false
+    },
+    {
+      "path": "world/zombie_loot.json",
+      "sha256": "bb5d6009590e7bf93e3bfdc358ed4e1bfacfff8ba5e7d0c4189400aa874bed7c",
+      "bytes": 6147,
+      "required": false
+    },
+    {
+      "path": "schema/maps_catalog.schema.json",
+      "sha256": "22734c13bbad4b4dd99eb02d825b5c8ab9add943f03b5ab9fd9a4bf705042b90",
+      "bytes": 2770,
+      "required": false
+    },
+    {
+      "path": "items/medical.json",
+      "sha256": "6ce07674de234b4ec7696a2cf4924da5f750333437b48cfd3bc0e4f970ef3c6f",
+      "bytes": 196,
+      "required": false
+    },
+    {
+      "path": "zombies/catalog.json",
+      "sha256": "5b71bc1600a71440e9b125f12d62cdb7076a53bdcf06c8a985881045373c624a",
+      "bytes": 1155,
+      "required": true
+    },
+    {
+      "path": "events/templates.json",
+      "sha256": "5f02f00b4bb20d388a88aebe1334834627a3d9697dba09b48af421c1e30cb690",
+      "bytes": 1024,
+      "required": false
+    },
+    {
+      "path": "schema/knowledge_entry.schema.json",
+      "sha256": "fccf269cbc03187b389c503a8df269c759f705fe30923a434e7170706859a8f9",
+      "bytes": 689,
+      "required": true
+    },
+    {
+      "path": "prompts/local_cursor_dev.md",
+      "sha256": "575f19a4e96fd6538a5dde17646ad9f39aff4d3bb75878694661f20b7cbd59ee",
+      "bytes": 1698,
+      "required": false
+    },
+    {
+      "path": "items/catalog.json",
+      "sha256": "7f244990b49fe8c5269ebb91a5e85c09fd36fbd9df3b921251a9a6c6adf89dd1",
+      "bytes": 15571,
+      "required": false
+    },
+    {
+      "path": "quests/templates.json",
+      "sha256": "afcedf56cdb30ec70919b8aae95abd4dcc16a3243f7ec803a10353b03bc84967",
+      "bytes": 1083,
+      "required": false
+    },
+    {
+      "path": "npcs/catalog.json",
+      "sha256": "c309acea327c6a73447e7c22246122a2cc40cf5d70eade6fc1c32d3399a7fe18",
+      "bytes": 3452,
+      "required": false
+    },
+    {
+      "path": "world/population.json",
+      "sha256": "75d9f2d175163bb5c2e759412cb1c256f60c4c42593dc15eecd2d23a4242ccd6",
+      "bytes": 1245,
+      "required": false
+    },
+    {
+      "path": "prompts/cloud_admin_web.md",
+      "sha256": "a63e7e09e713ef5cba40eab99e1e0333aa63d54060198c0fc065a328d6d6d51c",
+      "bytes": 1663,
+      "required": false
+    },
+    {
+      "path": "maps/catalog.json",
+      "sha256": "4cc63f542db0db270b6771d329609d48de4d4e158e4567ce91988ab9910300d7",
+      "bytes": 4591,
+      "required": true
+    },
+    {
+      "path": "world/ammo_supply.json",
+      "sha256": "dcc1bd14f25494ceef28f769271cd978c0179d6b0f66a220919d98d50320a688",
+      "bytes": 764,
+      "required": false
+    },
+    {
+      "path": "factions/catalog.json",
+      "sha256": "8fb263f392ca3d21af83cb896d62fe84d32b4279f1b06e1d0f1fc989cd916137",
+      "bytes": 908,
+      "required": false
+    },
+    {
+      "path": "weather/catalog.json",
+      "sha256": "1c56eb468a360383e2df533854fbf2b161dbd33ecf76a621f6edefadf36c3cf9",
+      "bytes": 1668,
+      "required": true
+    }
+  ]
 }

@@ -1,0 +1,136 @@
+{
+    "domain":  "world",
+    "version":  1,
+    "note":  "Zombie coffin loot category baselines. police/military reserved — no matching zombie types on roster.",
+    "entries":  [
+                    {
+                        "id":  "loot_table_walker",
+                        "domain":  "world",
+                        "version":  1,
+                        "tags":  [
+                                     "loot",
+                                     "zombie",
+                                     "active"
+                                 ],
+                        "data":  {
+                                     "specialty":  0.09,
+                                     "rare":  0.01,
+                                     "max_stacks":  2,
+                                     "kind":  "walker",
+                                     "none":  0.45,
+                                     "common":  0.45
+                                 }
+                    },
+                    {
+                        "id":  "loot_table_bat",
+                        "domain":  "world",
+                        "version":  1,
+                        "tags":  [
+                                     "loot",
+                                     "zombie",
+                                     "active",
+                                     "mutant"
+                                 ],
+                        "data":  {
+                                     "specialty":  0.4,
+                                     "rare":  0.15,
+                                     "max_stacks":  3,
+                                     "kind":  "bat",
+                                     "none":  0.2,
+                                     "common":  0.25
+                                 }
+                    },
+                    {
+                        "id":  "loot_table_boomer",
+                        "domain":  "world",
+                        "version":  1,
+                        "tags":  [
+                                     "loot",
+                                     "zombie",
+                                     "special_kind_only"
+                                 ],
+                        "data":  {
+                                     "specialty":  0.3,
+                                     "rare":  0.1,
+                                     "max_stacks":  2,
+                                     "kind":  "boomer",
+                                     "none":  0.25,
+                                     "common":  0.35
+                                 }
+                    },
+                    {
+                        "id":  "loot_table_stalker",
+                        "domain":  "world",
+                        "version":  1,
+                        "tags":  [
+                                     "loot",
+                                     "zombie",
+                                     "special_kind_only"
+                                 ],
+                        "data":  {
+                                     "specialty":  0.35,
+                                     "rare":  0.13,
+                                     "max_stacks":  3,
+                                     "kind":  "stalker",
+                                     "none":  0.22,
+                                     "common":  0.3
+                                 }
+                    },
+                    {
+                        "id":  "loot_table_tank",
+                        "domain":  "world",
+                        "version":  1,
+                        "tags":  [
+                                     "loot",
+                                     "zombie",
+                                     "special_kind_only"
+                                 ],
+                        "data":  {
+                                     "specialty":  0.4,
+                                     "rare":  0.15,
+                                     "max_stacks":  4,
+                                     "kind":  "tank",
+                                     "none":  0.2,
+                                     "common":  0.25
+                                 }
+                    },
+                    {
+                        "id":  "loot_table_police_reserved",
+                        "domain":  "world",
+                        "version":  1,
+                        "tags":  [
+                                     "loot",
+                                     "reserved",
+                                     "not_implemented"
+                                 ],
+                        "data":  {
+                                     "specialty":  0.25,
+                                     "rare":  0.05,
+                                     "implemented":  false,
+                                     "reason":  "No police zombie type in active roster or catalog.",
+                                     "kind":  "police",
+                                     "none":  0.3,
+                                     "common":  0.4
+                                 }
+                    },
+                    {
+                        "id":  "loot_table_military_reserved",
+                        "domain":  "world",
+                        "version":  1,
+                        "tags":  [
+                                     "loot",
+                                     "reserved",
+                                     "not_implemented"
+                                 ],
+                        "data":  {
+                                     "specialty":  0.35,
+                                     "rare":  0.1,
+                                     "implemented":  false,
+                                     "reason":  "No military zombie type in active roster or catalog.",
+                                     "kind":  "military",
+                                     "none":  0.25,
+                                     "common":  0.3
+                                 }
+                    }
+                ]
+}

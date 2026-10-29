@@ -1,6 +1,599 @@
 {
   "domain": "items",
-  "version": 1,
-  "note": "Placeholder index. Real firearm stats remain in firearm_definitions.gd until migrated.",
-  "entries": []
+  "version": 2,
+  "note": "Formal Dawn loot/item catalog. status=live playable; pending_*=data only. Models swappable without changing item_id.",
+  "entries": [
+    {
+      "id": "bandage",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "medical",
+        "heal",
+        "live"
+      ],
+      "data": {
+        "item_id": "bandage",
+        "name": "绷带",
+        "name_zh_hant": "繃帶",
+        "name_en": "Bandage",
+        "category": "medical",
+        "rarity": "common",
+        "weight": 0.08,
+        "stack_size": 12,
+        "status": "live",
+        "model": "res://models/items/polyhaven/bandage/medical_tape_1k.gltf",
+        "icon": "bandage.svg",
+        "heal_amount": 18,
+        "infection_reduce": 8.0,
+        "bleed_clear": 55.0,
+        "use_hold_sec": 4.0,
+        "consumable": "heal",
+        "is_medical": true
+      }
+    },
+    {
+      "id": "painkillers",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "medical",
+        "heal",
+        "live"
+      ],
+      "data": {
+        "item_id": "painkillers",
+        "name": "止痛药",
+        "name_zh_hant": "止痛藥",
+        "name_en": "Painkillers",
+        "category": "medical",
+        "rarity": "common",
+        "weight": 0.05,
+        "stack_size": 10,
+        "status": "live",
+        "model": "res://models/items/survival/painkillers.tscn",
+        "icon": "bandage.svg",
+        "heal_amount": 8,
+        "stamina_restore": 22.0,
+        "use_hold_sec": 2.2,
+        "consumable": "heal",
+        "is_medical": true
+      }
+    },
+    {
+      "id": "medkit",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "medical",
+        "heal",
+        "live"
+      ],
+      "data": {
+        "item_id": "medkit",
+        "name": "急救包",
+        "name_zh_hant": "急救包",
+        "name_en": "First Aid Kit",
+        "category": "medical",
+        "rarity": "uncommon",
+        "weight": 0.45,
+        "stack_size": 3,
+        "status": "live",
+        "model": "res://models/items/polyhaven/medkit/medical_box_1k.gltf",
+        "icon": "bandage.svg",
+        "heal_amount": 55,
+        "infection_reduce": 18.0,
+        "bleed_clear": 100.0,
+        "use_hold_sec": 6.5,
+        "consumable": "heal",
+        "is_medical": true
+      }
+    },
+    {
+      "id": "antibiotics",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "medical",
+        "infection",
+        "live"
+      ],
+      "data": {
+        "item_id": "antibiotics",
+        "name": "抗感染药品",
+        "name_zh_hant": "抗感染藥品",
+        "name_en": "Antibiotics",
+        "category": "medical",
+        "rarity": "uncommon",
+        "weight": 0.06,
+        "stack_size": 8,
+        "status": "live",
+        "model": "res://models/items/survival/antibiotics.tscn",
+        "icon": "bandage.svg",
+        "heal_amount": 4,
+        "infection_reduce": 42.0,
+        "use_hold_sec": 3.0,
+        "consumable": "heal",
+        "is_medical": true
+      }
+    },
+    {
+      "id": "canned_food",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "survival",
+        "food",
+        "live"
+      ],
+      "data": {
+        "item_id": "canned_food",
+        "name": "罐头",
+        "name_zh_hant": "罐頭",
+        "name_en": "Canned Food",
+        "category": "survival",
+        "rarity": "common",
+        "weight": 0.4,
+        "stack_size": 10,
+        "status": "live",
+        "model": "res://models/items/survival/canned_food.tscn",
+        "consumable": "food",
+        "hunger_restore": 28.0,
+        "use_hold_sec": 3.5
+      }
+    },
+    {
+      "id": "water_bottle",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "survival",
+        "drink",
+        "live"
+      ],
+      "data": {
+        "item_id": "water_bottle",
+        "name": "瓶装水",
+        "name_zh_hant": "瓶裝水",
+        "name_en": "Bottled Water",
+        "category": "survival",
+        "rarity": "common",
+        "weight": 0.5,
+        "stack_size": 10,
+        "status": "live",
+        "model": "res://models/items/survival/water_bottle.tscn",
+        "consumable": "drink",
+        "thirst_restore": 35.0,
+        "use_hold_sec": 2.8
+      }
+    },
+    {
+      "id": "energy_drink",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "survival",
+        "drink",
+        "live"
+      ],
+      "data": {
+        "item_id": "energy_drink",
+        "name": "能量饮料",
+        "name_zh_hant": "能量飲料",
+        "name_en": "Energy Drink",
+        "category": "survival",
+        "rarity": "uncommon",
+        "weight": 0.35,
+        "stack_size": 8,
+        "status": "live",
+        "model": "res://models/items/survival/water_bottle.tscn",
+        "consumable": "drink",
+        "thirst_restore": 12.0,
+        "stamina_restore": 35.0,
+        "use_hold_sec": 2.0
+      }
+    },
+    {
+      "id": "battery",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "survival",
+        "pending"
+      ],
+      "data": {
+        "item_id": "battery",
+        "name": "电池",
+        "name_zh_hant": "電池",
+        "name_en": "Battery",
+        "category": "survival",
+        "rarity": "common",
+        "weight": 0.15,
+        "stack_size": 16,
+        "status": "pending_flashlight_fuel",
+        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
+        "note": "Inventory-ready; flashlight fuel not wired."
+      }
+    },
+    {
+      "id": "ammo_9mm",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "ammo",
+        "live"
+      ],
+      "data": {
+        "item_id": "ammo_9mm",
+        "name": "9mm 弹药",
+        "name_zh_hant": "9mm 彈藥",
+        "name_en": "9mm Ammo",
+        "category": "ammo",
+        "rarity": "common",
+        "weight": 0.3,
+        "stack_size": 60,
+        "status": "live",
+        "model": "res://models/items/polyhaven/ammo/ammo_box_1k.gltf",
+        "is_ammo": true,
+        "ammo_type": "ammo_9mm",
+        "ammo_amount": 30,
+        "compatible": [
+          "fps_pistol",
+          "fps_smg",
+          "heavy_pistol"
+        ]
+      }
+    },
+    {
+      "id": "ammo_556",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "ammo",
+        "live"
+      ],
+      "data": {
+        "item_id": "ammo_556",
+        "name": "5.56mm 弹药",
+        "name_zh_hant": "5.56mm 彈藥",
+        "name_en": "5.56mm Ammo",
+        "category": "ammo",
+        "rarity": "uncommon",
+        "weight": 0.4,
+        "stack_size": 90,
+        "status": "live",
+        "model": "res://models/items/polyhaven/ammo/ammo_box_1k.gltf",
+        "is_ammo": true,
+        "ammo_type": "ammo_556",
+        "ammo_amount": 30,
+        "compatible": [
+          "acr_rifle",
+          "m416"
+        ]
+      }
+    },
+    {
+      "id": "ammo_762",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "ammo",
+        "pending"
+      ],
+      "data": {
+        "item_id": "ammo_762",
+        "name": "7.62mm 弹药",
+        "name_zh_hant": "7.62mm 彈藥",
+        "name_en": "7.62mm Ammo",
+        "category": "ammo",
+        "rarity": "rare",
+        "weight": 0.45,
+        "stack_size": 60,
+        "status": "pending_no_gun",
+        "model": "res://models/items/polyhaven/ammo/ammo_box_1k.gltf",
+        "is_ammo": true,
+        "ammo_type": "ammo_762",
+        "ammo_amount": 20,
+        "compatible": [],
+        "note": "No 7.62 firearm in FIREARM_IDS yet."
+      }
+    },
+    {
+      "id": "mag_empty",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "ammo",
+        "pending"
+      ],
+      "data": {
+        "item_id": "mag_empty",
+        "name": "弹匣",
+        "name_zh_hant": "彈匣",
+        "name_en": "Magazine",
+        "category": "ammo",
+        "rarity": "common",
+        "weight": 0.2,
+        "stack_size": 6,
+        "status": "pending_mag_system",
+        "model": "res://models/items/polyhaven/ammo/ammo_box_1k.gltf",
+        "note": "Mag state lives on firearm stack today."
+      }
+    },
+    {
+      "id": "cloth",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "craft",
+        "material",
+        "live"
+      ],
+      "data": {
+        "item_id": "cloth",
+        "name": "布料",
+        "name_zh_hant": "布料",
+        "name_en": "Cloth",
+        "category": "craft",
+        "rarity": "common",
+        "weight": 0.1,
+        "stack_size": 64,
+        "status": "live",
+        "craft_tag": "material",
+        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
+        "note": "Crafting bench not implemented — inventory/loot only."
+      }
+    },
+    {
+      "id": "scrap_metal",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "craft",
+        "material",
+        "live"
+      ],
+      "data": {
+        "item_id": "scrap_metal",
+        "name": "金属碎片",
+        "name_zh_hant": "金屬碎片",
+        "name_en": "Metal Scrap",
+        "category": "craft",
+        "rarity": "common",
+        "weight": 0.25,
+        "stack_size": 64,
+        "status": "live",
+        "craft_tag": "material",
+        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
+        "note": "Crafting bench not implemented — inventory/loot only."
+      }
+    },
+    {
+      "id": "duct_tape",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "craft",
+        "material",
+        "live"
+      ],
+      "data": {
+        "item_id": "duct_tape",
+        "name": "胶带",
+        "name_zh_hant": "膠帶",
+        "name_en": "Duct Tape",
+        "category": "craft",
+        "rarity": "common",
+        "weight": 0.12,
+        "stack_size": 20,
+        "status": "live",
+        "craft_tag": "material",
+        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
+        "note": "Crafting bench not implemented — inventory/loot only."
+      }
+    },
+    {
+      "id": "mech_parts",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "craft",
+        "material",
+        "live"
+      ],
+      "data": {
+        "item_id": "mech_parts",
+        "name": "机械零件",
+        "name_zh_hant": "機械零件",
+        "name_en": "Mechanical Parts",
+        "category": "craft",
+        "rarity": "common",
+        "weight": 0.35,
+        "stack_size": 30,
+        "status": "live",
+        "craft_tag": "material",
+        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
+        "note": "Crafting bench not implemented — inventory/loot only."
+      }
+    },
+    {
+      "id": "key_generic",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "personal",
+        "pending"
+      ],
+      "data": {
+        "item_id": "key_generic",
+        "name": "钥匙",
+        "name_zh_hant": "鑰匙",
+        "name_en": "Key",
+        "category": "personal",
+        "rarity": "uncommon",
+        "weight": 0.05,
+        "stack_size": 1,
+        "status": "pending_door_binding",
+        "key_target": "",
+        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
+        "note": "Must bind to a specific door id — never opens all doors."
+      }
+    },
+    {
+      "id": "id_card",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "personal",
+        "pending"
+      ],
+      "data": {
+        "item_id": "id_card",
+        "name": "身份卡",
+        "name_zh_hant": "身份卡",
+        "name_en": "ID Card",
+        "category": "personal",
+        "rarity": "uncommon",
+        "weight": 0.04,
+        "stack_size": 1,
+        "status": "pending_facility_binding",
+        "key_target": "",
+        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf"
+      }
+    },
+    {
+      "id": "wrist_watch",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "personal",
+        "pending"
+      ],
+      "data": {
+        "item_id": "wrist_watch",
+        "name": "手表",
+        "name_zh_hant": "手錶",
+        "name_en": "Wrist Watch",
+        "category": "personal",
+        "rarity": "common",
+        "weight": 0.08,
+        "stack_size": 1,
+        "status": "pending_ui_clock",
+        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf"
+      }
+    },
+    {
+      "id": "wallet",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "personal",
+        "pending"
+      ],
+      "data": {
+        "item_id": "wallet",
+        "name": "钱包",
+        "name_zh_hant": "錢包",
+        "name_en": "Wallet",
+        "category": "personal",
+        "rarity": "common",
+        "weight": 0.1,
+        "stack_size": 1,
+        "status": "pending_currency",
+        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf"
+      }
+    },
+    {
+      "id": "infected_tissue",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "infected",
+        "pending_research"
+      ],
+      "data": {
+        "item_id": "infected_tissue",
+        "name": "感染组织",
+        "name_zh_hant": "感染組織",
+        "name_en": "Infected Tissue",
+        "category": "infected",
+        "rarity": "uncommon",
+        "weight": 0.2,
+        "stack_size": 8,
+        "status": "pending_research",
+        "research_tag": "infected_tissue",
+        "model": "res://models/items/polyhaven/infected_vial/bleach_bottle_1k.gltf",
+        "note": "Research/advanced craft interface only — no power-ups."
+      }
+    },
+    {
+      "id": "mutant_gland",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "infected",
+        "pending_research"
+      ],
+      "data": {
+        "item_id": "mutant_gland",
+        "name": "变异腺体",
+        "name_zh_hant": "變異腺體",
+        "name_en": "Mutant Gland",
+        "category": "infected",
+        "rarity": "rare",
+        "weight": 0.2,
+        "stack_size": 8,
+        "status": "pending_research",
+        "research_tag": "mutant_gland",
+        "model": "res://models/items/polyhaven/infected_vial/bleach_bottle_1k.gltf",
+        "note": "Research/advanced craft interface only — no power-ups."
+      }
+    },
+    {
+      "id": "blood_sample",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "infected",
+        "pending_research"
+      ],
+      "data": {
+        "item_id": "blood_sample",
+        "name": "血液样本",
+        "name_zh_hant": "血液樣本",
+        "name_en": "Blood Sample",
+        "category": "infected",
+        "rarity": "uncommon",
+        "weight": 0.2,
+        "stack_size": 8,
+        "status": "pending_research",
+        "research_tag": "blood_sample",
+        "model": "res://models/items/polyhaven/infected_vial/bleach_bottle_1k.gltf",
+        "note": "Research/advanced craft interface only — no power-ups."
+      }
+    },
+    {
+      "id": "mutant_core",
+      "domain": "items",
+      "version": 1,
+      "tags": [
+        "infected",
+        "pending_research"
+      ],
+      "data": {
+        "item_id": "mutant_core",
+        "name": "变异核心",
+        "name_zh_hant": "變異核心",
+        "name_en": "Mutant Core",
+        "category": "infected",
+        "rarity": "legendary",
+        "weight": 0.2,
+        "stack_size": 8,
+        "status": "pending_research",
+        "research_tag": "mutant_core",
+        "model": "res://models/items/polyhaven/infected_vial/bleach_bottle_1k.gltf",
+        "note": "Research/advanced craft interface only — no power-ups."
+      }
+    }
+  ]
 }
