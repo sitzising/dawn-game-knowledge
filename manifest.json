@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "knowledge_version": "0.1.11-zombie-loot",
+  "knowledge_version": "0.1.16-phase6-outdoor-assets",
   "min_game_version": "0.0.0",
   "source": "packaged",
-  "generated_at": "2026-10-29",
+  "generated_at": "2026-10-30",
   "github_update": {
     "base_url": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/",
     "manifest_url": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/manifest.json",
@@ -79,8 +79,20 @@
     },
     {
       "path": "items/catalog.json",
-      "sha256": "7f244990b49fe8c5269ebb91a5e85c09fd36fbd9df3b921251a9a6c6adf89dd1",
-      "bytes": 15571,
+      "sha256": "0af71248df3e51951f2a2cf22083e51b4d6829d9919704dbc59da9a3adc7989d",
+      "bytes": 16886,
+      "required": false
+    },
+    {
+      "path": "items/vehicle_parts.json",
+      "sha256": "2d938fa72c447d19b5c972cfd73e5d66adac73c1dee76683567041f1c09825bb",
+      "bytes": 5455,
+      "required": false
+    },
+    {
+      "path": "world/vehicle_part_layouts.json",
+      "sha256": "60b5ec4c62b258d5ba55215ce933cc4b37e7c5b1aaca55e3ad3cb0cc36cca039",
+      "bytes": 2439,
       "required": false
     },
     {
@@ -109,8 +121,8 @@
     },
     {
       "path": "maps/catalog.json",
-      "sha256": "4cc63f542db0db270b6771d329609d48de4d4e158e4567ce91988ab9910300d7",
-      "bytes": 4591,
+      "sha256": "60b24c2531df61352af6b3846a1ca7302917438aec84d76158bb1b4b838f1159",
+      "bytes": 4954,
       "required": true
     },
     {
@@ -130,6 +142,12 @@
       "sha256": "1c56eb468a360383e2df533854fbf2b161dbd33ecf76a621f6edefadf36c3cf9",
       "bytes": 1668,
       "required": true
+    },
+    {
+      "path": "world/outdoor_loot_pools.json",
+      "sha256": "2a9e224e75e65a9751fb262a5b9e3aa88c1934c604c3113782e5c014e8402c92",
+      "bytes": 2417,
+      "required": false
     }
   ]
 }

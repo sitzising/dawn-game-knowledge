@@ -1,0 +1,64 @@
+{
+  "domain": "world",
+  "version": 2,
+  "note": "Phase 5 outdoor container loot pools + full-map scatter. Indoor building pools deferred. No legendary in outdoor_common.",
+  "entries": [
+    {
+      "id": "outdoor_world_scatter",
+      "domain": "world",
+      "version": 1,
+      "tags": ["loot", "outdoor", "scatter", "active"],
+      "data": {
+        "spacing_m": 90,
+        "max_containers": 220,
+        "margin_m": 48,
+        "jitter_m": 18,
+        "note": "Medium density full-map grid for hongkong_city (~150–220 crates)."
+      }
+    },
+    {
+      "id": "outdoor_common",
+      "domain": "world",
+      "version": 1,
+      "tags": ["loot", "outdoor", "container", "active"],
+      "data": {
+        "pool_id": "outdoor_common",
+        "min_items": 1,
+        "max_items": 3,
+        "allow_empty": false,
+        "items": [
+          {"id": "cloth", "weight": 22, "count_min": 1, "count_max": 3},
+          {"id": "scrap_metal", "weight": 20, "count_min": 1, "count_max": 3},
+          {"id": "canned_food", "weight": 14, "count_min": 1, "count_max": 2},
+          {"id": "water_bottle", "weight": 12, "count_min": 1, "count_max": 1},
+          {"id": "bandage", "weight": 12, "count_min": 1, "count_max": 2},
+          {"id": "battery", "weight": 10, "count_min": 1, "count_max": 2},
+          {"id": "duct_tape", "weight": 6, "count_min": 1, "count_max": 1},
+          {"id": "ammo_9mm", "weight": 4, "count_min": 1, "count_max": 1}
+        ]
+      }
+    },
+    {
+      "id": "outdoor_roadside",
+      "domain": "world",
+      "version": 1,
+      "tags": ["loot", "outdoor", "container", "active"],
+      "data": {
+        "pool_id": "outdoor_roadside",
+        "min_items": 1,
+        "max_items": 4,
+        "allow_empty": false,
+        "items": [
+          {"id": "scrap_metal", "weight": 24, "count_min": 1, "count_max": 4},
+          {"id": "cloth", "weight": 16, "count_min": 1, "count_max": 2},
+          {"id": "mech_parts", "weight": 12, "count_min": 1, "count_max": 2},
+          {"id": "battery", "weight": 12, "count_min": 1, "count_max": 2},
+          {"id": "canned_food", "weight": 10, "count_min": 1, "count_max": 1},
+          {"id": "water_bottle", "weight": 10, "count_min": 1, "count_max": 1},
+          {"id": "ammo_9mm", "weight": 8, "count_min": 1, "count_max": 2},
+          {"id": "painkillers", "weight": 8, "count_min": 1, "count_max": 1}
+        ]
+      }
+    }
+  ]
+}

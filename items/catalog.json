@@ -23,7 +23,7 @@
         "stack_size": 12,
         "status": "live",
         "model": "res://models/items/polyhaven/bandage/medical_tape_1k.gltf",
-        "icon": "bandage.svg",
+        "icon": "res://modules/world_player_v2/features/ui_hud/icons/bandage.svg",
         "heal_amount": 18,
         "infection_reduce": 8.0,
         "bleed_clear": 55.0,
@@ -52,7 +52,7 @@
         "stack_size": 10,
         "status": "live",
         "model": "res://models/items/survival/painkillers.tscn",
-        "icon": "bandage.svg",
+        "icon": "res://modules/world_player_v2/features/ui_hud/icons/pills.svg",
         "heal_amount": 8,
         "stamina_restore": 22.0,
         "use_hold_sec": 2.2,
@@ -137,6 +137,7 @@
         "stack_size": 10,
         "status": "live",
         "model": "res://models/items/survival/canned_food.tscn",
+        "icon": "res://modules/world_player_v2/features/ui_hud/icons/food.svg",
         "consumable": "food",
         "hunger_restore": 28.0,
         "use_hold_sec": 3.5
@@ -162,6 +163,7 @@
         "stack_size": 10,
         "status": "live",
         "model": "res://models/items/survival/water_bottle.tscn",
+        "icon": "res://modules/world_player_v2/features/ui_hud/icons/water.svg",
         "consumable": "drink",
         "thirst_restore": 35.0,
         "use_hold_sec": 2.8
@@ -211,8 +213,9 @@
         "weight": 0.15,
         "stack_size": 16,
         "status": "pending_flashlight_fuel",
-        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
-        "note": "Inventory-ready; flashlight fuel not wired."
+        "model": "res://models/items/survival/battery.tscn",
+        "icon": "res://modules/world_player_v2/features/ui_hud/icons/battery.svg",
+        "note": "Model/icon ready; flashlight fuel drain not wired — keep pending feature flag."
       }
     },
     {
@@ -234,6 +237,7 @@
         "stack_size": 60,
         "status": "live",
         "model": "res://models/items/polyhaven/ammo/ammo_box_1k.gltf",
+        "icon": "res://modules/world_player_v2/features/ui_hud/icons/ammo.svg",
         "is_ammo": true,
         "ammo_type": "ammo_9mm",
         "ammo_amount": 30,
@@ -340,8 +344,9 @@
         "stack_size": 64,
         "status": "live",
         "craft_tag": "material",
-        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
-        "note": "Crafting bench not implemented — inventory/loot only."
+        "model": "res://models/items/survival/cloth.tscn",
+        "icon": "res://modules/world_player_v2/features/ui_hud/icons/cloth.svg",
+        "note": "Phase 6: distinct cloth mesh/icon. Crafting bench still pending."
       }
     },
     {
@@ -364,8 +369,9 @@
         "stack_size": 64,
         "status": "live",
         "craft_tag": "material",
-        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
-        "note": "Crafting bench not implemented — inventory/loot only."
+        "model": "res://models/items/survival/scrap_metal.tscn",
+        "icon": "res://modules/world_player_v2/features/ui_hud/icons/box.svg",
+        "note": "Phase 6: scrap mesh (not cardboard). Crafting bench still pending."
       }
     },
     {
@@ -388,8 +394,9 @@
         "stack_size": 20,
         "status": "live",
         "craft_tag": "material",
-        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
-        "note": "Crafting bench not implemented — inventory/loot only."
+        "model": "res://models/items/survival/duct_tape.tscn",
+        "icon": "res://modules/world_player_v2/features/ui_hud/icons/tape.svg",
+        "note": "Phase 6: tape roll mesh/icon. Crafting bench still pending."
       }
     },
     {
@@ -412,8 +419,9 @@
         "stack_size": 30,
         "status": "live",
         "craft_tag": "material",
-        "model": "res://models/items/polyhaven/loot_bag/cardboard_box_01_1k.gltf",
-        "note": "Crafting bench not implemented — inventory/loot only."
+        "model": "res://models/items/survival/mech_parts.tscn",
+        "icon": "res://modules/world_player_v2/features/ui_hud/icons/gear.svg",
+        "note": "Phase 6: mech parts mesh/icon. Crafting bench still pending."
       }
     },
     {
