@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "knowledge_version": "0.1.16-phase6-outdoor-assets",
+  "knowledge_version": "0.1.17-phase13-ai-constraints",
   "min_game_version": "0.0.0",
   "source": "packaged",
   "generated_at": "2026-10-30",
@@ -73,8 +73,8 @@
     },
     {
       "path": "prompts/local_cursor_dev.md",
-      "sha256": "575f19a4e96fd6538a5dde17646ad9f39aff4d3bb75878694661f20b7cbd59ee",
-      "bytes": 1698,
+      "sha256": "825f2e9377f86237435f19586a3672482bab85fc218fc16a6dcaf83c09373a5c",
+      "bytes": 2134,
       "required": false
     },
     {

@@ -20,6 +20,13 @@
 6. 玩家动态记忆在 `user://`（KnowledgeManager player memory），不得推入公开知识库。
 7. 知识库提交：仅在知识库仓库内显式 `git add` 文件；禁止 `git add .`；游戏工程目录勿假装有远程 Git。
 
+## 生态升级约束（阶段 13 追加）
+
+详见工程内 `docs/AI_DEVELOPMENT_CONSTRAINTS.md` 与 `.cursor/rules/ecosystem-upgrade.mdc`。摘要：
+- 存档只走单机门控；HOST/CLIENT 不写单机槽。
+- 感知 FOV+LOS 失败关闭；人口有 cap；物资 `loot_seeded`；资产诚实（无 live 假冒）。
+- 召唤禁瞬移；管理刷取 CLIENT 拒；跨端 RPC 未完成不得宣称。
+
 ## 与云端提示词的边界
 
 - 本文件只管 **本机 Godot 游戏开发**。
