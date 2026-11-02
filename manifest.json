@@ -36,6 +36,18 @@
       "required": false
     },
     {
+      "path": "localization/lang_packs/catalog.json",
+      "sha256": "fe8eaffbc0e1dd4bb412665d2bff26f071b9510ace3f008c4eef414551e6362a",
+      "bytes": 355,
+      "required": false
+    },
+    {
+      "path": "localization/lang_packs/README.md",
+      "sha256": "4781a436400ba098b3ef9f170eee24c0c8c8cf655f25fd5c6d9d87effa73a9f4",
+      "bytes": 508,
+      "required": false
+    },
+    {
       "path": "world/zombie_loot.json",
       "sha256": "bb5d6009590e7bf93e3bfdc358ed4e1bfacfff8ba5e7d0c4189400aa874bed7c",
       "bytes": 6147,

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "domain": "localization",
+  "kind": "language_pack_catalog",
+  "compatible_game_version": "0.1.0",
+  "note": "Reserved under dawn-game-knowledge/localization/lang_packs/. zh_TW ships in the client; add remote packs here as <lang_id>/pack.json and list them below.",
+  "pack_root": "localization/lang_packs",
+  "languages": []
+}
