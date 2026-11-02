@@ -1,44 +1,33 @@
-{
-  "domain": "zombies",
-  "version": 2,
-  "entries": [
-    {
-      "id": "walker",
-      "domain": "zombies",
-      "display_name_key": "TERM_WALKER",
-      "version": 1,
-      "tags": ["ground", "default", "active_roster"],
-      "data": {
-        "special_kind": "",
-        "scene": "res://game/entities/zombie_base.tscn",
-        "max_health": 100,
-        "attack_damage": 16,
-        "detection_radius": 20.0,
-        "vision_fov_deg": 110.0,
-        "hearing_mul": 1.0,
-        "chase_speed_multiplier": 2.5,
-        "attack_range": 1.5,
-        "search_duration_min": 5.5,
-        "search_duration_max": 8.5,
-        "flight": false
-      }
-    },
-    {
-      "id": "bat",
-      "domain": "zombies",
-      "display_name_key": "TERM_BAT",
-      "version": 1,
-      "tags": ["air", "active_roster"],
-      "data": {
-        "special_kind": "",
-        "scene": "res://game/entities/zombie_bat.tscn",
-        "flight": true,
-        "flight_hover_height": 3.5,
-        "flight_speed_mult": 1.15,
-        "detection_radius": 22.0,
-        "hearing_mul": 1.0,
-        "notes": "Terrain floor ray cached; soft cap in EntityManager"
-      }
-    }
-  ]
-}
+{
+  "domain": "zombies",
+  "version": 3,
+  "entries": [
+    {
+      "id": "walker",
+      "domain": "zombies",
+      "display_name_key": "TERM_WALKER",
+      "version": 2,
+      "tags": [
+        "ground",
+        "default",
+        "active_roster"
+      ],
+      "data": {
+        "special_kind": "",
+        "scene": "res://game/entities/zombie_base.tscn",
+        "model": "res://models/entities/zombie/1/Strike_-_zombie_scratch_Strike_-_zombie_bite_24.glb",
+        "max_health": 100,
+        "attack_damage": 16,
+        "detection_radius": 20.0,
+        "vision_fov_deg": 110.0,
+        "hearing_mul": 1.0,
+        "chase_speed_multiplier": 2.5,
+        "attack_range": 1.5,
+        "search_duration_min": 5.5,
+        "search_duration_max": 8.5,
+        "flight": false,
+        "notes": "Strike scratch/bite timeslice pack; bat/dog/tank removed from roster"
+      }
+    }
+  ]
+}

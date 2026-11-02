@@ -67,14 +67,14 @@
     },
     {
       "path": "zombies/catalog.json",
-      "sha256": "5b71bc1600a71440e9b125f12d62cdb7076a53bdcf06c8a985881045373c624a",
-      "bytes": 1155,
+      "sha256": "c601cf5cfb2f89b72318d279863c9fa6fa5a8f8c4a978eb4f9de9a6937054b61",
+      "bytes": 886,
       "required": true
     },
     {
       "path": "events/templates.json",
-      "sha256": "5f02f00b4bb20d388a88aebe1334834627a3d9697dba09b48af421c1e30cb690",
-      "bytes": 1024,
+      "sha256": "b355221cca6a4cb5a98f26bd0bb9f1e83305e382983fdb9e99b865438c4feb1c",
+      "bytes": 1270,
       "required": false
     },
     {
