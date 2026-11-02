@@ -1,21 +1,18 @@
 {
   "domain": "zombies",
-  "version": 3,
+  "version": 4,
   "entries": [
     {
       "id": "walker",
       "domain": "zombies",
       "display_name_key": "TERM_WALKER",
       "version": 2,
-      "tags": [
-        "ground",
-        "default",
-        "active_roster"
-      ],
+      "tags": ["ground", "default", "active_roster"],
       "data": {
         "special_kind": "",
         "scene": "res://game/entities/zombie_base.tscn",
         "model": "res://models/entities/zombie/1/Strike_-_zombie_scratch_Strike_-_zombie_bite_24.glb",
+        "display_name_zh": "游荡者",
         "max_health": 100,
         "attack_damage": 16,
         "detection_radius": 20.0,
@@ -23,10 +20,53 @@
         "hearing_mul": 1.0,
         "chase_speed_multiplier": 2.5,
         "attack_range": 1.5,
-        "search_duration_min": 5.5,
-        "search_duration_max": 8.5,
         "flight": false,
-        "notes": "Strike scratch/bite timeslice pack; bat/dog/tank removed from roster"
+        "notes": "Strike timeslice pack (~40s scratch/bite)"
+      }
+    },
+    {
+      "id": "rot_walker",
+      "domain": "zombies",
+      "display_name_key": "TERM_ROT_WALKER",
+      "version": 1,
+      "tags": ["ground", "active_roster"],
+      "data": {
+        "special_kind": "",
+        "scene": "res://game/entities/zombie_rot_walker.tscn",
+        "model": "res://models/entities/zombie/僵尸2.glb",
+        "display_name_zh": "腐皮者",
+        "max_health": 100,
+        "attack_damage": 16,
+        "detection_radius": 20.0,
+        "vision_fov_deg": 110.0,
+        "hearing_mul": 1.0,
+        "chase_speed_multiplier": 2.5,
+        "attack_range": 1.5,
+        "flight": false,
+        "notes": "Same Strike timeslice clip; Mixamo ~1.84m mesh (僵尸2.glb)"
+      }
+    },
+    {
+      "id": "bulk_walker",
+      "domain": "zombies",
+      "display_name_key": "TERM_BULK_WALKER",
+      "version": 1,
+      "tags": ["ground", "active_roster"],
+      "data": {
+        "special_kind": "",
+        "scene": "res://game/entities/zombie_bulk_walker.tscn",
+        "model": "res://models/entities/zombie/僵尸3.glb",
+        "display_name_zh": "畸骨者",
+        "max_health": 120,
+        "attack_damage": 18,
+        "model_target_height": 1.85,
+        "detection_radius": 18.0,
+        "vision_fov_deg": 105.0,
+        "hearing_mul": 1.0,
+        "chase_speed_multiplier": 2.3,
+        "attack_range": 1.6,
+        "flight": false,
+        "notes": "Same Strike timeslice; raw mesh ~27m → model_target_height 1.85 (僵尸3.glb)"
       }
     }
   ]

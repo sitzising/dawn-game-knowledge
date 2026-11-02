@@ -24,7 +24,9 @@
         ],
         "payload": {
           "zombie_pool": [
-            "walker"
+            "walker",
+            "rot_walker",
+            "bulk_walker"
           ],
           "count_min": 4,
           "count_max": 10

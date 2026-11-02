@@ -1,10 +1,12 @@
 {
   "domain": "localization",
   "version": 2,
-  "note": "Maps knowledge display_name_key → DawnFY / pack status. Does not replace DawnFY.",
+  "note": "Maps knowledge display_name_key → offline language pack status. Not a downloadable language pack; gameplay knowledge is separate.",
   "terms": {
     "TERM_ZOMBIE": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
     "TERM_WALKER": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "TERM_ROT_WALKER": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
+    "TERM_BULK_WALKER": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
     "TERM_STALKER": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
     "TERM_BAT": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
     "TERM_TANK": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
