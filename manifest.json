@@ -1,9 +1,9 @@
 {
     "schema_version":  1,
-    "knowledge_version":  "0.1.19-zombie01-02-clips",
+    "knowledge_version": "0.1.20-zombie-dl-feel",
     "min_game_version":  "0.0.0",
     "source":  "packaged",
-    "generated_at":  "2026-11-03",
+    "generated_at": "2026-11-03",
     "github_update":  {
                           "base_url":  "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/",
                           "manifest_url":  "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/manifest.json",
@@ -67,8 +67,8 @@
                   },
                   {
                       "path":  "zombies/catalog.json",
-                      "sha256":  "13bb7aaa7e738237947befdbafe2682ad459bd2114eb92732a8730eb99ad26d8",
-                      "bytes":  2813,
+                      "sha256":  "fe538e0ba310881bd3584ded961ff39584b662fec630f8f93e4fa69e9d5705db",
+                      "bytes":  3522,
                       "required":  true
                   },
                   {

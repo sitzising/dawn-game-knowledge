@@ -1,25 +1,35 @@
 {
   "domain": "zombies",
-  "version": 5,
+  "version": 6,
   "entries": [
     {
       "id": "walker",
       "domain": "zombies",
       "display_name_key": "TERM_WALKER",
-      "version": 3,
-      "tags": ["ground", "default", "active_roster"],
+      "version": 4,
+      "tags": ["ground", "default", "active_roster", "shambler"],
       "data": {
         "special_kind": "",
         "scene": "res://game/entities/zombie_base.tscn",
         "model": "res://models/entities/zombie/1/zombie-01.glb",
         "display_name_zh": "游荡者",
         "max_health": 100,
-        "attack_damage": 16,
-        "detection_radius": 20.0,
-        "vision_fov_deg": 110.0,
-        "hearing_mul": 1.0,
-        "chase_speed_multiplier": 2.5,
-        "attack_range": 1.5,
+        "attack_damage": 14,
+        "move_speed": 1.35,
+        "detection_radius": 16.0,
+        "vision_fov_deg": 100.0,
+        "hearing_mul": 0.95,
+        "chase_speed_multiplier": 1.75,
+        "attack_range": 1.45,
+        "attack_windup": 0.38,
+        "attack_recovery": 0.70,
+        "attack_cooldown": 1.35,
+        "pack_call_radius": 11.0,
+        "spot_alert_min": 0.55,
+        "spot_alert_max": 0.95,
+        "night_speed_mul": 1.20,
+        "night_detect_mul": 1.35,
+        "closing_lunge_mul": 1.22,
         "flight": false,
         "anim_mode": "clips",
         "clips": [
@@ -32,27 +42,37 @@
           "Zombie_Yell",
           "Death_C"
         ],
-        "notes": "zombie-01.glb named clip pack (8 clips); raw mesh ~0.18m → target 1.8m"
+        "notes": "Dying Light–like daytime shambler: slower chase, longer yell/attack windup (zombie-01)"
       }
     },
     {
       "id": "rot_walker",
       "domain": "zombies",
       "display_name_key": "TERM_ROT_WALKER",
-      "version": 2,
-      "tags": ["ground", "active_roster"],
+      "version": 3,
+      "tags": ["ground", "active_roster", "viral_lite"],
       "data": {
         "special_kind": "",
         "scene": "res://game/entities/zombie_rot_walker.tscn",
         "model": "res://models/entities/zombie/zombie-02.glb",
         "display_name_zh": "腐皮者",
-        "max_health": 100,
-        "attack_damage": 16,
-        "detection_radius": 20.0,
-        "vision_fov_deg": 110.0,
-        "hearing_mul": 1.0,
-        "chase_speed_multiplier": 2.5,
-        "attack_range": 1.5,
+        "max_health": 95,
+        "attack_damage": 18,
+        "move_speed": 1.55,
+        "detection_radius": 22.0,
+        "vision_fov_deg": 120.0,
+        "hearing_mul": 1.30,
+        "chase_speed_multiplier": 2.95,
+        "attack_range": 1.55,
+        "attack_windup": 0.24,
+        "attack_recovery": 0.48,
+        "attack_cooldown": 0.95,
+        "pack_call_radius": 18.0,
+        "spot_alert_min": 0.35,
+        "spot_alert_max": 0.60,
+        "night_speed_mul": 1.55,
+        "night_detect_mul": 1.70,
+        "closing_lunge_mul": 1.48,
         "flight": false,
         "anim_mode": "clips",
         "clips": [
@@ -65,7 +85,7 @@
           "Zombie_Yell",
           "Death_A"
         ],
-        "notes": "zombie-02.glb named clip pack (8 clips); mesh ~2.0m → target 1.85m"
+        "notes": "Viral-lite: faster chase, louder hearing, stronger night + pack call (zombie-02)"
       }
     },
     {
