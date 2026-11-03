@@ -1,17 +1,17 @@
 {
   "domain": "zombies",
-  "version": 4,
+  "version": 5,
   "entries": [
     {
       "id": "walker",
       "domain": "zombies",
       "display_name_key": "TERM_WALKER",
-      "version": 2,
+      "version": 3,
       "tags": ["ground", "default", "active_roster"],
       "data": {
         "special_kind": "",
         "scene": "res://game/entities/zombie_base.tscn",
-        "model": "res://models/entities/zombie/1/Strike_-_zombie_scratch_Strike_-_zombie_bite_24.glb",
+        "model": "res://models/entities/zombie/1/zombie-01.glb",
         "display_name_zh": "游荡者",
         "max_health": 100,
         "attack_damage": 16,
@@ -21,19 +21,30 @@
         "chase_speed_multiplier": 2.5,
         "attack_range": 1.5,
         "flight": false,
-        "notes": "Strike timeslice pack (~40s scratch/bite)"
+        "anim_mode": "clips",
+        "clips": [
+          "Zombie_Idle",
+          "Zombie_Idle_Crouch",
+          "Zombie_Rise",
+          "Zombie_Scratch",
+          "Zombie_Walk",
+          "Zombie_Walk_2",
+          "Zombie_Yell",
+          "Death_C"
+        ],
+        "notes": "zombie-01.glb named clip pack (8 clips); raw mesh ~0.18m → target 1.8m"
       }
     },
     {
       "id": "rot_walker",
       "domain": "zombies",
       "display_name_key": "TERM_ROT_WALKER",
-      "version": 1,
+      "version": 2,
       "tags": ["ground", "active_roster"],
       "data": {
         "special_kind": "",
         "scene": "res://game/entities/zombie_rot_walker.tscn",
-        "model": "res://models/entities/zombie/僵尸2.glb",
+        "model": "res://models/entities/zombie/zombie-02.glb",
         "display_name_zh": "腐皮者",
         "max_health": 100,
         "attack_damage": 16,
@@ -43,7 +54,18 @@
         "chase_speed_multiplier": 2.5,
         "attack_range": 1.5,
         "flight": false,
-        "notes": "Same Strike timeslice clip; Mixamo ~1.84m mesh (僵尸2.glb)"
+        "anim_mode": "clips",
+        "clips": [
+          "Zombie_Idle",
+          "Zombie_Idle_Crouch",
+          "Zombie_Rise",
+          "Zombie_Scratch",
+          "Zombie_Walk",
+          "Zombie_Walk_2",
+          "Zombie_Yell",
+          "Death_A"
+        ],
+        "notes": "zombie-02.glb named clip pack (8 clips); mesh ~2.0m → target 1.85m"
       }
     },
     {
@@ -51,7 +73,7 @@
       "domain": "zombies",
       "display_name_key": "TERM_BULK_WALKER",
       "version": 1,
-      "tags": ["ground", "active_roster"],
+      "tags": ["ground", "legacy_strike"],
       "data": {
         "special_kind": "",
         "scene": "res://game/entities/zombie_bulk_walker.tscn",
@@ -66,7 +88,7 @@
         "chase_speed_multiplier": 2.3,
         "attack_range": 1.6,
         "flight": false,
-        "notes": "Same Strike timeslice; raw mesh ~27m → model_target_height 1.85 (僵尸3.glb)"
+        "notes": "Legacy Strike timeslice; not in active spawn roster until zombie-03 lands"
       }
     }
   ]
