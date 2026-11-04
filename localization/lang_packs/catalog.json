@@ -3,7 +3,32 @@
   "domain": "localization",
   "kind": "language_pack_catalog",
   "compatible_game_version": "0.1.0",
-  "note": "Reserved under dawn-game-knowledge/localization/lang_packs/. zh_TW ships in the client; add remote packs here as <lang_id>/pack.json and list them below.",
+  "note": "en ships in client (pack.json + source_map.json). zh_TW also ships. Remote catalog lists downloadable extras.",
   "pack_root": "localization/lang_packs",
-  "languages": []
+  "default_language": "en",
+  "languages": [
+    {
+      "id": "en",
+      "display_name": "English",
+      "version": "2",
+      "path": "localization/lang_packs/en/pack.json",
+      "bytes": 4825,
+      "sha256": "06a87ebc2c5ba1493de2e79c1c5cda376718469af7b76cada1d6f666c56bead2",
+      "source_map_path": "localization/lang_packs/en/source_map.json",
+      "source_map_bytes": 111430,
+      "source_map_sha256": "91657a4f71475cf34b4117a6e62476a9ec68488abfe418643bdfe7d21c2a13e3",
+      "status": "shipped_in_client",
+      "message_keys": 120,
+      "source_map_entries": 1841
+    },
+    {
+      "id": "zh_TW",
+      "display_name": "繁體中文",
+      "version": "2",
+      "path": "localization/lang_packs/zh_TW/pack.json",
+      "bytes": 3287,
+      "sha256": "1d4994475456f65715dcb029a9d930f449e9c0f26add688769c9f158093f88a5",
+      "status": "shipped_in_client"
+    }
+  ]
 }

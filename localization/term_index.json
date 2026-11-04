@@ -1,7 +1,7 @@
 {
   "domain": "localization",
   "version": 2,
-  "note": "Maps knowledge display_name_key → offline language pack status. Not a downloadable language pack; gameplay knowledge is separate.",
+  "note": "Maps knowledge display_name_key → offline language pack status. Client default language is en; zh_TW optional. Not a downloadable language pack; gameplay knowledge is separate.",
   "terms": {
     "TERM_ZOMBIE": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},
     "TERM_WALKER": {"packs": ["zh_TW", "en"], "status": "shipped", "csv": true},

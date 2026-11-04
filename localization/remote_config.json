@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "note": "Same knowledge repo as gameplay JSON. Language packs under localization/lang_packs/.",
+  "knowledge_repo": {
+    "git_url": "https://github.com/sitzising/dawn-game-knowledge.git",
+    "raw_base": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/",
+    "branch": "main",
+    "owner_repo": "sitzising/dawn-game-knowledge",
+    "evidence": [
+      "data/knowledge/manifest.json github_update",
+      "data/knowledge/READING_SPEC.md",
+      ".cursor/rules/dawn-knowledge-*.mdc"
+    ]
+  },
+  "language_packs": {
+    "enabled": true,
+    "catalog_url": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/localization/lang_packs/catalog.json",
+    "pack_base_url": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/",
+    "relative_catalog_path": "localization/lang_packs/catalog.json",
+    "relative_pack_root": "localization/lang_packs",
+    "status": "en_and_zh_TW_shipped_in_client",
+    "default_language": "en",
+    "user_message_en": "English and Traditional Chinese ship in the client. Extra packs may appear in the knowledge catalog.",
+    "user_message_zh_TW": "英文與繁體中文已內建於客戶端。知識庫 localization/lang_packs/ 可提供額外語言包。"
+  },
+  "install": {
+    "user_root": "user://dawn_lang_packs",
+    "pack_file_name": "pack.json",
+    "allow_extensions": ["json"],
+    "execute_remote_code": false
+  }
+}
