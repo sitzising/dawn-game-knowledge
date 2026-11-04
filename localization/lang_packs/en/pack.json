@@ -126,6 +126,8 @@
     "RARITY_RARE": "Rare",
     "RARITY_EPIC": "Epic",
     "RARITY_LEGENDARY": "Legendary",
-    "LANG_PACK_STATUS": "Language pack: shipped"
+    "LANG_PACK_STATUS": "Language pack: shipped",
+    "STATUS_ONLINE": "Status: Online",
+    "STATUS_OFFLINE": "Status: Offline"
   }
 }

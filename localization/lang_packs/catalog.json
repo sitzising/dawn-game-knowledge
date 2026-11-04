@@ -10,24 +10,24 @@
     {
       "id": "en",
       "display_name": "English",
-      "version": "2",
+      "version": "3",
       "path": "localization/lang_packs/en/pack.json",
-      "bytes": 4825,
-      "sha256": "06a87ebc2c5ba1493de2e79c1c5cda376718469af7b76cada1d6f666c56bead2",
+      "bytes": 4905,
+      "sha256": "7cc5ebb552bbbaff2d834488c7e1915457b26d5411fef48ca911920a277c8642",
       "source_map_path": "localization/lang_packs/en/source_map.json",
-      "source_map_bytes": 111430,
-      "source_map_sha256": "91657a4f71475cf34b4117a6e62476a9ec68488abfe418643bdfe7d21c2a13e3",
+      "source_map_bytes": 111561,
+      "source_map_sha256": "c76599ada46be10a46ea9f01d6d7bbd5340bf52dc8b50cecd38acfbd38aa7f04",
       "status": "shipped_in_client",
-      "message_keys": 120,
-      "source_map_entries": 1841
+      "message_keys": 122,
+      "source_map_entries": 1844
     },
     {
       "id": "zh_TW",
       "display_name": "繁體中文",
-      "version": "2",
+      "version": "3",
       "path": "localization/lang_packs/zh_TW/pack.json",
-      "bytes": 3287,
-      "sha256": "1d4994475456f65715dcb029a9d930f449e9c0f26add688769c9f158093f88a5",
+      "bytes": 3380,
+      "sha256": "429e9cb12b67e312b663167ff4241b20db9bf1370958aeb43ecb625b25cc8676",
       "status": "shipped_in_client"
     }
   ]

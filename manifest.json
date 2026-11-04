@@ -37,7 +37,7 @@
     },
     {
       "path": "localization/lang_packs/catalog.json",
-      "sha256": "d0c0b3daa72aa8b2026243634ab2c38157fd79bd3f87824ef2afc9c30372d3c7",
+      "sha256": "908417701440798e8b929063f380b8dbc0effe91b3569cf654e931388ab51436",
       "bytes": 1175,
       "required": false
     },
@@ -163,20 +163,20 @@
     },
     {
       "path": "localization/lang_packs/en/pack.json",
-      "sha256": "06a87ebc2c5ba1493de2e79c1c5cda376718469af7b76cada1d6f666c56bead2",
-      "bytes": 4825,
+      "sha256": "7cc5ebb552bbbaff2d834488c7e1915457b26d5411fef48ca911920a277c8642",
+      "bytes": 4905,
       "required": false
     },
     {
       "path": "localization/lang_packs/en/source_map.json",
-      "sha256": "91657a4f71475cf34b4117a6e62476a9ec68488abfe418643bdfe7d21c2a13e3",
-      "bytes": 111430,
+      "sha256": "c76599ada46be10a46ea9f01d6d7bbd5340bf52dc8b50cecd38acfbd38aa7f04",
+      "bytes": 111561,
       "required": false
     },
     {
       "path": "localization/lang_packs/zh_TW/pack.json",
-      "sha256": "1d4994475456f65715dcb029a9d930f449e9c0f26add688769c9f158093f88a5",
-      "bytes": 3287,
+      "sha256": "429e9cb12b67e312b663167ff4241b20db9bf1370958aeb43ecb625b25cc8676",
+      "bytes": 3380,
       "required": false
     },
     {

@@ -93,6 +93,8 @@
     "RARITY_UNCOMMON": "優秀",
     "RARITY_RARE": "稀有",
     "RARITY_EPIC": "史詩",
-    "RARITY_LEGENDARY": "傳奇"
+    "RARITY_LEGENDARY": "傳奇",
+    "STATUS_ONLINE": "在線狀態：在線",
+    "STATUS_OFFLINE": "在線狀態：離線"
   }
 }

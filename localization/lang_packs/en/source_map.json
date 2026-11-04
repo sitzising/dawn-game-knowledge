@@ -3,7 +3,7 @@
   "locale": "en",
   "kind": "source_map",
   "note": "zh_TW display string → English. Used by DawnLocale.T()",
-  "count": 1841,
+  "count": 1844,
   "source_map": {
     "玩家": "Player",
     "關閉": "Close",
@@ -1845,7 +1845,10 @@
     "装甲者": "Armored",
     "腐皮": "Rotskin",
     "畸骨": "Bulkbone",
-    "本作為虛構的殭屍末日生存遊戲，含緊張氛圍與對抗內容。請理性看待遊戲情節，注意勞逸結合，適度遊戲有益身心。": "This is a fictional zombie survival game with tense combat. Please take the story as fiction, rest regularly, and play in moderation."
+    "本作為虛構的殭屍末日生存遊戲，含緊張氛圍與對抗內容。請理性看待遊戲情節，注意勞逸結合，適度遊戲有益身心。": "This is a fictional zombie survival game with tense combat. Please take the story as fiction, rest regularly, and play in moderation.",
+    "在线状态：离线": "Status: Offline",
+    "在线状态：在线": "Status: Online",
+    "系统就绪": "System ready"
   },
   "built_at": 1793767699
 }
