@@ -10,7 +10,7 @@
 		"total": 247
 	},
 	"domain": "buildings",
-	"effective_model_scale": 25.0,
+	"effective_model_scale": 30.0,
 	"entries": [
 		{
 			"building_type": "highrise",
