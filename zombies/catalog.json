@@ -1,12 +1,12 @@
 {
   "domain": "zombies",
-  "version": 8,
+  "version": 9,
   "entries": [
     {
       "id": "walker",
       "domain": "zombies",
       "display_name_key": "TERM_WALKER",
-      "version": 6,
+      "version": 7,
       "tags": ["ground", "default", "active_roster", "shambler"],
       "data": {
         "special_kind": "",
@@ -15,13 +15,13 @@
         "display_name_zh": "游荡者",
         "max_health": 100,
         "attack_damage": 14,
-        "model_target_height": 2.81,
+        "model_target_height": 3.79,
         "move_speed": 1.62,
         "detection_radius": 16.0,
         "vision_fov_deg": 100.0,
         "hearing_mul": 0.95,
         "chase_speed_multiplier": 2.05,
-        "attack_range": 1.85,
+        "attack_range": 2.20,
         "attack_windup": 0.38,
         "attack_recovery": 0.70,
         "attack_cooldown": 1.35,
@@ -43,14 +43,14 @@
           "Zombie_Yell",
           "Death_C"
         ],
-        "notes": "Size pass 2: ~2.81m (+25% vs 2.25). Chase mid-buff kept."
+        "notes": "Size pass 3: ~3.79m (+35% vs 2.81). No zombie status/damage HUD."
       }
     },
     {
       "id": "rot_walker",
       "domain": "zombies",
       "display_name_key": "TERM_ROT_WALKER",
-      "version": 5,
+      "version": 6,
       "tags": ["ground", "active_roster", "viral_lite"],
       "data": {
         "special_kind": "",
@@ -59,13 +59,13 @@
         "display_name_zh": "腐皮者",
         "max_health": 95,
         "attack_damage": 18,
-        "model_target_height": 2.88,
+        "model_target_height": 3.89,
         "move_speed": 1.86,
         "detection_radius": 22.0,
         "vision_fov_deg": 120.0,
         "hearing_mul": 1.30,
         "chase_speed_multiplier": 3.40,
-        "attack_range": 1.96,
+        "attack_range": 2.35,
         "attack_windup": 0.24,
         "attack_recovery": 0.48,
         "attack_cooldown": 0.95,
@@ -87,14 +87,14 @@
           "Zombie_Yell",
           "Death_A"
         ],
-        "notes": "Viral-lite size pass 2: ~2.88m; chase mid-buff kept"
+        "notes": "Viral-lite size pass 3: ~3.89m"
       }
     },
     {
       "id": "bulk_walker",
       "domain": "zombies",
       "display_name_key": "TERM_BULK_WALKER",
-      "version": 3,
+      "version": 4,
       "tags": ["ground", "legacy_strike"],
       "data": {
         "special_kind": "",
@@ -103,15 +103,15 @@
         "display_name_zh": "畸骨者",
         "max_health": 120,
         "attack_damage": 18,
-        "model_target_height": 2.94,
+        "model_target_height": 3.97,
         "move_speed": 1.62,
         "detection_radius": 18.0,
         "vision_fov_deg": 105.0,
         "hearing_mul": 1.0,
         "chase_speed_multiplier": 2.65,
-        "attack_range": 2.02,
+        "attack_range": 2.45,
         "flight": false,
-        "notes": "Legacy Strike; size pass 2 ~2.94m; not in active spawn roster until zombie-03 lands"
+        "notes": "Legacy Strike size pass 3 ~3.97m"
       }
     }
   ]

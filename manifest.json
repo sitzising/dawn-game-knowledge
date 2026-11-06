@@ -1,6 +1,6 @@
 {
     "schema_version":  1,
-    "knowledge_version":  "0.1.25-zombie-size-2",
+    "knowledge_version":  "0.1.26-zombie-size-3-no-hud",
     "min_game_version":  "0.0.0",
     "source":  "packaged",
     "generated_at":  "2026-11-06",
@@ -92,8 +92,8 @@
                   },
                   {
                       "path":  "zombies/catalog.json",
-                      "sha256":  "83a60bc3c674d88c471e8e6606e98a5b200b7736cfae076533600d02b909e696",
-                      "bytes":  3575,
+                      "sha256":  "548be401018acbb5c0922b247e423ee4d7b3c5d1a1b2d7a8832aa10ecc041dd1",
+                      "bytes":  3511,
                       "required":  true
                   },
                   {
