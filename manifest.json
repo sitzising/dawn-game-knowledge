@@ -1,6 +1,6 @@
-﻿{
+{
     "schema_version":  1,
-    "knowledge_version":  "0.1.23-building-registry",
+    "knowledge_version":  "0.1.24-zombie-mid-buff",
     "min_game_version":  "0.0.0",
     "source":  "packaged",
     "generated_at":  "2026-11-06",
@@ -92,8 +92,8 @@
                   },
                   {
                       "path":  "zombies/catalog.json",
-                      "sha256":  "fe538e0ba310881bd3584ded961ff39584b662fec630f8f93e4fa69e9d5705db",
-                      "bytes":  3522,
+                      "sha256":  "958fe6db6e645c080039fd172fea433af01429c8bcbe7b47998b7ffdca2dafdd",
+                      "bytes":  3609,
                       "required":  true
                   },
                   {
