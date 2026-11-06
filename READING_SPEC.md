@@ -25,7 +25,7 @@
 | 字段 / 规则 | 说明 |
 |---|---|
 | `type_standards.*` | 住宅 / 商业 / 工业 / 高层 / 车库 / 道路 分型米制标准 |
-| `map_root_policy.hongkong_city` | **门高拟合 + K=2**（有效缩放 **≈21.3966**）；换 GLB 必须走 `MAP_GLB_UPLOAD_ADAPT.md` |
+| `map_root_policy.hongkong_city` | **门高拟合 + K=3**（有效缩放 **≈32.0949**）；换 GLB 必须走 `MAP_GLB_UPLOAD_ADAPT.md` |
 | `repair_policy` | 禁止统一放大所有建筑；禁止整栋均匀缩放拉坏门窗/入口/底层；优先楼层模块 / 切面上部延伸 |
 | `entries[].id` | 建筑稳定主键（禁止用显示名） |
 | 自动检查 | Schema：`schema/buildings_scale.schema.json`；探针：`addons/tests/probe_building_scale.gd` |
