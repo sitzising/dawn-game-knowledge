@@ -73,7 +73,16 @@
         }
       }
     },
-    "autocheck": { "type": "object" },
+    "autocheck": {
+      "type": "object",
+      "properties": {
+        "probe_script": { "type": "string" },
+        "schema": { "type": "string" },
+        "registry": { "type": "string" },
+        "anomalies_snapshot": { "type": "string" },
+        "fail_closed_for_new_live_assets": { "type": "boolean" }
+      }
+    },
     "entries": {
       "type": "array",
       "description": "Per-building registry rows (stable_id). Filled in repair phase.",

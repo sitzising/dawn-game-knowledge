@@ -30,8 +30,10 @@
 | `entries[].id` | 建筑稳定主键（禁止用显示名） |
 | 自动检查 | Schema：`schema/buildings_scale.schema.json`；探针：`addons/tests/probe_building_scale.gd` |
 | AI 新增建筑 | 未通过尺度标准与探针不得标 `live` |
+| `buildings/hk_building_registry.json` | 香港城建筑审计注册表；既有 ID（`hk_garage_b2` / `hk_proto_house_01`）禁止重编号；其余 `hk_mesh_*` |
+| 探针 | `addons/tests/probe_building_scale.gd`（headless）；异常快照见工程 `docs/map/hk_building_anomalies_*.json` |
 
-详细方案：`游戏工程/docs/map/MAP_BUILDING_SCALE_REPAIR_PLAN.md`。
+详细方案：`游戏工程/docs/map/MAP_BUILDING_SCALE_REPAIR_PLAN.md`；清单摘要：`docs/map/HK_BUILDING_INVENTORY.md`。
 
 ## 地图字段（稳定 ID）
 

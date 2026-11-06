@@ -96,9 +96,10 @@
     }
   },
   "autocheck": {
-    "probe_script_planned": "res://addons/tests/probe_building_scale.gd",
+    "probe_script": "res://addons/tests/probe_building_scale.gd",
     "schema": "schema/buildings_scale.schema.json",
-    "registry_planned": "buildings/hk_building_registry.json",
+    "registry": "buildings/hk_building_registry.json",
+    "anomalies_snapshot": "docs/map/hk_building_anomalies_20261106.json",
     "fail_closed_for_new_live_assets": true,
     "legacy_monolithic_glb": {
       "map_id": "hongkong_city",
