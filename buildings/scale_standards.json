@@ -5,12 +5,12 @@
   "note": "Human-scale building standards for Dawn. Map root scale for hongkong_city stays K=1 (effective ×21.3967 door-fit). Do NOT uniformly scale all buildings. AI/authors must pass autocheck before marking live.",
   "map_root_policy": {
     "hongkong_city": {
-      "extra_uniform_mul_K": 3.0,
-      "effective_model_scale": 32.0949,
-      "fit_by_door_height": true,
+      "extra_uniform_mul_K": 1.0,
+      "effective_model_scale": 25.0,
+      "fit_by_door_height": false,
       "fit_by_span": false,
       "pedestrian_door_anchor_m": 2.1,
-      "note": "Epoch 8: door-fit ×10.6983 then K=3 → final ≈×32.0949 (door≈6.3m). Upload: MAP_GLB_UPLOAD_ADAPT.md",
+      "note": "Epoch 9: fixed map_scale=25 only. No door-fit. Do NOT move/edit building meshes for clearance.",
       "forbid_global_remap": true,
       "forbid_blend_glb_edit": true
     }
