@@ -16,7 +16,7 @@
 2. 可配置内容写入 `data/knowledge/**`，并同步 `github_publish/**` 与独立知识库仓库。
 3. 地图稳定 ID 以 `maps/catalog.json` 的 `id` 为准（如 `hongkong_city`），禁止用显示名当主键。
 4. **不要**改写 `MapRegistry.MAPS` 加载路径，除非用户明确要求迁移；知识库地图元数据与客户端资源是否存在是两回事。
-5. **建筑人体尺度**以 `buildings/scale_standards.json` 为准：香港城地图根 **K=1 / ×21.3967 / 门 2.1 m**；禁止全局放大地图或统一放大所有建筑；禁止整栋均匀缩放拉坏门窗/入口/底层；优先楼层模块与切面上部延伸。新增建筑须过 `probe_building_scale` + schema，方可标 `live`。方案见 `docs/map/MAP_BUILDING_SCALE_REPAIR_PLAN.md`。
+5. **香港城地图换 GLB（强制）**：按 `docs/map/MAP_GLB_UPLOAD_ADAPT.md` — 复制到 `res://maps/hongkong_city/Hongkongcity.glb` → 保持 `fit_by_door_height=true`（门→2.1 m）→ 跑 `probe_hk_map_scale.gd` → 若 `MEASURED_HK_ROOT_SCALE` 相对知识库变化明显则升 `map_world_scale_epoch` 并更新存档迁移。禁止长期关掉门高拟合导致「人比城大」。建筑人体尺度另见 `buildings/scale_standards.json`；禁止统一放大所有建筑。
 6. **禁止**把 GitHub Token、服务器密钥、管理员密码写入客户端工程或知识库公开文件。
 7. 玩家动态记忆在 `user://`（KnowledgeManager player memory），不得推入公开知识库。
 8. 知识库提交：仅在知识库仓库内显式 `git add` 文件；禁止 `git add .`；游戏工程目录勿假装有远程 Git。

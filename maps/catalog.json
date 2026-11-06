@@ -8,9 +8,13 @@
       "id": "wasteland",
       "domain": "maps",
       "display_name_key": "MAP_WASTELAND",
-      "display_name": "废土荒原",
+      "display_name": "廢土荒原",
       "version": 1,
-      "tags": ["voxel", "locked", "official"],
+      "tags": [
+        "voxel",
+        "locked",
+        "official"
+      ],
       "data": {
         "enabled": false,
         "status": "LOCKED",
@@ -34,7 +38,7 @@
         },
         "admin_selectable": false,
         "client_loadable_when_unlocked": true,
-        "desc": "程序化体素废土（当前锁定）。"
+        "desc": "程序化體素廢土（當前鎖定）。"
       }
     },
     {
@@ -43,7 +47,11 @@
       "display_name_key": "MAP_FOREST_HIGHWAY",
       "display_name": "森林公路",
       "version": 1,
-      "tags": ["static", "locked", "official"],
+      "tags": [
+        "static",
+        "locked",
+        "official"
+      ],
       "data": {
         "enabled": false,
         "status": "LOCKED",
@@ -68,7 +76,7 @@
         },
         "admin_selectable": false,
         "client_loadable_when_unlocked": true,
-        "desc": "静态密林公路（当前锁定）。"
+        "desc": "靜態密林公路（當前鎖定）。"
       }
     },
     {
@@ -77,7 +85,12 @@
       "display_name_key": "MAP_HONGKONG_CITY",
       "display_name": "HongKong City",
       "version": 1,
-      "tags": ["static", "active", "official", "default"],
+      "tags": [
+        "static",
+        "active",
+        "official",
+        "default"
+      ],
       "data": {
         "enabled": true,
         "status": "ACTIVE",
@@ -90,6 +103,21 @@
         "scene_path": "res://modules/world_module/world_hongkong_city.tscn",
         "model_path": "res://maps/hongkong_city/Hongkongcity.glb",
         "preview_path": "res://maps/previews/hongkong_city.jpg",
+        "scale_adapt": {
+          "policy": "door_fit_required",
+          "fit_by_door_height": true,
+          "fit_by_span": false,
+          "target_door_height_m": 2.1,
+          "door_anchor_names": [
+            "Doormetallic_2_door_0",
+            "Doormetallic_door_0"
+          ],
+          "effective_model_scale": 10.6983,
+          "map_world_scale_epoch": 6,
+          "probe_script": "res://addons/tests/probe_hk_map_scale.gd",
+          "upload_checklist": "docs/map/MAP_GLB_UPLOAD_ADAPT.md",
+          "note": "Every new Hongkongcity.glb must be copied into res://maps/hongkong_city/, door-fit verified, and save epoch/root updated if measured scale changes."
+        },
         "resource_paths": [
           "res://modules/world_module/world_hongkong_city.tscn",
           "res://maps/hongkong_city/Hongkongcity.glb",
@@ -97,7 +125,10 @@
         ],
         "city_gate": {
           "id": "hk_city_gate_metallic",
-          "leaves": ["Doormetallic_2_door_0", "Doormetallic_door_0"],
+          "leaves": [
+            "Doormetallic_2_door_0",
+            "Doormetallic_door_0"
+          ],
           "open_sfx": "res://game/sound/world/city_gate_open.mp3",
           "interact": "E"
         },
@@ -108,11 +139,11 @@
         },
         "admin_selectable": true,
         "client_loadable_when_unlocked": true,
-        "desc": "香港城市场景：当前默认可游玩地图。",
+        "desc": "香港城市場景：當前默認可遊玩地圖。",
         "safe_zones": [
           {
             "id": "hk_garage_b2",
-            "display_name": "地下车库 B2",
+            "display_name": "地下車庫 B2",
             "kind": "garage",
             "door_mesh": "Object_22",
             "parent_hint": "zma_carpark",
@@ -120,6 +151,27 @@
             "approach_show_m": 90,
             "spawn_in_zone": true,
             "open_door_on_boot": true
+          }
+        ],
+        "prototype_interiors": [
+          {
+            "id": "hk_proto_house_01",
+            "display_name": "原型廢屋",
+            "kind": "modular_house",
+            "offset_from_garage": [
+              8.0,
+              0.0,
+              12.0
+            ],
+            "visual_asset": "polyscan_abandoned_rustic_two_story_cc0",
+            "visual_path": "res://models/buildings/abandoned_house/polyscan_live/Mesh/Old_House.obj",
+            "containers": [
+              "hk_proto_house_01_box_a",
+              "hk_proto_house_01_crate_b"
+            ],
+            "loot_pool": "building_common",
+            "status": "live_prototype",
+            "note": "Phase 4: PolyScan CC0 rustic two-story PBR visual + modular collision doorway near garage."
           }
         ]
       }
