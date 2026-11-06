@@ -1,14 +1,18 @@
 {
   "domain": "world",
   "version": 2,
-  "note": "Solo population. SettingsStore overrides at runtime. Zone min target is independent of active instance cap.",
+  "note": "Solo population (Dying Light-style). Zone booked targets cover the whole map; active instances stream by sleep/wake under GTX1050 caps. Do not yank NPCs/zombies to the player. SettingsStore overrides at runtime.",
   "entries": [
     {
       "id": "world_population_defaults",
       "domain": "world",
       "display_name_key": "WORLD_POP",
       "version": 2,
-      "tags": ["solo", "population", "zones"],
+      "tags": [
+        "solo",
+        "population",
+        "zones"
+      ],
       "data": {
         "npc_preset_low": 4,
         "npc_preset_mid": 8,
