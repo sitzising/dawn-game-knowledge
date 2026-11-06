@@ -6,11 +6,11 @@
   "map_root_policy": {
     "hongkong_city": {
       "extra_uniform_mul_K": 1.0,
-      "effective_model_scale": 10.6983,
-      "fit_by_door_height": true,
+      "effective_model_scale": 1.0,
+      "fit_by_door_height": false,
       "fit_by_span": false,
       "pedestrian_door_anchor_m": 2.1,
-      "note": "Door-fit restored (epoch 4) on 2026-11-06 GLB: raw door≈0.196m → root ≈×10.6983, door≈2.1m, span≈1.4km. Coord migrate e3→e4 still ×21.3967 (legacy e2 frame). No realism-span stack.",
+      "note": "Epoch 5: Godot root map_scale=1.0 only (1 unit=1 m). No door/span auto-fit. Authored GLB must already be meter-true.",
       "forbid_global_remap": true,
       "forbid_blend_glb_edit": true
     }
