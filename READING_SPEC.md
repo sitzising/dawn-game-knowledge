@@ -15,10 +15,23 @@
 
 ## 域（domains）
 
-现有：`zombies` `weather` `items` `npcs` `quests` `events` `factions` `localization` `world`  
-新增：`maps`（官方地图元数据）
+现有：`zombies` `weather` `items` `npcs` `quests` `events` `factions` `localization` `world` `maps`  
+新增：`buildings`（建筑人体尺度标准 / 稳定 ID 注册；见 `buildings/scale_standards.json`）
 
 提示词 Markdown（`prompts/*.md`）**不走** KnowledgeManager `entries` 摄取，仅供人/Agent/网站文档读取。
+
+## 建筑尺度（buildings）
+
+| 字段 / 规则 | 说明 |
+|---|---|
+| `type_standards.*` | 住宅 / 商业 / 工业 / 高层 / 车库 / 道路 分型米制标准 |
+| `map_root_policy.hongkong_city` | **K=1**，有效缩放 **21.3967**，行人门锚 **2.1 m**；禁止为沙盘感全局再放大 |
+| `repair_policy` | 禁止统一放大所有建筑；禁止整栋均匀缩放拉坏门窗/入口/底层；优先楼层模块 / 切面上部延伸 |
+| `entries[].id` | 建筑稳定主键（禁止用显示名） |
+| 自动检查 | Schema：`schema/buildings_scale.schema.json`；探针：`addons/tests/probe_building_scale.gd` |
+| AI 新增建筑 | 未通过尺度标准与探针不得标 `live` |
+
+详细方案：`游戏工程/docs/map/MAP_BUILDING_SCALE_REPAIR_PLAN.md`。
 
 ## 地图字段（稳定 ID）
 

@@ -1,0 +1,110 @@
+{
+  "domain": "buildings",
+  "version": 1,
+  "status": "draft_standards",
+  "note": "Human-scale building standards for Dawn. Map root scale for hongkong_city stays K=1 (effective ×21.3967 door-fit). Do NOT uniformly scale all buildings. AI/authors must pass autocheck before marking live.",
+  "map_root_policy": {
+    "hongkong_city": {
+      "extra_uniform_mul_K": 1.0,
+      "effective_model_scale": 21.3967,
+      "pedestrian_door_anchor_m": 2.1,
+      "forbid_global_remap": true,
+      "forbid_blend_glb_edit": true
+    }
+  },
+  "player_reference": {
+    "height_m": 1.85,
+    "forbid_shrink_player_to_hide_scale_bugs": true,
+    "forbid_speed_change_to_hide_scale_bugs": true
+  },
+  "repair_policy": {
+    "forbid_uniform_scale_all_buildings": true,
+    "forbid_whole_building_uniform_scale_if_it_stretches_door_window_entrance_or_ground_floor": true,
+    "prefer": [
+      "floor_module_stack",
+      "roof_and_upper_shell_extension",
+      "cut_plane_vertical_extend_above_locked_ground_band",
+      "godot_overlay_proxy_with_stable_id"
+    ],
+    "must_preserve": [
+      "ground_footprint_anchor",
+      "door_and_entrance_world_band",
+      "collision_enterables",
+      "stable_id",
+      "adjacent_road_relationship"
+    ],
+    "priority_order": [
+      "skyline_highrise",
+      "garage_vehicle_clearance",
+      "residential",
+      "commercial",
+      "industrial"
+    ]
+  },
+  "type_standards": {
+    "residential": {
+      "display_name": "住宅",
+      "story_height_m": { "min": 2.8, "target": 3.0, "max": 3.3 },
+      "typical_total_height_m": { "min": 9.0, "target": 15.0, "max": 45.0 },
+      "footprint_min_m": { "x": 8.0, "z": 8.0 },
+      "ground_floor_clear_h_m": { "min": 2.7, "max": 3.5 },
+      "door_h_m": { "min": 2.0, "max": 2.2 },
+      "window_sill_typical_m": { "min": 0.9, "max": 1.2 }
+    },
+    "commercial": {
+      "display_name": "商业",
+      "story_height_m": { "min": 3.5, "target": 4.0, "max": 4.5 },
+      "typical_total_height_m": { "min": 8.0, "target": 24.0, "max": 60.0 },
+      "footprint_min_m": { "x": 10.0, "z": 10.0 },
+      "ground_floor_clear_h_m": { "min": 3.5, "max": 5.0 },
+      "door_h_m": { "min": 2.1, "max": 2.4 },
+      "shopfront_glazing_band_m": { "min": 2.4, "max": 3.2 }
+    },
+    "industrial": {
+      "display_name": "工业",
+      "story_height_m": { "min": 4.0, "target": 5.0, "max": 6.0 },
+      "eave_height_m": { "min": 6.0, "target": 9.0, "max": 14.0 },
+      "typical_total_height_m": { "min": 6.0, "target": 12.0, "max": 30.0 },
+      "footprint_min_m": { "x": 12.0, "z": 12.0 },
+      "vehicle_door_clear_h_m": { "min": 3.5, "target": 4.5, "max": 6.0 },
+      "door_h_m": { "min": 2.0, "max": 2.2 }
+    },
+    "highrise": {
+      "display_name": "高层/天际线",
+      "story_height_m": { "min": 3.0, "target": 3.3, "max": 3.6 },
+      "typical_total_height_m": { "min": 80.0, "target": 120.0, "max": 250.0 },
+      "podium_height_m": { "min": 8.0, "max": 25.0 },
+      "footprint_min_m": { "x": 18.0, "z": 18.0 },
+      "ground_floor_clear_h_m": { "min": 3.5, "max": 6.0 },
+      "door_h_m": { "min": 2.1, "max": 2.4 },
+      "skyline_role": "primary"
+    },
+    "garage_parking": {
+      "display_name": "车库/停车场",
+      "vehicle_door_clear_h_m": { "min": 2.1, "target": 2.3, "max": 2.6 },
+      "internal_clear_h_m": { "min": 2.2, "target": 2.4, "max": 3.0 },
+      "parking_bay_m": { "width_min": 2.4, "width_target": 2.5, "length_min": 5.0, "length_target": 5.5 },
+      "drive_aisle_m": { "min": 5.5, "target": 6.0, "max": 7.5 },
+      "ramp_clear_h_m": { "min": 2.1, "max": 2.5 }
+    },
+    "road_street": {
+      "display_name": "道路/街区",
+      "lane_width_m": { "min": 3.0, "target": 3.25, "max": 3.5 },
+      "two_lane_carriageway_m": { "min": 7.0, "target": 7.5, "max": 9.0 },
+      "sidewalk_m": { "min": 1.5, "target": 2.0, "max": 3.5 },
+      "building_face_to_face_street_m": { "min": 12.0, "target": 18.0, "max": 40.0 }
+    }
+  },
+  "autocheck": {
+    "probe_script_planned": "res://addons/tests/probe_building_scale.gd",
+    "schema": "schema/buildings_scale.schema.json",
+    "registry_planned": "buildings/hk_building_registry.json",
+    "fail_closed_for_new_live_assets": true,
+    "legacy_monolithic_glb": {
+      "map_id": "hongkong_city",
+      "mode": "overlay_registry_plus_heuristic_audit",
+      "note": "Source GLB remains immutable; repairs are Godot overlays / cut-plane extensions keyed by stable_id."
+    }
+  },
+  "entries": []
+}

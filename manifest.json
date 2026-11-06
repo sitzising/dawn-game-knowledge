@@ -1,9 +1,9 @@
-{
+﻿{
   "schema_version": 1,
-  "knowledge_version": "0.1.21-locale-en-default",
+  "knowledge_version": "0.1.22-building-scale-standards",
   "min_game_version": "0.0.0",
   "source": "packaged",
-  "generated_at": "2026-11-04",
+  "generated_at": "2026-11-06",
   "github_update": {
     "base_url": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/",
     "manifest_url": "https://raw.githubusercontent.com/sitzising/dawn-game-knowledge/main/manifest.json",
@@ -20,13 +20,26 @@
     "factions",
     "localization",
     "world",
-    "maps"
+    "maps",
+    "buildings"
   ],
   "files": [
     {
       "path": "READING_SPEC.md",
-      "sha256": "34a207060fa34c1a4303f59852462fe7f0058f40265f3a16a4f3c508c3dc0adb",
-      "bytes": 1954,
+      "sha256": "75ec2bce8b7d09dae7fcb335f0bc2aa3c4ae56fcafd65020c11c0b1a86e95c1b",
+      "bytes": 2815,
+      "required": false
+    },
+    {
+      "path": "buildings/scale_standards.json",
+      "sha256": "44c7944849f89fe8892291398d413a2519cdf18f58b196c778d2e050cc8f0097",
+      "bytes": 4470,
+      "required": false
+    },
+    {
+      "path": "schema/buildings_scale.schema.json",
+      "sha256": "3d5b8b60c61463839bd0d55719166bb7db9d4cf8147a248cf1b70c20d70ee701",
+      "bytes": 4094,
       "required": false
     },
     {

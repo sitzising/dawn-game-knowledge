@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dawn.knowledge.buildings_scale.v1",
+  "title": "DawnBuildingScaleStandards",
+  "type": "object",
+  "required": ["domain", "version", "type_standards", "repair_policy", "map_root_policy"],
+  "properties": {
+    "domain": { "const": "buildings" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["draft_standards", "active", "deprecated"]
+    },
+    "note": { "type": "string" },
+    "map_root_policy": { "type": "object" },
+    "player_reference": { "type": "object" },
+    "repair_policy": {
+      "type": "object",
+      "required": ["forbid_uniform_scale_all_buildings", "must_preserve", "prefer"],
+      "properties": {
+        "forbid_uniform_scale_all_buildings": { "const": true },
+        "forbid_whole_building_uniform_scale_if_it_stretches_door_window_entrance_or_ground_floor": {
+          "type": "boolean"
+        },
+        "prefer": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "must_preserve": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "priority_order": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "type_standards": {
+      "type": "object",
+      "required": ["residential", "commercial", "industrial", "highrise", "garage_parking"],
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "display_name": { "type": "string" },
+          "story_height_m": {
+            "type": "object",
+            "properties": {
+              "min": { "type": "number" },
+              "target": { "type": "number" },
+              "max": { "type": "number" }
+            }
+          },
+          "typical_total_height_m": {
+            "type": "object",
+            "properties": {
+              "min": { "type": "number" },
+              "target": { "type": "number" },
+              "max": { "type": "number" }
+            }
+          },
+          "door_h_m": {
+            "type": "object",
+            "properties": {
+              "min": { "type": "number", "minimum": 1.8, "maximum": 2.6 },
+              "max": { "type": "number", "minimum": 1.8, "maximum": 2.6 }
+            }
+          },
+          "vehicle_door_clear_h_m": { "type": "object" },
+          "footprint_min_m": { "type": "object" }
+        }
+      }
+    },
+    "autocheck": { "type": "object" },
+    "entries": {
+      "type": "array",
+      "description": "Per-building registry rows (stable_id). Filled in repair phase.",
+      "items": {
+        "type": "object",
+        "required": ["id", "building_type", "map_id"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_\\.\\-]+$",
+            "description": "Stable building id (never display name)."
+          },
+          "map_id": { "type": "string" },
+          "building_type": {
+            "type": "string",
+            "enum": [
+              "residential",
+              "commercial",
+              "industrial",
+              "highrise",
+              "garage_parking",
+              "road_street",
+              "other"
+            ]
+          },
+          "source_mesh_name": { "type": "string" },
+          "source_node_path_hint": { "type": "string" },
+          "repair_mode": {
+            "type": "string",
+            "enum": [
+              "none",
+              "overlay_floors",
+              "cut_plane_extend",
+              "roof_module",
+              "proxy_replace_upper",
+              "garage_clearance_fix"
+            ]
+          },
+          "measured_h_m": { "type": "number" },
+          "target_h_m": { "type": "number" },
+          "ground_band_lock_m": { "type": "number" },
+          "status": {
+            "type": "string",
+            "enum": ["audit_only", "planned", "wip", "live", "waived"]
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
