@@ -1,6 +1,6 @@
 {
   "domain": "zombies",
-  "version": 9,
+  "version": 10,
   "entries": [
     {
       "id": "walker",
@@ -15,7 +15,7 @@
         "display_name_zh": "游荡者",
         "max_health": 100,
         "attack_damage": 14,
-        "model_target_height": 3.79,
+        "model_target_height": 1.85,
         "move_speed": 1.62,
         "detection_radius": 16.0,
         "vision_fov_deg": 100.0,
@@ -43,7 +43,7 @@
           "Zombie_Yell",
           "Death_C"
         ],
-        "notes": "Size pass 3: ~3.79m (+35% vs 2.81). No zombie status/damage HUD."
+        "notes": "Human-scale ~1.85m (player reference). No zombie status/damage HUD."
       }
     },
     {
@@ -59,7 +59,7 @@
         "display_name_zh": "腐皮者",
         "max_health": 95,
         "attack_damage": 18,
-        "model_target_height": 3.89,
+        "model_target_height": 1.85,
         "move_speed": 1.86,
         "detection_radius": 22.0,
         "vision_fov_deg": 120.0,
@@ -87,7 +87,7 @@
           "Zombie_Yell",
           "Death_A"
         ],
-        "notes": "Viral-lite size pass 3: ~3.89m"
+        "notes": "Viral-lite human-scale ~1.85m"
       }
     },
     {
@@ -103,7 +103,7 @@
         "display_name_zh": "畸骨者",
         "max_health": 120,
         "attack_damage": 18,
-        "model_target_height": 3.97,
+        "model_target_height": 1.90,
         "move_speed": 1.62,
         "detection_radius": 18.0,
         "vision_fov_deg": 105.0,
@@ -111,7 +111,7 @@
         "chase_speed_multiplier": 2.65,
         "attack_range": 2.45,
         "flight": false,
-        "notes": "Legacy Strike size pass 3 ~3.97m"
+        "notes": "Legacy Strike human-scale ~1.90m"
       }
     }
   ]

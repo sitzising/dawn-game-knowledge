@@ -1,6 +1,6 @@
 {
     "schema_version":  1,
-    "knowledge_version":  "0.1.26-zombie-size-3-no-hud",
+    "knowledge_version":  "0.1.27-zombie-human-scale-185",
     "min_game_version":  "0.0.0",
     "source":  "packaged",
     "generated_at":  "2026-11-06",
@@ -92,8 +92,8 @@
                   },
                   {
                       "path":  "zombies/catalog.json",
-                      "sha256":  "548be401018acbb5c0922b247e423ee4d7b3c5d1a1b2d7a8832aa10ecc041dd1",
-                      "bytes":  3511,
+                      "sha256":  "726c7f6f29300cb54c65a5e3c7e55ed00972c7e3aae80748de55032ee66085c4",
+                      "bytes":  3514,
                       "required":  true
                   },
                   {
@@ -116,8 +116,8 @@
                   },
                   {
                       "path":  "items/vehicle_parts.json",
-                      "sha256":  "2d938fa72c447d19b5c972cfd73e5d66adac73c1dee76683567041f1c09825bb",
-                      "bytes":  5455,
+                      "sha256":  "e4b84ba9da8a4dbcadb9d8bcebc07caa1a1f623c1a9a92d8a426db3951c1870c",
+                      "bytes":  17475,
                       "required":  false
                   },
                   {
