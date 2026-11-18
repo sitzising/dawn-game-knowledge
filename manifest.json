@@ -1,4 +1,4 @@
-{
+﻿{
     "schema_version":  1,
     "knowledge_version":  "0.1.27-zombie-human-scale-185",
     "min_game_version":  "0.0.0",
@@ -116,8 +116,8 @@
                   },
                   {
                       "path":  "items/vehicle_parts.json",
-                      "sha256":  "e4b84ba9da8a4dbcadb9d8bcebc07caa1a1f623c1a9a92d8a426db3951c1870c",
-                      "bytes":  17475,
+                      "sha256":  "6e66a68eec46ad0ea085ce5e4c829dc232e826bd788166d30b034a63bbc68a57",
+                      "bytes":  17269,
                       "required":  false
                   },
                   {

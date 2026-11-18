@@ -1,0 +1,589 @@
+{
+  "domain": "items",
+  "version": 3,
+  "note": "Vehicle parts — unique item_id. drive_mods optional. G2 adds transmission/brakes/suspension/drive_shaft items. Old ids unchanged.",
+  "entries": [
+    {
+      "id": "vp_battery_common",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "start"],
+      "data": {
+        "item_id": "vp_battery_common",
+        "name": "車用蓄電池",
+        "name_en": "Car Battery",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 12.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "battery",
+        "required_for_start": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "啟動必需。缺此零件無法點火。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_engine_common",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "start"],
+      "data": {
+        "item_id": "vp_engine_common",
+        "name": "發動機總成",
+        "name_en": "Engine Block",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 85.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "engine",
+        "required_for_start": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "啟動與動力必需。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_starter_common",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "start"],
+      "data": {
+        "item_id": "vp_starter_common",
+        "name": "啟動機",
+        "name_en": "Starter Motor",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 4.5,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "starter",
+        "required_for_start": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "啟動必需。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_fuel_pump_common",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "start"],
+      "data": {
+        "item_id": "vp_fuel_pump_common",
+        "name": "燃油泵",
+        "name_en": "Fuel Pump",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 2.2,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "fuel_pump",
+        "required_for_start": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "啟動必需；負責供油。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_ignition_common",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "start"],
+      "data": {
+        "item_id": "vp_ignition_common",
+        "name": "點火組件",
+        "name_en": "Ignition Module",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 1.1,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "ignition",
+        "required_for_start": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "啟動必需。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_fuel_tank_common",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "start"],
+      "data": {
+        "item_id": "vp_fuel_tank_common",
+        "name": "油箱",
+        "name_en": "Fuel Tank",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 18.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "fuel_tank",
+        "required_for_start": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "啟動必需；無油箱無法持油。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_tire_common",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "drive"],
+      "data": {
+        "item_id": "vp_tire_common",
+        "name": "輪胎",
+        "name_en": "Tire",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 9.0,
+        "stack_size": 4,
+        "status": "pending_model",
+        "vehicle_part_slot": "tire",
+        "required_for_drive": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "行駛必需。影響抓地、制動與轉向。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_tire_sport",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "drive", "performance"],
+      "data": {
+        "item_id": "vp_tire_sport",
+        "name": "高性能輪胎",
+        "name_en": "Sport Tire",
+        "category": "vehicle_part",
+        "rarity": "rare",
+        "weight": 8.5,
+        "stack_size": 4,
+        "status": "pending_model",
+        "vehicle_part_slot": "tire",
+        "required_for_drive": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "同槽兼容。抓地與制動更好。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.16,
+          "brake_mul": 1.18,
+          "steer_mul": 1.08,
+          "handbrake_slip_mul": 1.12
+        }
+      }
+    },
+    {
+      "id": "vp_tire_offroad",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "drive"],
+      "data": {
+        "item_id": "vp_tire_offroad",
+        "name": "越野輪胎",
+        "name_en": "Offroad Tire",
+        "category": "vehicle_part",
+        "rarity": "uncommon",
+        "weight": 11.0,
+        "stack_size": 4,
+        "status": "pending_model",
+        "vehicle_part_slot": "tire",
+        "required_for_drive": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "同槽兼容。公路抓地略低，越野更穩。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 0.98,
+          "grip_mul": 0.88,
+          "brake_mul": 0.90,
+          "steer_mul": 0.94,
+          "handbrake_slip_mul": 0.92
+        }
+      }
+    },
+    {
+      "id": "vp_radiator_common",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "drive"],
+      "data": {
+        "item_id": "vp_radiator_common",
+        "name": "散熱器",
+        "name_en": "Radiator",
+        "category": "vehicle_part",
+        "rarity": "uncommon",
+        "weight": 7.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "radiator",
+        "required_for_drive": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "行駛必需，防止過熱。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_engine_epic",
+      "domain": "items",
+      "version": 2,
+      "tags": ["vehicle_part", "start", "performance"],
+      "data": {
+        "item_id": "vp_engine_epic",
+        "name": "強化發動機",
+        "name_en": "Reinforced Engine",
+        "category": "vehicle_part",
+        "rarity": "epic",
+        "weight": 90.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "engine",
+        "required_for_start": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "同槽兼容的性能變體；更高扭矩与加速。",
+        "drive_mods": {
+          "torque_mul": 1.22,
+          "accel_mul": 1.14,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_transmission_common",
+      "domain": "items",
+      "version": 3,
+      "tags": ["vehicle_part", "drive", "transmission"],
+      "data": {
+        "item_id": "vp_transmission_common",
+        "name": "手動變速箱",
+        "name_en": "Manual Transmission",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 28.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "transmission",
+        "required_for_drive": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "傳動效率與油門響應。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "drivetrain_mul": 1.0,
+          "response_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_transmission_sport",
+      "domain": "items",
+      "version": 3,
+      "tags": ["vehicle_part", "drive", "transmission", "performance"],
+      "data": {
+        "item_id": "vp_transmission_sport",
+        "name": "運動變速箱",
+        "name_en": "Sport Transmission",
+        "category": "vehicle_part",
+        "rarity": "rare",
+        "weight": 26.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "transmission",
+        "required_for_drive": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "更高傳動效率与更快油门响应。",
+        "drive_mods": {
+          "torque_mul": 1.0,
+          "accel_mul": 1.08,
+          "drivetrain_mul": 1.10,
+          "response_mul": 1.22,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_brakes_common",
+      "domain": "items",
+      "version": 3,
+      "tags": ["vehicle_part", "drive", "brakes"],
+      "data": {
+        "item_id": "vp_brakes_common",
+        "name": "原廠剎車",
+        "name_en": "Stock Brakes",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 14.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "brakes",
+        "vehicle_compat": ["pickup_truck"],
+        "description": "獨立剎車系統，加強制動。",
+        "drive_mods": {
+          "brake_mul": 1.0,
+          "brake_response_mul": 1.0,
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_brakes_sport",
+      "domain": "items",
+      "version": 3,
+      "tags": ["vehicle_part", "drive", "brakes", "performance"],
+      "data": {
+        "item_id": "vp_brakes_sport",
+        "name": "高性能剎車",
+        "name_en": "Sport Brakes",
+        "category": "vehicle_part",
+        "rarity": "rare",
+        "weight": 16.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "brakes",
+        "vehicle_compat": ["pickup_truck"],
+        "description": "更强制动力与响应。",
+        "drive_mods": {
+          "brake_mul": 1.28,
+          "brake_response_mul": 1.15,
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_suspension_common",
+      "domain": "items",
+      "version": 3,
+      "tags": ["vehicle_part", "drive", "suspension"],
+      "data": {
+        "item_id": "vp_suspension_common",
+        "name": "公路懸掛",
+        "name_en": "Road Suspension",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 22.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "suspension",
+        "vehicle_compat": ["pickup_truck"],
+        "description": "偏硬懸掛，公路更穩。",
+        "drive_mods": {
+          "suspension_travel_mul": 1.0,
+          "suspension_stiff_mul": 1.0,
+          "suspension_damp_mul": 1.0,
+          "stability_mul": 1.0,
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_suspension_offroad",
+      "domain": "items",
+      "version": 3,
+      "tags": ["vehicle_part", "drive", "suspension"],
+      "data": {
+        "item_id": "vp_suspension_offroad",
+        "name": "越野懸掛",
+        "name_en": "Offroad Suspension",
+        "category": "vehicle_part",
+        "rarity": "uncommon",
+        "weight": 26.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "suspension",
+        "vehicle_compat": ["pickup_truck"],
+        "description": "長行程軟懸掛，越野更穩。",
+        "drive_mods": {
+          "suspension_travel_mul": 1.22,
+          "suspension_stiff_mul": 0.78,
+          "suspension_damp_mul": 1.12,
+          "stability_mul": 0.92,
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_drive_shaft_rwd",
+      "domain": "items",
+      "version": 3,
+      "tags": ["vehicle_part", "drive", "drivetrain"],
+      "data": {
+        "item_id": "vp_drive_shaft_rwd",
+        "name": "後驅傳動",
+        "name_en": "RWD Drivetrain",
+        "category": "vehicle_part",
+        "rarity": "common",
+        "weight": 18.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "drive_shaft",
+        "required_for_drive": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "默认皮卡后驱。",
+        "drive_mods": {
+          "drive_mode": "rwd",
+          "front_drive_share": 0.0,
+          "rear_drive_share": 1.0,
+          "drivetrain_mul": 1.0,
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.0,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_drive_shaft_fwd",
+      "domain": "items",
+      "version": 3,
+      "tags": ["vehicle_part", "drive", "drivetrain"],
+      "data": {
+        "item_id": "vp_drive_shaft_fwd",
+        "name": "前驅傳動",
+        "name_en": "FWD Drivetrain",
+        "category": "vehicle_part",
+        "rarity": "uncommon",
+        "weight": 17.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "drive_shaft",
+        "required_for_drive": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "前轮驱动。",
+        "drive_mods": {
+          "drive_mode": "fwd",
+          "front_drive_share": 1.0,
+          "rear_drive_share": 0.0,
+          "drivetrain_mul": 0.98,
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.0,
+          "brake_mul": 1.0,
+          "steer_mul": 1.02,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    },
+    {
+      "id": "vp_drive_shaft_awd",
+      "domain": "items",
+      "version": 3,
+      "tags": ["vehicle_part", "drive", "drivetrain", "performance"],
+      "data": {
+        "item_id": "vp_drive_shaft_awd",
+        "name": "四驅傳動",
+        "name_en": "AWD Drivetrain",
+        "category": "vehicle_part",
+        "rarity": "rare",
+        "weight": 24.0,
+        "stack_size": 1,
+        "status": "pending_model",
+        "vehicle_part_slot": "drive_shaft",
+        "required_for_drive": true,
+        "vehicle_compat": ["pickup_truck"],
+        "description": "前后轴各约一半动力，越野抓地更好。",
+        "drive_mods": {
+          "drive_mode": "awd",
+          "front_drive_share": 0.5,
+          "rear_drive_share": 0.5,
+          "drivetrain_mul": 1.04,
+          "torque_mul": 1.0,
+          "accel_mul": 1.0,
+          "grip_mul": 1.04,
+          "brake_mul": 1.0,
+          "steer_mul": 0.98,
+          "handbrake_slip_mul": 1.0
+        }
+      }
+    }
+  ]
+}
