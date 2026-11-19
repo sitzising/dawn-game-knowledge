@@ -28,6 +28,12 @@
 - 感知 FOV+LOS 失败关闭；人口有 cap；物资 `loot_seeded`；资产诚实（无 live 假冒）。
 - 召唤禁瞬移；管理刷取 CLIENT 拒；跨端 RPC 未完成不得宣称。
 
+## 剧情系统（Dawnblight / story 域）
+
+- 工程规则：`.cursor/rules/story-system.mdc`（知识库镜像：`cursor/rules/story-system.mdc`）
+- 设定权威：`story/*.json`；运行时 `StoryKnowledgeGateway` + `StoryProgressRuntime`
+- 改剧情必须同步 manifest / github_publish / 本仓库；禁止平行 lore；AI 不得泄露超 tier 信息
+
 ## 与云端提示词的边界
 
 - 本文件只管 **本机 Godot 游戏开发**。

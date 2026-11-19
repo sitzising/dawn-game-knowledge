@@ -1,0 +1,29 @@
+---
+description: Dawn story knowledge authority, ID stability, AI tier filter, solo save
+alwaysApply: true
+---
+
+# Dawn 剧情系统硬规则
+
+剧情权威源是 GitHub 知识库 `sitzising/dawn-game-knowledge`（本机克隆 + 工程 `data/knowledge/story/**`），**禁止**另建平行 lore / 第二套剧情仓库。
+
+索引：`docs/AI_DEVELOPMENT_CONSTRAINTS.md` · 读取规范：`data/knowledge/READING_SPEC.md` · 验收：`docs/story/`
+
+## 硬规则
+
+1. 世界观、人物关系、时间线、主线结局以 `story/*.json`（及已确认的 `docs/story/*.md`）为准；**禁止擅自改写**已锁定设定。
+2. 改剧情 JSON 必须同步：`data/knowledge/story/**` → `github_publish/story/**` → 更新 `manifest.json`（sha256/bytes/version）→ 按 `dawn-knowledge-github.mdc` 推送到知识库仓库。
+3. 新增 NPC / 任务 / 章节 / 事件必须使用**稳定 ID**（如 `ch_01`、`story.npc_*`）；禁止重复 ID、擅自重命名 ID、删除已有剧情条目（废弃用标记，不物理抹除）。
+4. AI NPC 只能使用 `StoryKnowledgeGateway` 按 `knowledge_tier` / `knows` 过滤后的上下文；**禁止**把整本 bible 或超出角色可知范围的信息塞进对白提示。
+5. AI 生成剧情/对白**不得**改变主线事实、感染规则、结局分支既定条件；发现与知识库冲突时以知识库为准并修正生成结果。
+6. 影响进度的字段必须走单机 `story_progress`（`StoryProgressRuntime` / SaveManager）；旧档缺字段 → 默认 blob，**禁止静默清空**其它存档键。
+7. 仅 `is_solo_session()` / `can_solo_persist()` 可持久化剧情进度；HOST/CLIENT **不得**写单机槽或伪造联机剧情权威（未接入的多人剧情功能禁止顺手改多人系统）。
+8. 玩家可见剧情文案遵守 `ui-copy.mdc`：禁止废话、重复描述、占位、开发备注；未开放写「暫不可用」。
+9. 剧情改动必须同步对应文档（`docs/story/**` 与/或 READING_SPEC）；**禁止只写文档不落实代码/JSON**，也禁止只改代码不同步知识库。
+10. 运行时入口：`StoryKnowledgeGateway` + `StoryProgressRuntime`；禁止另起第二套读取/存档机制。
+
+## 与现有规则的关系
+
+- 文案语气：`ui-copy.mdc`（本规则管设定权威与 ID/存档；不重复全文案细则）
+- 知识库推送：`dawn-knowledge-github.mdc` / `dawn-knowledge-read.mdc`
+- 单机存档：`singleplayer-save.mdc`

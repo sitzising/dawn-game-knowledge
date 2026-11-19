@@ -1,0 +1,67 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "story.ai_dialogue_rules",
+      "domain": "story",
+      "version": 1,
+      "tags": ["ai", "rules"],
+      "data": {
+        "may": [
+          "free_chat_in_character",
+          "react_to_player_history",
+          "react_to_memory",
+          "discuss_known_world_facts",
+          "suggest_actions_aligned_with_npc_goals"
+        ],
+        "must_not": [
+          "invent_main_plot_facts",
+          "change_quest_state",
+          "spawn_items",
+          "modify_player_inventory",
+          "resurrect_characters",
+          "change_factions_unilaterally",
+          "reveal_future_chapters",
+          "speak_as_dead_npc",
+          "claim_witness_to_unwitnessed_events"
+        ],
+        "fact_vs_rumor": "NPC must label hearsay as rumor, never as certainty.",
+        "context_pipeline": [
+          "location",
+          "chapter",
+          "quest",
+          "npc_profile",
+          "npc_memory",
+          "relationship",
+          "allowed_story_entries",
+          "generate"
+        ]
+      }
+    },
+    {
+      "id": "story.ai_knowledge_tiers",
+      "domain": "story",
+      "version": 1,
+      "tags": ["ai", "filter"],
+      "data": {
+        "tiers_order": ["street", "district", "faction", "military", "lab", "core"],
+        "default_player_tier": "street",
+        "filter_rule": "NPC may only receive story entries whose knowledge_tier index <= NPC knowledge_tier index, plus explicit knows[] ids."
+      }
+    },
+    {
+      "id": "story.voice_rules",
+      "domain": "story",
+      "version": 1,
+      "tags": ["voice"],
+      "data": {
+        "max_spoken_chars": 180,
+        "prefer_short_lines": true,
+        "subtitle_required": true,
+        "cache_key": "npc_id+line_hash+lang",
+        "fail_open": "show_subtitle_only_if_tts_fails"
+      }
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "domain": "story",
+  "version": 1,
+  "note": "Story cast profiles. World combat templates stay in npcs/catalog.json (npc_world_*).",
+  "entries": [
+    {
+      "id": "npc_story_zhou_wanqing",
+      "domain": "story",
+      "version": 1,
+      "tags": ["character", "main"],
+      "data": {
+        "display_name": "周晚晴",
+        "age": 29,
+        "role": "市政调度",
+        "faction_id": "faction_civic_remnant",
+        "personality": ["冷静", "内疚", "责任感"],
+        "goal_short": "确认撤离名单是否被篡改",
+        "goal_long": "带出仍在城内的物流同事",
+        "secret": "曾签署过一份「优先采样」调拨单，当时不知用途",
+        "fears": ["再次错判", "连累他人"],
+        "knowledge_tier": "military",
+        "knows": ["story.timeline:tl_d1", "story.world_overview"],
+        "does_not_know": ["story.secrets_layers:core"],
+        "voice": {"age_band": "adult", "pace": "measured", "pitch": "mid"},
+        "death_allowed": true,
+        "spawn_by_population": false
+      }
+    },
+    {
+      "id": "npc_story_he_yashan",
+      "domain": "story",
+      "version": 1,
+      "tags": ["character", "main", "hub"],
+      "data": {
+        "display_name": "何崖山",
+        "age": 41,
+        "role": "餘火盟联络",
+        "faction_id": "faction_ember",
+        "personality": ["谨慎", "护短", "多疑"],
+        "goal_short": "验证玩家是否可靠",
+        "goal_long": "保住据点与钝感者名单",
+        "secret": "藏着钝感携带者名单副本",
+        "knowledge_tier": "faction",
+        "knows": ["story.world_overview", "story.infection"],
+        "does_not_know": ["story.secrets_layers:lab", "story.secrets_layers:core"],
+        "voice": {"age_band": "adult", "pace": "slow", "pitch": "low"},
+        "death_allowed": true,
+        "spawn_by_population": false
+      }
+    },
+    {
+      "id": "npc_story_mai_qin",
+      "domain": "story",
+      "version": 1,
+      "tags": ["character", "main", "medical"],
+      "data": {
+        "display_name": "麦琴",
+        "age": 34,
+        "role": "野战医",
+        "faction_id": "faction_ember",
+        "personality": ["务实", "尖锐", "悲观中的坚持"],
+        "goal_short": "弄到抗生素与缝合线",
+        "goal_long": "证明稳定剂传言不全是骗局",
+        "secret": "曾在澄海外包诊所打过临工",
+        "knowledge_tier": "district",
+        "knows": ["story.infection", "story.timeline:tl_d7"],
+        "does_not_know": ["story.secrets_layers:core"],
+        "voice": {"age_band": "adult", "pace": "fast", "pitch": "mid"},
+        "death_allowed": true,
+        "spawn_by_population": false
+      }
+    },
+    {
+      "id": "npc_story_guan_bo",
+      "domain": "story",
+      "version": 1,
+      "tags": ["character", "main"],
+      "data": {
+        "display_name": "关博",
+        "age": 36,
+        "role": "市政残部下级军官",
+        "faction_id": "faction_civic_remnant",
+        "personality": ["纪律", "动摇", "羞愧"],
+        "goal_short": "维持码头仓库秩序",
+        "goal_long": "决定是否公开弃城令",
+        "secret": "见过弃城采样条款原件",
+        "knowledge_tier": "military",
+        "knows": ["story.secrets_layers:military", "story.timeline:tl_d10"],
+        "does_not_know": ["story.secrets_layers:core"],
+        "voice": {"age_band": "adult", "pace": "clipped", "pitch": "mid"},
+        "death_allowed": true,
+        "spawn_by_population": false
+      }
+    },
+    {
+      "id": "npc_story_siheng",
+      "domain": "story",
+      "version": 1,
+      "tags": ["character", "antagonist"],
+      "data": {
+        "display_name": "司衡",
+        "age": 48,
+        "role": "澄海遗影负责人",
+        "faction_id": "faction_chenghai_echo",
+        "personality": ["理智外表", "工具人伦理", "绝不自认邪恶"],
+        "goal_short": "回收对照样本",
+        "goal_long": "完成稳定剂对照实验",
+        "secret": "广播撤离坐标通向采样站",
+        "knowledge_tier": "core",
+        "knows": ["story.infection", "story.secrets_layers:lab", "story.secrets_layers:core"],
+        "does_not_know": [],
+        "voice": {"age_band": "adult", "pace": "calm", "pitch": "low"},
+        "death_allowed": true,
+        "spawn_by_population": false
+      }
+    },
+    {
+      "id": "npc_story_root",
+      "domain": "story",
+      "version": 1,
+      "tags": ["character", "main"],
+      "data": {
+        "display_name": "根",
+        "age": 27,
+        "role": "路劫中间人",
+        "faction_id": "faction_cutroad",
+        "personality": ["油滑", "怕死", "偶尔守信"],
+        "goal_short": "做成一单零件交易",
+        "goal_long": "离开卫士城",
+        "secret": "向澄海卖过活人坐标（不知采样站全貌）",
+        "knowledge_tier": "district",
+        "knows": ["story.world_overview"],
+        "does_not_know": ["story.secrets_layers:lab", "story.secrets_layers:core"],
+        "voice": {"age_band": "young_adult", "pace": "fast", "pitch": "mid"},
+        "death_allowed": true,
+        "spawn_by_population": false
+      }
+    }
+  ]
+}

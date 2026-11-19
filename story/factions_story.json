@@ -1,0 +1,71 @@
+{
+  "domain": "story",
+  "version": 1,
+  "note": "Story faction lore. Runtime reputation still pending; ids must stay stable.",
+  "entries": [
+    {
+      "id": "faction_ember",
+      "domain": "story",
+      "version": 1,
+      "tags": ["faction"],
+      "data": {
+        "display_name": "餘火盟",
+        "maps_to_catalog": "faction_survivors",
+        "ideal": "互助求生",
+        "method": "据点共享与护送",
+        "leader_ref": "npc_story_he_yashan",
+        "secret": "钝感者名单",
+        "hostile_to": ["faction_cutroad", "faction_chenghai_echo"],
+        "player_default": "wary"
+      }
+    },
+    {
+      "id": "faction_cutroad",
+      "domain": "story",
+      "version": 1,
+      "tags": ["faction"],
+      "data": {
+        "display_name": "路劫团",
+        "maps_to_catalog": "faction_raiders",
+        "ideal": "谁强谁吃",
+        "method": "卡路与勒索",
+        "leader_ref": "npc_story_root",
+        "secret": "向澄海卖坐标",
+        "hostile_to": ["faction_ember", "faction_civic_remnant"],
+        "player_default": "hostile"
+      }
+    },
+    {
+      "id": "faction_civic_remnant",
+      "domain": "story",
+      "version": 1,
+      "tags": ["faction"],
+      "data": {
+        "display_name": "市政残部",
+        "maps_to_catalog": "",
+        "ideal": "秩序残影",
+        "method": "仓库戒严与配给",
+        "leader_ref": "npc_story_guan_bo",
+        "secret": "弃城采样令",
+        "hostile_to": ["faction_cutroad"],
+        "player_default": "neutral"
+      }
+    },
+    {
+      "id": "faction_chenghai_echo",
+      "domain": "story",
+      "version": 1,
+      "tags": ["faction"],
+      "data": {
+        "display_name": "澄海遗影",
+        "maps_to_catalog": "",
+        "ideal": "完成对照实验",
+        "method": "广播诱捕与采样",
+        "leader_ref": "npc_story_siheng",
+        "secret": "采样站即「撤离点」",
+        "hostile_to": [],
+        "player_default": "unknown"
+      }
+    }
+  ]
+}

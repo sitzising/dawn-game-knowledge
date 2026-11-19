@@ -15,8 +15,10 @@
 
 ## 域（domains）
 
-现有：`zombies` `weather` `items` `npcs` `quests` `events` `factions` `localization` `world` `maps`  
-新增：`buildings`（建筑人体尺度标准 / 稳定 ID 注册；见 `buildings/scale_standards.json`）
+现有：`zombies` `weather` `items` `npcs` `quests` `events` `factions` `localization` `world` `maps` `buildings` `story`  
+- `buildings`：建筑人体尺度标准 / 稳定 ID 注册；见 `buildings/scale_standards.json`  
+- `story`：曦蚀世界观 / 主线章节 / 角色 / 剧情派系 / AI 分层规则；见 `story/*.json`；运行时经 `StoryKnowledgeGateway` 按 `knowledge_tier` 过滤；单机进度 blob 为 `story_progress`（勿写入 HOST/CLIENT）
+- Cursor 剧情硬规则镜像（非 KnowledgeManager 摄取）：仓库内 `cursor/rules/story-system.mdc`（与游戏工程 `.cursor/rules/story-system.mdc` 同文；**勿**列入 `manifest.files` 以免被当 JSON 解析）
 
 提示词 Markdown（`prompts/*.md`）**不走** KnowledgeManager `entries` 摄取，仅供人/Agent/网站文档读取。
 

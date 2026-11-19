@@ -1,0 +1,50 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "story.main_hook",
+      "domain": "story",
+      "version": 1,
+      "tags": ["main", "hook"],
+      "data": {
+        "hook": "信号塔广播承诺科学救援离港；餘火盟警告去者未归。",
+        "core_question": "广播的安全船是希望还是收割？",
+        "antagonist_id": "npc_story_siheng",
+        "map_id": "hongkong_city",
+        "start_chapter_id": "ch_prologue"
+      }
+    },
+    {
+      "id": "story.main_cast",
+      "domain": "story",
+      "version": 1,
+      "tags": ["main", "cast"],
+      "data": {
+        "npc_ids": [
+          "npc_story_zhou_wanqing",
+          "npc_story_he_yashan",
+          "npc_story_mai_qin",
+          "npc_story_guan_bo",
+          "npc_story_siheng",
+          "npc_story_root"
+        ]
+      }
+    },
+    {
+      "id": "story.ending_catalog",
+      "domain": "story",
+      "version": 1,
+      "tags": ["main", "endings"],
+      "data": {
+        "endings": [
+          {"id": "end_burn_tower", "title": "断讯", "summary": "毁塔断采样，城内更难联络"},
+          {"id": "end_steal_ship", "title": "夺船", "summary": "撤离少数人，留下者命运分支"},
+          {"id": "end_broadcast_truth", "title": "公开", "summary": "公开真相，阵营动荡但可重建"},
+          {"id": "end_bargain", "title": "交易", "summary": "与司衡交易稳定剂，代价沉重"},
+          {"id": "end_fail_hollow", "title": "空壳", "summary": "失败结局；可读档重来"}
+        ]
+      }
+    }
+  ]
+}

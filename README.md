@@ -15,6 +15,8 @@ Dawn：黎明 — 统一游戏知识库（地图元数据、玩法配置、开�
 | `zombies/` `npcs/` `…` | 玩法配置域 |
 | `prompts/local_cursor_dev.md` | **本机** Cursor / Godot 开发提示词 |
 | `prompts/cloud_admin_web.md` | **云端** 网站/后台提示词 |
+| `story/` | 曦蚀剧情域（bible / chapters / cast / AI rules） |
+| `cursor/rules/story-system.mdc` | 剧情 Cursor 硬规则镜像（非 manifest 摄取） |
 | `READING_SPEC.md` | 统一读取规范 |
 
 ## 重要约定

@@ -1,0 +1,158 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "ch_prologue",
+      "domain": "story",
+      "version": 1,
+      "tags": ["chapter", "playable_first"],
+      "data": {
+        "title": "灰门之前",
+        "order": 0,
+        "era_day": 45,
+        "map_id": "hongkong_city",
+        "locations": ["garage_safezone", "city_gate"],
+        "goal": "离开车库补给线，抵达城门方向并听到信号塔广播。",
+        "gameplay": ["survival_intro", "loot", "zombie_pressure", "radio_discover"],
+        "npc_ids": ["npc_story_he_yashan"],
+        "entry": {"flags_required": [], "chapter_complete": []},
+        "exit": {"flags_any": ["heard_tower_broadcast", "reached_city_gate_approach"]},
+        "fail": {"player_dead": true},
+        "save_nodes": ["prologue_start", "prologue_gate"],
+        "missable": ["garage_extra_medkit"],
+        "map_content_gap": []
+      }
+    },
+    {
+      "id": "ch_01_ember",
+      "domain": "story",
+      "version": 1,
+      "tags": ["chapter", "playable_first"],
+      "data": {
+        "title": "餘火",
+        "order": 1,
+        "era_day": 45,
+        "map_id": "hongkong_city",
+        "locations": ["ember_outpost_near"],
+        "goal": "接触何崖山，取得餘火盟信任，完成一次物资或护送。",
+        "gameplay": ["meet_ally", "escort_or_supply", "trust_check"],
+        "npc_ids": ["npc_story_he_yashan", "npc_story_mai_qin"],
+        "entry": {"flags_required": ["heard_tower_broadcast"]},
+        "exit": {"flags_any": ["ember_trusted", "ember_refused"]},
+        "fail": {"he_yashan_dead_early": "branch_ember_collapse"},
+        "save_nodes": ["ember_met", "ember_done"],
+        "map_content_gap": ["ember_outpost_near POI marker"]
+      }
+    },
+    {
+      "id": "ch_02_static",
+      "domain": "story",
+      "version": 1,
+      "tags": ["chapter"],
+      "data": {
+        "title": "噪声",
+        "order": 2,
+        "goal": "调查广播外围，收集录音证据。",
+        "gameplay": ["stealth", "investigate", "audio_logs"],
+        "npc_ids": ["npc_story_he_yashan"],
+        "entry": {"flags_any": ["ember_trusted", "ember_refused"]},
+        "exit": {"flags_required": ["tower_perimeter_intel"]},
+        "map_content_gap": ["signal_tower_perimeter"]
+      }
+    },
+    {
+      "id": "ch_03_ledger",
+      "domain": "story",
+      "version": 1,
+      "tags": ["chapter"],
+      "data": {
+        "title": "名册",
+        "order": 3,
+        "goal": "追查钝感携带者线索并作出道德选择。",
+        "gameplay": ["investigate", "moral_choice", "medical"],
+        "npc_ids": ["npc_story_mai_qin", "npc_story_zhou_wanqing"],
+        "entry": {"flags_required": ["tower_perimeter_intel"]},
+        "exit": {"flags_any": ["carrier_hidden", "carrier_revealed", "carrier_handed_over"]},
+        "map_content_gap": ["hospital_archive"]
+      }
+    },
+    {
+      "id": "ch_04_cutroad",
+      "domain": "story",
+      "version": 1,
+      "tags": ["chapter"],
+      "data": {
+        "title": "断路",
+        "order": 4,
+        "goal": "面对路劫团：交易、绕行或强攻，保护载具线。",
+        "gameplay": ["vehicle", "combat_or_deal", "transport"],
+        "npc_ids": ["npc_story_root"],
+        "entry": {"flags_any": ["carrier_hidden", "carrier_revealed", "carrier_handed_over"]},
+        "exit": {"flags_any": ["cutroad_dealt", "cutroad_fought", "cutroad_fled"]}
+      }
+    },
+    {
+      "id": "ch_05_remnant",
+      "domain": "story",
+      "version": 1,
+      "tags": ["chapter"],
+      "data": {
+        "title": "残令",
+        "order": 5,
+        "goal": "接触市政残部，取得或偷取弃城令证据。",
+        "gameplay": ["negotiate", "infiltrate"],
+        "npc_ids": ["npc_story_guan_bo"],
+        "entry": {"flags_any": ["cutroad_dealt", "cutroad_fought", "cutroad_fled"]},
+        "exit": {"flags_required": ["abandon_order_known"]},
+        "map_content_gap": ["dock_warehouse_band"]
+      }
+    },
+    {
+      "id": "ch_06_echo",
+      "domain": "story",
+      "version": 1,
+      "tags": ["chapter"],
+      "data": {
+        "title": "澄海回声",
+        "order": 6,
+        "goal": "进入澄海遗迹，验证曦蚀规则与稳定剂真相。",
+        "gameplay": ["dungeon_lab", "lore_confirm", "boss_pressure"],
+        "npc_ids": ["npc_story_siheng", "npc_story_zhou_wanqing"],
+        "entry": {"flags_required": ["abandon_order_known"]},
+        "exit": {"flags_required": ["stabilizer_truth"]},
+        "map_content_gap": ["chenghai_lab_ruin"]
+      }
+    },
+    {
+      "id": "ch_07_tide",
+      "domain": "story",
+      "version": 1,
+      "tags": ["chapter"],
+      "data": {
+        "title": "灰潮",
+        "order": 7,
+        "goal": "据点保卫或大逃亡；关键人物生死分岔。",
+        "gameplay": ["defense", "escape", "character_fates"],
+        "npc_ids": ["npc_story_he_yashan", "npc_story_mai_qin", "npc_story_guan_bo"],
+        "entry": {"flags_required": ["stabilizer_truth"]},
+        "exit": {"flags_required": ["tide_survived"]}
+      }
+    },
+    {
+      "id": "ch_finale",
+      "domain": "story",
+      "version": 1,
+      "tags": ["chapter", "finale"],
+      "data": {
+        "title": "黎明选择",
+        "order": 8,
+        "goal": "根据累计选择触发结局。",
+        "gameplay": ["finale_choice", "multi_ending"],
+        "npc_ids": ["npc_story_siheng"],
+        "entry": {"flags_required": ["tide_survived"]},
+        "exit": {"ending_id_set": true}
+      }
+    }
+  ]
+}

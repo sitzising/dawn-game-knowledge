@@ -1,0 +1,93 @@
+{
+  "domain": "story",
+  "version": 1,
+  "knowledge_version_note": "Dawnblight bible — runtime entries for StoryKnowledgeGateway",
+  "entries": [
+    {
+      "id": "story.world_overview",
+      "domain": "story",
+      "version": 1,
+      "tags": ["bible", "world", "public"],
+      "data": {
+        "title": "衛士城現況",
+        "summary": "濱海巨城衛士城在曦蝕爆發後封鎖。電力與通信崩潰，倖存者結成餘火盟，掠奪者盤據斷路，市政殘部退守碼頭倉庫。短波廣播承諾「科學救援離港」。",
+        "map_id": "hongkong_city",
+        "fiction_place_name": "衛士城",
+        "era_day_start": 45,
+        "knowledge_tier": "street"
+      }
+    },
+    {
+      "id": "story.infection",
+      "domain": "story",
+      "version": 1,
+      "tags": ["bible", "infection", "rules"],
+      "data": {
+        "name": "曦蝕",
+        "name_en": "Dawnblight",
+        "pathogen_code": "Aurora-17",
+        "source_org": "澄海生物",
+        "transmission": ["体液", "深咬"],
+        "aerosol_only_in": "密闭高浓度实验室",
+        "incubation_hours_min": 6,
+        "incubation_hours_max": 36,
+        "stages": ["发热", "痛觉钝化与攻击冲动", "语言崩解", "空壳化"],
+        "consciousness_after_hollow": false,
+        "public_cure": false,
+        "rumor_stabilizer": true,
+        "carriers_rare": true,
+        "rule_lock": "Infection rules must stay consistent across chapters; discoveries may add facts, never contradict.",
+        "knowledge_tier": "street"
+      }
+    },
+    {
+      "id": "story.timeline",
+      "domain": "story",
+      "version": 1,
+      "tags": ["bible", "timeline"],
+      "data": {
+        "events": [
+          {"id": "tl_d90", "day": -90, "text": "澄海再生一期私下扩大样本池", "tier": "lab"},
+          {"id": "tl_d14", "day": -14, "text": "港口仓储工人群聚发热，被报为流感", "tier": "street"},
+          {"id": "tl_d7", "day": -7, "text": "医院夜班失控；视频流出后删帖", "tier": "district"},
+          {"id": "tl_d3", "day": -3, "text": "市政局部检疫；通信限流", "tier": "street"},
+          {"id": "tl_d1", "day": -1, "text": "通道与城门军事封控", "tier": "street"},
+          {"id": "tl_d0", "day": 0, "text": "大规模空壳化；电网分区跳闸 — 灾难纪元起点", "tier": "street"},
+          {"id": "tl_d3p", "day": 3, "text": "医疗崩溃；餘火盟雏形", "tier": "faction"},
+          {"id": "tl_d10", "day": 10, "text": "市政残部丢掉市政厅", "tier": "faction"},
+          {"id": "tl_d21", "day": 21, "text": "信号塔开始循环「安全撤离」广播", "tier": "street"},
+          {"id": "tl_d45", "day": 45, "text": "开局：玩家自城郊车库进入衛士城周边", "tier": "street"}
+        ]
+      }
+    },
+    {
+      "id": "story.secrets_layers",
+      "domain": "story",
+      "version": 1,
+      "tags": ["bible", "secrets"],
+      "data": {
+        "layers": [
+          {"tier": "street", "text": "被咬会变；城封了；广播说有船"},
+          {"tier": "district", "text": "某医院地下室有澄海冷柜"},
+          {"tier": "faction", "text": "餘火盟藏着钝感携带者名单"},
+          {"tier": "military", "text": "封城命令含弃城采样条款"},
+          {"tier": "lab", "text": "Aurora-17 本为再生；稳定剂需活人对照"},
+          {"tier": "core", "text": "信号塔撤离把幸存者导入采样站"}
+        ]
+      }
+    },
+    {
+      "id": "story.player_default",
+      "domain": "story",
+      "version": 1,
+      "tags": ["bible", "player"],
+      "data": {
+        "role": "市政物流外勤",
+        "survived_how": "灾难夜被锁在城郊车库作业区",
+        "motivation": "寻找失联调度周晚晴；查明广播真伪",
+        "moral_lock": false,
+        "knowledge_tier": "street"
+      }
+    }
+  ]
+}
