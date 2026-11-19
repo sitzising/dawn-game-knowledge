@@ -1,0 +1,745 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "quest_main_prologue",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "main"
+      ],
+      "data": {
+        "name": "灰门补给线",
+        "chapter_id": "ch_prologue",
+        "background": "离开车库，确认广播。",
+        "trigger": {
+          "chapter": "ch_prologue"
+        },
+        "objectives": [
+          "搜刮车库",
+          "取得收信",
+          "抵达城门接近点"
+        ],
+        "npcs": [],
+        "choices": [
+          "chc_pr_listen_full"
+        ],
+        "outcomes": {
+          "success_flags": [
+            "heard_tower_broadcast"
+          ]
+        },
+        "rewards": {
+          "loot": "med_battery"
+        },
+        "fail": {
+          "player_dead": true
+        },
+        "affects_main": true,
+        "affects_ending": false
+      }
+    },
+    {
+      "id": "quest_main_ember_trial",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "main"
+      ],
+      "data": {
+        "name": "先干活",
+        "chapter_id": "ch_01_ember",
+        "background": "何崖山的信任试炼。",
+        "trigger": {
+          "flags_required": [
+            "heard_tower_broadcast"
+          ],
+          "talk": "npc_story_he_yashan"
+        },
+        "objectives": [
+          "完成护送或取药"
+        ],
+        "npcs": [
+          "npc_story_he_yashan",
+          "npc_story_mai_qin"
+        ],
+        "choices": [
+          "chc_em_trial",
+          "chc_em_join"
+        ],
+        "outcomes": {
+          "flags_any": [
+            "ember_trusted",
+            "ember_refused"
+          ]
+        },
+        "affects_main": true,
+        "affects_ending": false
+      }
+    },
+    {
+      "id": "quest_main_static",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "main"
+      ],
+      "data": {
+        "name": "假道",
+        "chapter_id": "ch_02_static",
+        "background": "塔周取证。",
+        "trigger": {
+          "flags_any": [
+            "ember_trusted",
+            "ember_refused"
+          ]
+        },
+        "objectives": [
+          "取得脚本残页",
+          "确认分叉路"
+        ],
+        "npcs": [
+          "npc_story_he_yashan"
+        ],
+        "choices": [
+          "chc_st_share"
+        ],
+        "outcomes": {
+          "flags_required": [
+            "tower_perimeter_intel"
+          ]
+        },
+        "affects_main": true,
+        "affects_ending": "soft"
+      }
+    },
+    {
+      "id": "quest_main_ledger",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "main"
+      ],
+      "data": {
+        "name": "名单上的人",
+        "chapter_id": "ch_03_ledger",
+        "background": "钝感者与周晚晴。",
+        "trigger": {
+          "flags_required": [
+            "tower_perimeter_intel"
+          ]
+        },
+        "objectives": [
+          "医院档案",
+          "处置小南",
+          "与周晚晴对话"
+        ],
+        "npcs": [
+          "npc_story_zhou_wanqing",
+          "npc_story_mai_qin",
+          "npc_story_xiao_nan"
+        ],
+        "choices": [
+          "chc_ld_zhou_blame",
+          "chc_ld_carrier"
+        ],
+        "outcomes": {
+          "flags_any": [
+            "carrier_hidden",
+            "carrier_revealed",
+            "carrier_handed_over"
+          ]
+        },
+        "affects_main": true,
+        "affects_ending": true
+      }
+    },
+    {
+      "id": "quest_main_cutroad",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "main"
+      ],
+      "data": {
+        "name": "过路费",
+        "chapter_id": "ch_04_cutroad",
+        "trigger": {
+          "flags_any": [
+            "carrier_hidden",
+            "carrier_revealed",
+            "carrier_handed_over"
+          ]
+        },
+        "objectives": [
+          "过东环卡口"
+        ],
+        "npcs": [
+          "npc_story_root",
+          "npc_story_tieyan"
+        ],
+        "choices": [
+          "chc_cr_approach",
+          "chc_cr_expose_root"
+        ],
+        "outcomes": {
+          "flags_any": [
+            "cutroad_dealt",
+            "cutroad_fought",
+            "cutroad_fled"
+          ]
+        },
+        "affects_main": true,
+        "affects_ending": "soft"
+      }
+    },
+    {
+      "id": "quest_main_remnant",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "main"
+      ],
+      "data": {
+        "name": "铁柜里的附件",
+        "chapter_id": "ch_05_remnant",
+        "trigger": {
+          "flags_any": [
+            "cutroad_dealt",
+            "cutroad_fought",
+            "cutroad_fled"
+          ]
+        },
+        "objectives": [
+          "取得弃城采样令知情"
+        ],
+        "npcs": [
+          "npc_story_guan_bo"
+        ],
+        "choices": [
+          "chc_rm_public"
+        ],
+        "outcomes": {
+          "flags_required": [
+            "abandon_order_known"
+          ]
+        },
+        "affects_main": true,
+        "affects_ending": true
+      }
+    },
+    {
+      "id": "quest_main_echo",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "main"
+      ],
+      "data": {
+        "name": "对照",
+        "chapter_id": "ch_06_echo",
+        "trigger": {
+          "flags_required": [
+            "abandon_order_known"
+          ]
+        },
+        "objectives": [
+          "验证稳定剂",
+          "对峙司衡"
+        ],
+        "npcs": [
+          "npc_story_siheng",
+          "npc_story_zhou_wanqing"
+        ],
+        "choices": [
+          "chc_ec_siheng"
+        ],
+        "outcomes": {
+          "flags_required": [
+            "stabilizer_truth"
+          ]
+        },
+        "affects_main": true,
+        "affects_ending": true
+      }
+    },
+    {
+      "id": "quest_main_tide",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "main"
+      ],
+      "data": {
+        "name": "灰潮",
+        "chapter_id": "ch_07_tide",
+        "trigger": {
+          "flags_required": [
+            "stabilizer_truth"
+          ]
+        },
+        "objectives": [
+          "存活灰潮"
+        ],
+        "npcs": [
+          "npc_story_he_yashan",
+          "npc_story_mai_qin",
+          "npc_story_guan_bo"
+        ],
+        "choices": [
+          "chc_td_plan"
+        ],
+        "outcomes": {
+          "flags_required": [
+            "tide_survived"
+          ]
+        },
+        "affects_main": true,
+        "affects_ending": true
+      }
+    },
+    {
+      "id": "quest_main_finale",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "main"
+      ],
+      "data": {
+        "name": "黎明选择",
+        "chapter_id": "ch_finale",
+        "trigger": {
+          "flags_required": [
+            "tide_survived"
+          ]
+        },
+        "objectives": [
+          "执行终局行动"
+        ],
+        "npcs": [
+          "npc_story_siheng"
+        ],
+        "choices": [
+          "chc_fn_ending"
+        ],
+        "outcomes": {
+          "ending_id_set": true
+        },
+        "affects_main": true,
+        "affects_ending": true
+      }
+    },
+    {
+      "id": "quest_side_carrier_watch",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "side",
+        "moral"
+      ],
+      "data": {
+        "name": "测温贴",
+        "chapter_id": "ch_03_ledger",
+        "background": "麦琴请你连续两晚记录小南体温与行为，不惊动据点。",
+        "trigger": {
+          "flags_required": [
+            "ember_trusted"
+          ],
+          "talk": "npc_story_mai_qin"
+        },
+        "objectives": [
+          "两晚观察",
+          "交回记录"
+        ],
+        "npcs": [
+          "npc_story_mai_qin",
+          "npc_story_xiao_nan"
+        ],
+        "choices": [
+          {
+            "id": "chc_side_watch_leak",
+            "options": [
+              {
+                "id": "keep_secret",
+                "effects": {
+                  "flags": {
+                    "carrier_watch_done": true
+                  }
+                }
+              },
+              {
+                "id": "tell_he",
+                "effects": {
+                  "flags": {
+                    "carrier_watch_done": true,
+                    "carrier_revealed": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "outcomes": {
+          "flags": [
+            "carrier_watch_done"
+          ]
+        },
+        "rewards": {
+          "med_knowledge": true,
+          "rel_mai": 10
+        },
+        "fail": {
+          "xiao_nan_fled": true
+        },
+        "followup": "影响 chc_ld_carrier 默认选项倾向",
+        "affects_main": true,
+        "affects_ending": true
+      }
+    },
+    {
+      "id": "quest_side_missing_roster",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "side",
+        "investigate"
+      ],
+      "data": {
+        "name": "墙上的名字",
+        "background": "為何崖山核查「去者未归」中三人最后出现地点。",
+        "trigger": {
+          "flags_required": [
+            "ember_trusted"
+          ]
+        },
+        "objectives": [
+          "三处线索点",
+          "回报"
+        ],
+        "npcs": [
+          "npc_story_he_yashan"
+        ],
+        "outcomes": {
+          "flags": [
+            "missing_roster_done"
+          ],
+          "intel": "supports_tower_suspicion"
+        },
+        "rewards": {
+          "ammo_small": true,
+          "rel_he": 8
+        },
+        "affects_main": false,
+        "affects_ending": "soft_end_burn"
+      }
+    },
+    {
+      "id": "quest_side_night_bazaar_debt",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "side",
+        "survival"
+      ],
+      "data": {
+        "name": "秤上的债",
+        "background": "冯叔的摊被抢；找回秤砣与账本，或用物资抵。",
+        "trigger": {
+          "location": "night_bazaar_bridge",
+          "era_day_min": 46
+        },
+        "objectives": [
+          "找回账本或赔偿"
+        ],
+        "npcs": [
+          "npc_story_old_feng"
+        ],
+        "choices": [
+          {
+            "id": "chc_side_feng",
+            "options": [
+              {
+                "id": "recover",
+                "effects": {
+                  "flags": {
+                    "feng_helped": true
+                  }
+                }
+              },
+              {
+                "id": "pay",
+                "effects": {
+                  "flags": {
+                    "feng_helped": true
+                  },
+                  "resources": {
+                    "pay": true
+                  }
+                }
+              },
+              {
+                "id": "refuse",
+                "effects": {
+                  "flags": {
+                    "feng_refused": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "rewards": {
+          "shop_discount": true,
+          "info_root_hint": true
+        },
+        "affects_main": false,
+        "affects_ending": false,
+        "followup": "feng_helped 时根的卖人线索更易触发"
+      }
+    },
+    {
+      "id": "quest_side_dock_ration",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "side",
+        "faction"
+      ],
+      "data": {
+        "name": "配给窗口",
+        "background": "关博要你夜里盯配给窗口防止内鬼；可发现士兵倒卖。",
+        "trigger": {
+          "flags_any": [
+            "cutroad_dealt",
+            "cutroad_fought",
+            "cutroad_fled"
+          ],
+          "near": "dock_warehouse_band"
+        },
+        "objectives": [
+          "值夜",
+          "决定举报或分赃"
+        ],
+        "npcs": [
+          "npc_story_guan_bo"
+        ],
+        "choices": [
+          {
+            "id": "chc_side_ration",
+            "options": [
+              {
+                "id": "report",
+                "effects": {
+                  "rel": {
+                    "npc_story_guan_bo": 10
+                  },
+                  "flags": {
+                    "ration_clean": true
+                  }
+                }
+              },
+              {
+                "id": "split",
+                "effects": {
+                  "flags": {
+                    "ration_dirty": true
+                  },
+                  "resources": {
+                    "food": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "affects_main": false,
+        "affects_ending": "soft_truth_path_if_clean"
+      }
+    },
+    {
+      "id": "quest_side_white_tent",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "side",
+        "rescue"
+      ],
+      "data": {
+        "name": "白篷旗语",
+        "background": "麦琴请你把隔离旗语教给一处流动白篷，并送缝合线。",
+        "trigger": {
+          "flags_required": [
+            "ember_trusted"
+          ],
+          "talk": "npc_story_mai_qin"
+        },
+        "objectives": [
+          "送达缝合线",
+          "教旗语",
+          "返回"
+        ],
+        "npcs": [
+          "npc_story_mai_qin"
+        ],
+        "fail": {
+          "tent_overrun": "可选失败，不影响主线硬门"
+        },
+        "rewards": {
+          "rel_mai": 12,
+          "med_recipe_hint": true
+        },
+        "affects_main": false,
+        "affects_ending": false
+      }
+    },
+    {
+      "id": "quest_side_root_guilt",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "side",
+        "character"
+      ],
+      "data": {
+        "name": "弹壳转不停",
+        "background": "根喝醉后吐露卖过坐标；可逼他画地图或勒索。",
+        "trigger": {
+          "flags_required": [
+            "cutroad_dealt"
+          ],
+          "talk": "npc_story_root"
+        },
+        "objectives": [
+          "取得口供或地图标注"
+        ],
+        "npcs": [
+          "npc_story_root"
+        ],
+        "choices": [
+          {
+            "id": "chc_side_root",
+            "options": [
+              {
+                "id": "map",
+                "effects": {
+                  "flags": {
+                    "root_map": true
+                  }
+                }
+              },
+              {
+                "id": "blackmail",
+                "effects": {
+                  "flags": {
+                    "root_blackmail": true
+                  }
+                }
+              },
+              {
+                "id": "forgive_use",
+                "effects": {
+                  "flags": {
+                    "root_ally_soft": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "affects_main": true,
+        "affects_ending": "soft_steal_ship"
+      }
+    },
+    {
+      "id": "quest_side_lu_qin_tape",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "side",
+        "hidden",
+        "environment"
+      ],
+      "data": {
+        "name": "陆钦的磁带",
+        "background": "在市政厅废墟或仓库找到陆钦留言磁带，揭示附件流转。",
+        "trigger": {
+          "explore": [
+            "dock_warehouse_band",
+            "city_hall_ruin_hint"
+          ],
+          "chance": "guaranteed_once"
+        },
+        "objectives": [
+          "播放磁带",
+          "交给周晚晴或关博"
+        ],
+        "npcs": [
+          "npc_story_lu_qin",
+          "npc_story_zhou_wanqing",
+          "npc_story_guan_bo"
+        ],
+        "outcomes": {
+          "flags": [
+            "lu_qin_tape_found"
+          ],
+          "boost": "abandon_order_known_easier"
+        },
+        "affects_main": true,
+        "affects_ending": true,
+        "hidden": true
+      }
+    },
+    {
+      "id": "quest_side_battery_run",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "quest",
+        "side",
+        "repeatable"
+      ],
+      "data": {
+        "name": "电池夜运",
+        "background": "夜市需要可充电电池；可重复，每日上限一次，空壳压力上升。",
+        "trigger": {
+          "flags_required": [
+            "feng_helped"
+          ],
+          "repeatable_daily": true
+        },
+        "objectives": [
+          "交付电池"
+        ],
+        "npcs": [
+          "npc_story_old_feng"
+        ],
+        "rewards": {
+          "barter_credit": true
+        },
+        "fail": {
+          "ambush": true
+        },
+        "affects_main": false,
+        "affects_ending": false,
+        "repeatable": true
+      }
+    }
+  ]
+}

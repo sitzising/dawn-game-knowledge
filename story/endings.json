@@ -1,0 +1,168 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "end_burn_tower",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "ending"
+      ],
+      "data": {
+        "title": "断讯",
+        "requires_flags_all": [
+          "stabilizer_truth",
+          "tide_survived"
+        ],
+        "blocks_if": [
+          "siheng_bargain_locked"
+        ],
+        "key_choices": [
+          "chc_fn_ending:burn"
+        ],
+        "finale_beats": [
+          "爆破或切断信号塔馈电",
+          "广播骤停；城内短时恐慌",
+          "采样诱导中断"
+        ],
+        "cinematics": "塔灯熄灭；餘火灶火在远景更显亮；沈渡听到底噪",
+        "world_after": "无统一撤离叙事；据点更孤立；澄海遗影能力下降",
+        "character_outcomes": {
+          "npc_story_siheng": "若存活则逃入暗处继续小规模实验",
+          "npc_story_zhou_wanqing": "可留下协助重建通信替代方案"
+        }
+      }
+    },
+    {
+      "id": "end_steal_ship",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "ending"
+      ],
+      "data": {
+        "title": "夺船",
+        "requires_flags_all": [
+          "tide_survived"
+        ],
+        "requires_flags_any": [
+          "cutroad_dealt",
+          "abandon_order_known"
+        ],
+        "key_choices": [
+          "chc_fn_ending:ship"
+        ],
+        "finale_beats": [
+          "突袭管制码头内侧",
+          "争夺有限舱位",
+          "留下者目送离港"
+        ],
+        "cinematics": "船灯切海雾；甲板上点名；岸上名字被风吹散",
+        "world_after": "离港者不确定海上是否另有采样；城内权力真空",
+        "character_outcomes": {
+          "npc_story_xiao_nan": "若仍存活可被带上船或自愿留下",
+          "npc_story_he_yashan": "通常留下"
+        }
+      }
+    },
+    {
+      "id": "end_broadcast_truth",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "ending"
+      ],
+      "data": {
+        "title": "公开",
+        "requires_flags_all": [
+          "abandon_order_known",
+          "stabilizer_truth",
+          "tide_survived"
+        ],
+        "preferred_flags": [
+          "abandon_order_public",
+          "tower_intel_shared",
+          "carrier_hidden"
+        ],
+        "key_choices": [
+          "chc_fn_ending:truth"
+        ],
+        "finale_beats": [
+          "抢占广播或散发文件副本",
+          "阵营震动",
+          "短时暴力后出现新协商"
+        ],
+        "cinematics": "同一频道改念弃城令与实验日志摘要；有人砸收音机，有人抄写",
+        "world_after": "信任重构可能；澄海失去话术优势；內訌风险高",
+        "character_outcomes": {
+          "npc_story_zhou_wanqing": "公开调拨单，承担骂名",
+          "npc_story_guan_bo": "若公开派胜利则留任或被审"
+        }
+      }
+    },
+    {
+      "id": "end_bargain",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "ending"
+      ],
+      "data": {
+        "title": "交易",
+        "requires_flags_all": [
+          "stabilizer_truth",
+          "siheng_spared",
+          "tide_survived"
+        ],
+        "blocks_if": [
+          "siheng_killed_early"
+        ],
+        "key_choices": [
+          "chc_fn_ending:bargain"
+        ],
+        "cost": [
+          "稳定剂依赖",
+          "可能交出对照者或数据",
+          "道德污点 flag bargain_stained"
+        ],
+        "finale_beats": [
+          "与司衡签城下之盟",
+          "部分人获药",
+          "采样以「自愿合同」继续灰色存在"
+        ],
+        "cinematics": "冷白灯下签字；麦琴背过脸；沈渡手不抖或抖",
+        "world_after": "短期死亡率下降；长期被澄海绑定",
+        "character_outcomes": {
+          "npc_story_mai_qin": "可能服药或拒绝合作分裂",
+          "npc_story_siheng": "存活并扩大影响"
+        }
+      }
+    },
+    {
+      "id": "end_fail_hollow",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "ending",
+        "fail"
+      ],
+      "data": {
+        "title": "空壳",
+        "triggers": [
+          "player_dead",
+          "player_infected_hollow",
+          "finale_failed_combat"
+        ],
+        "finale_beats": [
+          "视角坠落",
+          "趋声",
+          "可读档"
+        ],
+        "cinematics": "工牌掉进污水；广播仍在循环",
+        "world_after": "世界继续；玩家需读档",
+        "reload_allowed": true
+      }
+    }
+  ]
+}

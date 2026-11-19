@@ -1,6 +1,6 @@
 {
     "schema_version": 1,
-    "knowledge_version": "0.1.28-story-dawnblight",
+    "knowledge_version": "0.1.29-story-complete-draft",
     "min_game_version": "0.0.0",
     "source": "packaged",
     "generated_at": "2026-11-20",
@@ -45,8 +45,8 @@
         },
         {
             "path": "READING_SPEC.md",
-            "sha256": "abe0a51f842d52537afa6c025d986b5eb291818f1e3ce91169f6959a26597f1d",
-            "bytes": 3586,
+            "sha256": "537355c1fc1ac47534e29d07eab4468f154b5287c8bfd49fe71b2a708a61e958",
+            "bytes": 3772,
             "required": false
         },
         {
@@ -207,38 +207,80 @@
         },
         {
             "path": "story/ai_rules.json",
-            "sha256": "1907300d8814af7f040e6ba9502046eff9fc73fd8e8db1a9192ffdc50ed39d16",
-            "bytes": 1934,
+            "sha256": "2b94e39557bc9c3521b518b065b2c9bb3521b537a6fd3ed0394ddb842fdfe2db",
+            "bytes": 5105,
             "required": false
         },
         {
             "path": "story/bible.json",
-            "sha256": "48e0420795fedf4c1c5881ab350b7d50217003521e114e1c28e7f3a1bf02d1f8",
-            "bytes": 4000,
+            "sha256": "11a447032c5682087a3489837a4c9fec8391e1cfdbf1dba0f2298a28f52973fe",
+            "bytes": 13227,
             "required": false
         },
         {
             "path": "story/chapters.json",
-            "sha256": "dbfa86185747cf2e305a2dd7cac06fc4c368393ad5089834a20572dbd5216301",
-            "bytes": 5681,
+            "sha256": "7a9f88569836b40691bdb6020063efd33120e7926807e04d92f3debaa7624091",
+            "bytes": 36383,
             "required": false
         },
         {
             "path": "story/characters.json",
-            "sha256": "4a08cab46c86fbffc8ee26c2116a09b4afd9ebc806db8e80193008919ef3a5ed",
-            "bytes": 5317,
+            "sha256": "be6ba61584e2874d41f7cd75ba03c0f6dbfa3f0b1b0f6ecbe5c791a98e556442",
+            "bytes": 21920,
+            "required": false
+        },
+        {
+            "path": "story/choices.json",
+            "sha256": "77c902d731e2aa5afd88fe32a8bcb6a6e44de60a0bf93ef6487cea970889c707",
+            "bytes": 2994,
+            "required": false
+        },
+        {
+            "path": "story/endings.json",
+            "sha256": "66969f21456f042e35cd3ffbc5dc63ff8964b2b3ed081466cd5a7523d4de5c67",
+            "bytes": 4630,
+            "required": false
+        },
+        {
+            "path": "story/environment_stories.json",
+            "sha256": "46e3c02ed49161657a7dd102aafec330ef48caecccbd66b5bad672097bf56105",
+            "bytes": 4802,
             "required": false
         },
         {
             "path": "story/factions_story.json",
-            "sha256": "4c476201778bcb187d831b6e7eedb6da199d26acdb3de56216eafe2e6cc03f19",
-            "bytes": 2080,
+            "sha256": "af93c2e21bc48d45a4a5aab04f4d2b1093bd0e16f18f51cbdd406788d0fdf1a9",
+            "bytes": 6910,
             "required": false
         },
         {
             "path": "story/main_story.json",
-            "sha256": "04a7bc0167d1e49e22f5023e2204d5cbc65c78edc29fb9f8b78d534b128f625b",
-            "bytes": 1622,
+            "sha256": "83d55dad7c4764c0123af4e3181d6ee4eda0726c12cba83622179db72735ece1",
+            "bytes": 2871,
+            "required": false
+        },
+        {
+            "path": "story/quests.json",
+            "sha256": "34144160c5095e652ebc0904d8827aebd0007d263a4a4e17ebfe392d74980a20",
+            "bytes": 17013,
+            "required": false
+        },
+        {
+            "path": "story/regions.json",
+            "sha256": "3588fc08bcf5d13e8a91152a68ca93e4aef0f0f1d30c2841677f5858189332b1",
+            "bytes": 1858,
+            "required": false
+        },
+        {
+            "path": "story/world_events.json",
+            "sha256": "9c62d8fe5013c6f843d68b64b0d3c0d80daa00b156b3eb2602b855c608d7a094",
+            "bytes": 2869,
+            "required": false
+        },
+        {
+            "path": "story/world_timeline.json",
+            "sha256": "c3238bf23434468778c6ee73de763fe2c65144895fb8d5cea7cb333eacef23ed",
+            "bytes": 6604,
             "required": false
         }
     ]

@@ -1,0 +1,215 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "env_garage_lock",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "environment",
+        "prologue"
+      ],
+      "data": {
+        "region_id": "garage_safezone",
+        "title": "远程锁止",
+        "discoveries": [
+          {
+            "type": "terminal",
+            "text": "调度系统：远程锁止 — 防物资流失。操作者：周*晴"
+          },
+          {
+            "type": "blood",
+            "text": "卷帘内侧血痕向下，不像从外破入"
+          },
+          {
+            "type": "radio",
+            "text": "同事最后呼叫录音"
+          }
+        ],
+        "implies": [
+          "zhou_guilt",
+          "player_trauma"
+        ],
+        "knowledge_tier": "street"
+      }
+    },
+    {
+      "id": "env_ember_wall",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "environment"
+      ],
+      "data": {
+        "region_id": "ember_outpost_near",
+        "title": "去者未归",
+        "discoveries": [
+          {
+            "type": "wall_list",
+            "text": "炭笔名单，日期从 Day21 起"
+          },
+          {
+            "type": "kitchen",
+            "text": "工分条与公平勺"
+          }
+        ],
+        "knowledge_tier": "street"
+      }
+    },
+    {
+      "id": "env_tower_arrows",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "environment"
+      ],
+      "data": {
+        "region_id": "signal_tower_perimeter",
+        "title": "白箭头",
+        "discoveries": [
+          {
+            "type": "sign",
+            "text": "救援此路"
+          },
+          {
+            "type": "fork",
+            "text": "真道与假道轮胎印深浅不同"
+          },
+          {
+            "type": "paper",
+            "text": "脚本库残页"
+          }
+        ],
+        "knowledge_tier": "district"
+      }
+    },
+    {
+      "id": "env_hospital_cold",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "environment"
+      ],
+      "data": {
+        "region_id": "hospital_archive",
+        "title": "澄海冷柜",
+        "discoveries": [
+          {
+            "type": "freezer",
+            "text": "澄海生物资产标"
+          },
+          {
+            "type": "records",
+            "text": "痛阈异常被红圈"
+          },
+          {
+            "type": "corpses",
+            "text": "约束带仍扣在空床"
+          }
+        ],
+        "knowledge_tier": "district"
+      }
+    },
+    {
+      "id": "env_cutroad_bus",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "environment"
+      ],
+      "data": {
+        "region_id": "cutroad_yard",
+        "title": "公交尸骨",
+        "discoveries": [
+          {
+            "type": "barricade",
+            "text": "公交车排成税卡"
+          },
+          {
+            "type": "graffiti",
+            "text": "铁眼的眼睛涂鸦"
+          }
+        ],
+        "knowledge_tier": "street"
+      }
+    },
+    {
+      "id": "env_dock_cabinet",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "environment"
+      ],
+      "data": {
+        "region_id": "dock_warehouse_band",
+        "title": "铁柜附件",
+        "discoveries": [
+          {
+            "type": "document",
+            "text": "弃城采样条款原件或副本"
+          },
+          {
+            "type": "generator",
+            "text": "唯一稳定电力"
+          },
+          {
+            "type": "tape",
+            "text": "陆钦磁带可能在此"
+          }
+        ],
+        "knowledge_tier": "military"
+      }
+    },
+    {
+      "id": "env_lab_cages",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "environment"
+      ],
+      "data": {
+        "region_id": "chenghai_lab_ruin",
+        "title": "对照笼",
+        "discoveries": [
+          {
+            "type": "log",
+            "text": "稳定剂只能推迟"
+          },
+          {
+            "type": "cage",
+            "text": "编号样本名牌"
+          },
+          {
+            "type": "cold_chain",
+            "text": "断链的稳定剂箱"
+          }
+        ],
+        "knowledge_tier": "lab"
+      }
+    },
+    {
+      "id": "env_bazaar_scale",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "environment"
+      ],
+      "data": {
+        "region_id": "night_bazaar_bridge",
+        "title": "禁抢木牌",
+        "discoveries": [
+          {
+            "type": "sign",
+            "text": "抢摊者沉河——已执行两例"
+          },
+          {
+            "type": "ledger",
+            "text": "抗生素买家账"
+          }
+        ],
+        "knowledge_tier": "district"
+      }
+    }
+  ]
+}

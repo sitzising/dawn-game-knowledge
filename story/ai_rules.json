@@ -1,30 +1,50 @@
 {
   "domain": "story",
-  "version": 1,
+  "version": 2,
   "entries": [
     {
       "id": "story.ai_dialogue_rules",
       "domain": "story",
-      "version": 1,
-      "tags": ["ai", "rules"],
+      "version": 2,
+      "tags": [
+        "ai",
+        "rules"
+      ],
       "data": {
         "may": [
           "free_chat_in_character",
           "react_to_player_history",
           "react_to_memory",
           "discuss_known_world_facts",
-          "suggest_actions_aligned_with_npc_goals"
+          "suggest_actions_aligned_with_npc_goals",
+          "use_personal_voice_style"
         ],
         "must_not": [
           "invent_main_plot_facts",
+          "invent_quests",
           "change_quest_state",
+          "change_story_flags",
           "spawn_items",
           "modify_player_inventory",
           "resurrect_characters",
           "change_factions_unilaterally",
           "reveal_future_chapters",
+          "reveal_secrets_above_tier",
           "speak_as_dead_npc",
-          "claim_witness_to_unwitnessed_events"
+          "claim_witness_to_unwitnessed_events",
+          "claim_incomplete_quest_complete",
+          "alter_ending_conditions"
+        ],
+        "deterministic_owns": [
+          "chapter_gated_dialogues",
+          "quest_state_transitions",
+          "flag_writes",
+          "ending_resolution"
+        ],
+        "ai_owns": [
+          "color_dialogue",
+          "rumor_labeled_hearsay",
+          "emotional_reaction"
         ],
         "fact_vs_rumor": "NPC must label hearsay as rumor, never as certainty.",
         "context_pipeline": [
@@ -42,25 +62,138 @@
     {
       "id": "story.ai_knowledge_tiers",
       "domain": "story",
-      "version": 1,
-      "tags": ["ai", "filter"],
+      "version": 2,
+      "tags": [
+        "ai",
+        "filter"
+      ],
       "data": {
-        "tiers_order": ["street", "district", "faction", "military", "lab", "core"],
+        "tiers_order": [
+          "street",
+          "district",
+          "faction",
+          "military",
+          "lab",
+          "core"
+        ],
         "default_player_tier": "street",
-        "filter_rule": "NPC may only receive story entries whose knowledge_tier index <= NPC knowledge_tier index, plus explicit knows[] ids."
+        "filter_rule": "NPC may only receive story entries whose knowledge_tier index <= NPC knowledge_tier index, plus explicit knows[] ids.",
+        "may_know": [
+          "lived_events",
+          "told_info",
+          "public_info",
+          "currently_observable"
+        ],
+        "must_not_know": [
+          "future_events",
+          "unpublished_secrets",
+          "other_npc_private_memories",
+          "player_undiscovered_intel"
+        ]
+      }
+    },
+    {
+      "id": "story.ai_knowledge_matrix",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "ai",
+        "matrix"
+      ],
+      "data": {
+        "npcs": {
+          "npc_story_he_yashan": {
+            "knows_topics": [
+              "ember_rules",
+              "missing_wall",
+              "broadcast_danger_rumor"
+            ],
+            "blocked_topics": [
+              "stabilizer_mechanism",
+              "harvest_route_full"
+            ]
+          },
+          "npc_story_mai_qin": {
+            "knows_topics": [
+              "infection_stages",
+              "hospital_night",
+              "xiao_nan_fever"
+            ],
+            "blocked_topics": [
+              "core_harvest",
+              "abandon_order_text"
+            ]
+          },
+          "npc_story_zhou_wanqing": {
+            "knows_topics": [
+              "lock_order",
+              "roster_tamper_suspicion",
+              "military_annex_rumor"
+            ],
+            "blocked_topics": [
+              "core_harvest_full"
+            ]
+          },
+          "npc_story_guan_bo": {
+            "knows_topics": [
+              "abandon_order_exists",
+              "dock_discipline"
+            ],
+            "blocked_topics": [
+              "lab_stabilizer_truth"
+            ]
+          },
+          "npc_story_root": {
+            "knows_topics": [
+              "toll_prices",
+              "sold_coords_partial"
+            ],
+            "blocked_topics": [
+              "sampling_station_purpose"
+            ]
+          },
+          "npc_story_siheng": {
+            "knows_topics": [
+              "all_core"
+            ],
+            "blocked_topics": []
+          },
+          "npc_story_xiao_nan": {
+            "knows_topics": [
+              "street_survival",
+              "own_symptoms"
+            ],
+            "blocked_topics": [
+              "carrier_list",
+              "lab"
+            ]
+          },
+          "npc_story_old_feng": {
+            "knows_topics": [
+              "prices",
+              "who_bought_meds"
+            ],
+            "blocked_topics": [
+              "core"
+            ]
+          }
+        }
       }
     },
     {
       "id": "story.voice_rules",
       "domain": "story",
-      "version": 1,
-      "tags": ["voice"],
+      "version": 2,
+      "tags": [
+        "voice"
+      ],
       "data": {
         "max_spoken_chars": 180,
         "prefer_short_lines": true,
         "subtitle_required": true,
         "cache_key": "npc_id+line_hash+lang",
-        "fail_open": "show_subtitle_only_if_tts_fails"
+        "fail_open": "show_subtitle_only_if_tts_fails",
+        "style_by_npc": "Use characters.json voice.style; never homogenize."
       }
     }
   ]

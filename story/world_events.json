@@ -1,0 +1,102 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "story.world_events_catalog",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "world_events",
+        "open_world"
+      ],
+      "data": {
+        "design": "Mainline can idle; world keeps moving via these events without requiring chapter advance.",
+        "events": [
+          {
+            "id": "we_night_horde_pulse",
+            "name": "夜潮",
+            "trigger": {
+              "time": "night",
+              "noise_high": true
+            },
+            "effect": "局部空壳密度上升",
+            "blocks_main": false
+          },
+          {
+            "id": "we_broadcast_variant",
+            "name": "广播变体",
+            "trigger": {
+              "era_day_min": 47,
+              "random": 0.3
+            },
+            "effect": "播放不同安抚脚本；可录到新证据",
+            "blocks_main": false
+          },
+          {
+            "id": "we_ember_ration_cut",
+            "name": "餘火减餐",
+            "trigger": {
+              "flags": [
+                "ember_trusted"
+              ],
+              "era_day_min": 50
+            },
+            "effect": "据点情绪下降；可触发支线",
+            "blocks_main": false
+          },
+          {
+            "id": "we_cutroad_toll_hike",
+            "name": "路费涨价",
+            "trigger": {
+              "era_day_min": 53
+            },
+            "effect": "交易成本上升",
+            "blocks_main": false
+          },
+          {
+            "id": "we_dock_blackout",
+            "name": "码头跳电",
+            "trigger": {
+              "era_day_min": 56,
+              "random": 0.25
+            },
+            "effect": "潜入更容易，空壳从黑暗涌出",
+            "blocks_main": false
+          },
+          {
+            "id": "we_carrier_hunt_rumor",
+            "name": "猎名单传闻",
+            "trigger": {
+              "flags_any": [
+                "carrier_revealed",
+                "tower_perimeter_intel"
+              ]
+            },
+            "effect": "NPC 对话出现悬赏钝感者谣言",
+            "blocks_main": false
+          },
+          {
+            "id": "we_siheng_drone_spot",
+            "name": "無人机残影",
+            "trigger": {
+              "era_day_min": 60,
+              "near": "signal_tower_perimeter"
+            },
+            "effect": "环境叙事：澄海仍在监视",
+            "blocks_main": false
+          },
+          {
+            "id": "we_npc_idle_schedules",
+            "name": "NPC 作息",
+            "trigger": {
+              "always": true
+            },
+            "effect": "何崖山巡逻、麦琴诊所、冯叔夜出——不因主线暂停而冻结",
+            "blocks_main": false
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "story.regions_index",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "regions",
+        "index"
+      ],
+      "data": {
+        "regions": [
+          {
+            "id": "garage_safezone",
+            "name": "城郊市政车库",
+            "story": "沈渡被锁之处；墙上对讲机仍卡在同事最后一声"
+          },
+          {
+            "id": "city_gate",
+            "name": "灰门方向城门",
+            "story": "封控残骸与疏散告示叠写"
+          },
+          {
+            "id": "ember_outpost_near",
+            "name": "餘火旧中学据点",
+            "story": "灶火与工分条；墙上「去者未归」名单"
+          },
+          {
+            "id": "signal_tower_perimeter",
+            "name": "信号塔外围",
+            "story": "喇叭线与「救援」箭嘴；夜间空壳更密"
+          },
+          {
+            "id": "hospital_archive",
+            "name": "市立医院档案层",
+            "story": "澄海冷柜与被撕页的住院记录"
+          },
+          {
+            "id": "cutroad_yard",
+            "name": "东环卡口",
+            "story": "路障用公交车尸骨堆成"
+          },
+          {
+            "id": "dock_warehouse_band",
+            "name": "码头仓库带",
+            "story": "发电机与配给窗口；弃城令锁在铁柜"
+          },
+          {
+            "id": "chenghai_lab_ruin",
+            "name": "澄海滨海实验室废墟",
+            "story": "对照笼与稳定剂冷链残骸"
+          },
+          {
+            "id": "night_bazaar_bridge",
+            "name": "高架桥下夜市",
+            "story": "秤与油灯；禁抢木牌"
+          }
+        ],
+        "content_status": "authored_pending_poi"
+      }
+    }
+  ]
+}

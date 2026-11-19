@@ -1,0 +1,218 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "story.timeline_full",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "timeline",
+        "canon"
+      ],
+      "data": {
+        "era_zero_definition": "Day 0 = 衛士城大规模空壳化与分区跳闸之夜",
+        "player_start_day": 45,
+        "events": [
+          {
+            "id": "tl_d90",
+            "day": -90,
+            "title": "样本池扩大",
+            "public": false,
+            "tier": "lab",
+            "text": "澄海再生一期在未完成伦理审查下扩大人体样本。"
+          },
+          {
+            "id": "tl_d60",
+            "day": -60,
+            "title": "合同「曦」",
+            "public": false,
+            "tier": "lab",
+            "text": "内部邮件出现军用镇痛旁支代号。"
+          },
+          {
+            "id": "tl_d30",
+            "day": -30,
+            "title": "不痛的工伤",
+            "public": true,
+            "tier": "district",
+            "text": "澄海仓库工人受伤却笑着继续搬箱——被当作励志段子。"
+          },
+          {
+            "id": "tl_d14",
+            "day": -14,
+            "title": "港口发热",
+            "public": true,
+            "tier": "street",
+            "text": "仓储工人群聚发热，官方称季节性流感。"
+          },
+          {
+            "id": "tl_d7",
+            "day": -7,
+            "title": "夜班失控",
+            "public": true,
+            "tier": "district",
+            "text": "市立医院夜班走廊视频流出后全网删除。"
+          },
+          {
+            "id": "tl_d3",
+            "day": -3,
+            "title": "检疫",
+            "public": true,
+            "tier": "street",
+            "text": "局部检疫与通信限流；市民囤水。"
+          },
+          {
+            "id": "tl_d1",
+            "day": -1,
+            "title": "封城",
+            "public": true,
+            "tier": "street",
+            "text": "通道与城门军事封控；物流外勤被要求就地待命。"
+          },
+          {
+            "id": "tl_d0",
+            "day": 0,
+            "title": "纪元夜",
+            "public": true,
+            "tier": "street",
+            "text": "空壳化浪潮；电网分区跳闸；沈渡被锁在城郊车库。"
+          },
+          {
+            "id": "tl_d3p",
+            "day": 3,
+            "title": "餘火",
+            "public": true,
+            "tier": "faction",
+            "text": "何崖山等人在旧中学食堂建立第一处共享灶火。"
+          },
+          {
+            "id": "tl_d10",
+            "day": 10,
+            "title": "弃厅",
+            "public": true,
+            "tier": "faction",
+            "text": "市政厅失守；关博随残部退往码头仓库带。"
+          },
+          {
+            "id": "tl_d21",
+            "day": 21,
+            "title": "广播",
+            "public": true,
+            "tier": "street",
+            "text": "信号塔开始循环科学救援离港广播。"
+          },
+          {
+            "id": "tl_d28",
+            "day": 28,
+            "title": "去者未归",
+            "public": true,
+            "tier": "faction",
+            "text": "餘火盟名单上出现连续失踪。"
+          },
+          {
+            "id": "tl_d36",
+            "day": 36,
+            "title": "东环卡口",
+            "public": true,
+            "tier": "faction",
+            "text": "铁眼部路劫团控制东环高架。"
+          },
+          {
+            "id": "tl_d40",
+            "day": 40,
+            "title": "采样加强",
+            "public": false,
+            "tier": "core",
+            "text": "司衡提高自愿撤离配额，优先寻找钝感者。"
+          },
+          {
+            "id": "tl_d45",
+            "day": 45,
+            "title": "灰门之前",
+            "public": true,
+            "tier": "street",
+            "text": "玩家开局。"
+          },
+          {
+            "id": "tl_d46",
+            "day": 46,
+            "title": "接触餘火",
+            "public": true,
+            "tier": "street",
+            "chapter_hint": "ch_01_ember",
+            "text": "主线预计接触何崖山（可因探索延迟）。"
+          },
+          {
+            "id": "tl_d48",
+            "day": 48,
+            "title": "噪声调查窗",
+            "public": true,
+            "tier": "street",
+            "chapter_hint": "ch_02_static",
+            "text": "塔周侦察窗口；空壳潮夜间增强。"
+          },
+          {
+            "id": "tl_d52",
+            "day": 52,
+            "title": "名册压力",
+            "public": true,
+            "tier": "faction",
+            "chapter_hint": "ch_03_ledger",
+            "text": "钝感者线索迫使道德选择。"
+          },
+          {
+            "id": "tl_d55",
+            "day": 55,
+            "title": "断路摊牌",
+            "public": true,
+            "tier": "faction",
+            "chapter_hint": "ch_04_cutroad",
+            "text": "载具线与路劫团冲突。"
+          },
+          {
+            "id": "tl_d58",
+            "day": 58,
+            "title": "残令",
+            "public": true,
+            "tier": "military",
+            "chapter_hint": "ch_05_remnant",
+            "text": "弃城采样令曝光窗口。"
+          },
+          {
+            "id": "tl_d62",
+            "day": 62,
+            "title": "澄海回声",
+            "public": false,
+            "tier": "lab",
+            "chapter_hint": "ch_06_echo",
+            "text": "实验室废墟验证稳定剂真相。"
+          },
+          {
+            "id": "tl_d65",
+            "day": 65,
+            "title": "灰潮",
+            "public": true,
+            "tier": "street",
+            "chapter_hint": "ch_07_tide",
+            "text": "空壳潮冲击据点或大逃亡。"
+          },
+          {
+            "id": "tl_d67",
+            "day": 67,
+            "title": "黎明选择",
+            "public": true,
+            "tier": "street",
+            "chapter_hint": "ch_finale",
+            "text": "结局窗口（可由 flags 提前/延后数日）。"
+          }
+        ],
+        "consistency_rules": [
+          "Player-visible calendar may drift ±3 days based on exploration; relative order of main flags must hold.",
+          "No resurrection after confirmed hollow or story death without explicit end_fail_hollow reload.",
+          "Infection incubation never outside 6-36h."
+        ]
+      }
+    }
+  ]
+}

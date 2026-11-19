@@ -1,157 +1,1287 @@
 {
   "domain": "story",
-  "version": 1,
+  "version": 2,
   "entries": [
     {
       "id": "ch_prologue",
       "domain": "story",
-      "version": 1,
-      "tags": ["chapter", "playable_first"],
+      "version": 2,
+      "tags": [
+        "chapter",
+        "playable_first"
+      ],
       "data": {
         "title": "灰门之前",
         "order": 0,
-        "era_day": 45,
         "map_id": "hongkong_city",
-        "locations": ["garage_safezone", "city_gate"],
-        "goal": "离开车库补给线，抵达城门方向并听到信号塔广播。",
-        "gameplay": ["survival_intro", "loot", "zombie_pressure", "radio_discover"],
-        "npc_ids": ["npc_story_he_yashan"],
-        "entry": {"flags_required": [], "chapter_complete": []},
-        "exit": {"flags_any": ["heard_tower_broadcast", "reached_city_gate_approach"]},
-        "fail": {"player_dead": true},
-        "save_nodes": ["prologue_start", "prologue_gate"],
-        "missable": ["garage_extra_medkit"],
+        "content_status": "authored_pending_poi",
+        "era_day": 45,
+        "locations": [
+          "garage_safezone",
+          "city_gate"
+        ],
+        "background": "灾难第四十五天。沈渡在城郊市政车库耗尽罐头，决定沿旧补给线向城门方向移动。对讲机里只剩底噪与偶尔掠过的信号塔广播碎片。",
+        "why_enter": "补给耗尽；寻找周晚晴与任何活人组织。",
+        "goal": "离开车库补给线，抵达城门方向并确认听到信号塔广播。",
+        "quest_flow": [
+          {
+            "step": 1,
+            "id": "pr_loot",
+            "desc": "在车库与毗邻工具间搜刮医疗与电池"
+          },
+          {
+            "step": 2,
+            "id": "pr_radio",
+            "desc": "修复或拾取手持收信机，锁定短波频道"
+          },
+          {
+            "step": 3,
+            "id": "pr_road",
+            "desc": "沿补给线潜行/战斗通过稀疏空壳"
+          },
+          {
+            "step": 4,
+            "id": "pr_gate",
+            "desc": "抵达城门接近点，完整收听一轮广播"
+          }
+        ],
+        "major_events": [
+          "发现同事工牌与未送出的对讲录音",
+          "第一次近距离面对行尸趋声",
+          "广播完整句：科学救援、离港集合、带上健康证明"
+        ],
+        "dialogues": [
+          {
+            "id": "dlg_pr_radio_log",
+            "speaker": "录音/同事",
+            "lines": [
+              "调度，车库侧门还是锁的——外面在撞门。",
+              "沈渡？你要是听得到……别按表单了。开门。",
+              "……信号没了。"
+            ]
+          },
+          {
+            "id": "dlg_pr_broadcast",
+            "speaker": "信号塔",
+            "lines": [
+              "这里是澄海应急科学救援协调频道。",
+              "健康成年幸存者请前往指示集合点，准备有序离港。",
+              "请携带身份证明。重复。"
+            ]
+          },
+          {
+            "id": "dlg_pr_he_spot",
+            "speaker": "npc_story_he_yashan",
+            "condition": "optional_spot",
+            "lines": [
+              "别往喇叭走。去的人，墙上有名。",
+              "你要找活人，跟灰烟走——别跟广播走。"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "choice_id": "chc_pr_listen_full",
+            "prompt": "是否完整录下广播",
+            "options": [
+              {
+                "id": "record",
+                "effects": {
+                  "flags": {
+                    "heard_tower_broadcast": true,
+                    "broadcast_recorded": true
+                  }
+                }
+              },
+              {
+                "id": "ignore_detail",
+                "effects": {
+                  "flags": {
+                    "heard_tower_broadcast": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "gameplay": [
+          "survival_intro",
+          "loot",
+          "zombie_pressure",
+          "radio_discover"
+        ],
+        "environment_narrative": [
+          "卷帘门内侧指甲抓痕",
+          "调度系统锁屏仍显示「远程锁止：防物资流失」",
+          "城门告示被新纸覆盖：「救援此路」箭头指向采样假道"
+        ],
+        "rewards": {
+          "items_hint": [
+            "medkit_small",
+            "battery_pack"
+          ],
+          "flags": [
+            "heard_tower_broadcast"
+          ]
+        },
+        "exit": {
+          "flags_any": [
+            "heard_tower_broadcast",
+            "reached_city_gate_approach"
+          ]
+        },
+        "entry": {
+          "flags_required": [],
+          "chapter_complete": []
+        },
+        "fail": {
+          "player_dead": true
+        },
+        "next_chapter_trigger": {
+          "chapter_id": "ch_01_ember",
+          "flags_required": [
+            "heard_tower_broadcast"
+          ]
+        },
+        "npc_ids": [
+          "npc_story_he_yashan"
+        ],
+        "save_nodes": [
+          "prologue_start",
+          "prologue_gate"
+        ],
+        "missable": [
+          "garage_extra_medkit"
+        ],
         "map_content_gap": []
       }
     },
     {
       "id": "ch_01_ember",
       "domain": "story",
-      "version": 1,
-      "tags": ["chapter", "playable_first"],
+      "version": 2,
+      "tags": [
+        "chapter",
+        "playable_first"
+      ],
       "data": {
         "title": "餘火",
         "order": 1,
-        "era_day": 45,
         "map_id": "hongkong_city",
-        "locations": ["ember_outpost_near"],
-        "goal": "接触何崖山，取得餘火盟信任，完成一次物资或护送。",
-        "gameplay": ["meet_ally", "escort_or_supply", "trust_check"],
-        "npc_ids": ["npc_story_he_yashan", "npc_story_mai_qin"],
-        "entry": {"flags_required": ["heard_tower_broadcast"]},
-        "exit": {"flags_any": ["ember_trusted", "ember_refused"]},
-        "fail": {"he_yashan_dead_early": "branch_ember_collapse"},
-        "save_nodes": ["ember_met", "ember_done"],
-        "map_content_gap": ["ember_outpost_near POI marker"]
+        "content_status": "authored_pending_poi",
+        "era_day": 46,
+        "locations": [
+          "ember_outpost_near"
+        ],
+        "background": "广播让沈渡成为「可能的信徒」。何崖山需要劳动力，也需要证明外来者不会把据点坐标卖给喇叭。",
+        "why_enter": "城门方向接触到餘火哨或被引导至旧中学。",
+        "goal": "接触何崖山，取得餘火盟信任或明确拒绝其庇护，完成一次物资或护送。",
+        "quest_flow": [
+          {
+            "step": 1,
+            "id": "em_meet",
+            "desc": "在据点外围通过搜身与问答"
+          },
+          {
+            "step": 2,
+            "id": "em_trial",
+            "desc": "选择：护送伤员 / 取回被劫药箱"
+          },
+          {
+            "step": 3,
+            "id": "em_judge",
+            "desc": "何崖山宣布信任或拒绝庇护"
+          },
+          {
+            "step": 4,
+            "id": "em_mai",
+            "desc": "麦琴提供感染观察常识（可选）"
+          }
+        ],
+        "major_events": [
+          "初见餘火灶火",
+          "「去者未归」墙",
+          "信任检定"
+        ],
+        "dialogues": [
+          {
+            "id": "dlg_em_he_intro",
+            "speaker": "npc_story_he_yashan",
+            "lines": [
+              "工牌还挂着。市政的人，锁过多少门？",
+              "这里规矩简单：先干活，再吃饭。广播的饭，我们不吃。",
+              "你要留下，去把巷口那箱药带回来——或者把老陈护到白篷点。选一个。"
+            ]
+          },
+          {
+            "id": "dlg_em_mai",
+            "speaker": "npc_story_mai_qin",
+            "lines": [
+              "发热不等于空壳。别一枪崩了还能说话的人。",
+              "深咬、清创、隔离。听不懂就别碰伤员。"
+            ]
+          },
+          {
+            "id": "dlg_em_trust",
+            "speaker": "npc_story_he_yashan",
+            "condition": "trial_success",
+            "lines": [
+              "你没把我们卖给喇叭。暂且算人。",
+              "墙那边的名字，别变成你的。"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "choice_id": "chc_em_trial",
+            "prompt": "信任试炼类型",
+            "options": [
+              {
+                "id": "escort",
+                "effects": {
+                  "flags": {
+                    "ember_trial_escort": true
+                  }
+                }
+              },
+              {
+                "id": "supply",
+                "effects": {
+                  "flags": {
+                    "ember_trial_supply": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "choice_id": "chc_em_join",
+            "prompt": "是否接受餘火庇护",
+            "options": [
+              {
+                "id": "accept",
+                "effects": {
+                  "flags": {
+                    "ember_trusted": true
+                  },
+                  "faction": {
+                    "faction_ember": 20
+                  }
+                }
+              },
+              {
+                "id": "refuse",
+                "effects": {
+                  "flags": {
+                    "ember_refused": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "gameplay": [
+          "meet_ally",
+          "escort_or_supply",
+          "trust_check"
+        ],
+        "environment_narrative": [
+          "食堂黑板上的工分",
+          "去者未归名单用炭笔写"
+        ],
+        "rewards": {
+          "reputation_ember": "up_if_trusted",
+          "info": "塔周危险提示"
+        },
+        "entry": {
+          "flags_required": [
+            "heard_tower_broadcast"
+          ]
+        },
+        "exit": {
+          "flags_any": [
+            "ember_trusted",
+            "ember_refused"
+          ]
+        },
+        "fail": {
+          "he_yashan_dead_early": "branch_ember_collapse"
+        },
+        "next_chapter_trigger": {
+          "chapter_id": "ch_02_static",
+          "flags_any": [
+            "ember_trusted",
+            "ember_refused"
+          ]
+        },
+        "npc_ids": [
+          "npc_story_he_yashan",
+          "npc_story_mai_qin"
+        ],
+        "save_nodes": [
+          "ember_met",
+          "ember_done"
+        ],
+        "map_content_gap": [
+          "ember_outpost_near POI marker"
+        ]
       }
     },
     {
       "id": "ch_02_static",
       "domain": "story",
-      "version": 1,
-      "tags": ["chapter"],
+      "version": 2,
+      "tags": [
+        "chapter"
+      ],
       "data": {
         "title": "噪声",
         "order": 2,
-        "goal": "调查广播外围，收集录音证据。",
-        "gameplay": ["stealth", "investigate", "audio_logs"],
-        "npc_ids": ["npc_story_he_yashan"],
-        "entry": {"flags_any": ["ember_trusted", "ember_refused"]},
-        "exit": {"flags_required": ["tower_perimeter_intel"]},
-        "map_content_gap": ["signal_tower_perimeter"]
+        "map_id": "hongkong_city",
+        "content_status": "authored_pending_poi",
+        "era_day": 48,
+        "locations": [
+          "signal_tower_perimeter"
+        ],
+        "background": "無論是否加入餘火，塔周都是唯一能验证广播是否「真人值守」的外围。",
+        "why_enter": "需要录音/物证说服自己或据点：广播背后有人在调度。",
+        "goal": "调查广播外围，收集录音与路径证据，获得 tower_perimeter_intel。",
+        "quest_flow": [
+          {
+            "step": 1,
+            "desc": "潜入塔周警戒线，避开护卫与空壳潮"
+          },
+          {
+            "step": 2,
+            "desc": "取得维护日志残页或对讲加密碎片"
+          },
+          {
+            "step": 3,
+            "desc": "发现「救援箭嘴」与真实道路分叉"
+          },
+          {
+            "step": 4,
+            "desc": "带回情报；可选择是否告诉何崖山"
+          }
+        ],
+        "major_events": [
+          "发现假道分叉",
+          "听到采样站内侧隐约发电机"
+        ],
+        "dialogues": [
+          {
+            "id": "dlg_st_log",
+            "speaker": "文件",
+            "lines": [
+              "脚本库：安抚-集合-分流。禁止提及采样。",
+              "配额上调。优先标记「低痛阈」个体。"
+            ]
+          },
+          {
+            "id": "dlg_st_he",
+            "speaker": "npc_story_he_yashan",
+            "condition": "ember_trusted",
+            "lines": [
+              "我说过。墙不是吓你。",
+              "你要是还想往里走，先想清楚你带回来的是火还是引线。"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "choice_id": "chc_st_share",
+            "prompt": "是否与餘火共享塔周情报",
+            "options": [
+              {
+                "id": "share",
+                "effects": {
+                  "flags": {
+                    "tower_intel_shared": true,
+                    "tower_perimeter_intel": true
+                  }
+                }
+              },
+              {
+                "id": "keep",
+                "effects": {
+                  "flags": {
+                    "tower_perimeter_intel": true,
+                    "tower_intel_hoarded": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "gameplay": [
+          "stealth",
+          "investigate",
+          "audio_logs"
+        ],
+        "environment_narrative": [
+          "生锈喇叭箱",
+          "地面白色箭头被血覆盖又重画"
+        ],
+        "entry": {
+          "flags_any": [
+            "ember_trusted",
+            "ember_refused"
+          ]
+        },
+        "exit": {
+          "flags_required": [
+            "tower_perimeter_intel"
+          ]
+        },
+        "next_chapter_trigger": {
+          "chapter_id": "ch_03_ledger",
+          "flags_required": [
+            "tower_perimeter_intel"
+          ]
+        },
+        "npc_ids": [
+          "npc_story_he_yashan"
+        ],
+        "map_content_gap": [
+          "signal_tower_perimeter"
+        ]
       }
     },
     {
       "id": "ch_03_ledger",
       "domain": "story",
-      "version": 1,
-      "tags": ["chapter"],
+      "version": 2,
+      "tags": [
+        "chapter"
+      ],
       "data": {
         "title": "名册",
         "order": 3,
-        "goal": "追查钝感携带者线索并作出道德选择。",
-        "gameplay": ["investigate", "moral_choice", "medical"],
-        "npc_ids": ["npc_story_mai_qin", "npc_story_zhou_wanqing"],
-        "entry": {"flags_required": ["tower_perimeter_intel"]},
-        "exit": {"flags_any": ["carrier_hidden", "carrier_revealed", "carrier_handed_over"]},
-        "map_content_gap": ["hospital_archive"]
+        "map_id": "hongkong_city",
+        "content_status": "authored_pending_poi",
+        "era_day": 52,
+        "locations": [
+          "hospital_archive",
+          "ember_outpost_near"
+        ],
+        "background": "塔周「低痛阈」字样与麦琴对小南的秘密观察重合。周晚晴也可能在档案层出现。",
+        "why_enter": "追查钝感携带者线索；道德选择不可避免。",
+        "goal": "作出 carrier_hidden / carrier_revealed / carrier_handed_over 之一。",
+        "quest_flow": [
+          {
+            "step": 1,
+            "desc": "医院档案层取得澄海相关住院撕页"
+          },
+          {
+            "step": 2,
+            "desc": "与麦琴对质小南的发热史"
+          },
+          {
+            "step": 3,
+            "desc": "与周晚晴短暂重逢（若存活路径）"
+          },
+          {
+            "step": 4,
+            "desc": "选择：藏匿 / 据内公开 / 交给「救援渠道」"
+          }
+        ],
+        "major_events": [
+          "重逢周晚晴",
+          "小南身份危机",
+          "名单伦理摊牌"
+        ],
+        "dialogues": [
+          {
+            "id": "dlg_ld_zhou",
+            "speaker": "npc_story_zhou_wanqing",
+            "lines": [
+              "沈渡。你还活着——好。",
+              "车库门禁……是我签的远程锁。我以为能少死些抢物资的人。",
+              "名单被人改过。有些名字后面多了采样标记。我需要原件。"
+            ]
+          },
+          {
+            "id": "dlg_ld_player_opts",
+            "speaker": "npc_story_player",
+            "lines": [
+              "（选项A）你锁门的时候，对讲里有人在叫我的名字。",
+              "（选项B）先说名单。门的事……我们活着再说。",
+              "（选项C）我来是找你，不是来听解释。"
+            ]
+          },
+          {
+            "id": "dlg_ld_mai_xiao",
+            "speaker": "npc_story_mai_qin",
+            "lines": [
+              "小南发热过，没攻人。你要是把她送去喇叭，我就当没救过你。"
+            ]
+          },
+          {
+            "id": "dlg_ld_xiao",
+            "speaker": "npc_story_xiao_nan",
+            "lines": [
+              "别用看标本的眼神看我。",
+              "我可以跑。你们别为了我打架。"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "choice_id": "chc_ld_zhou_blame",
+            "prompt": "如何回应周晚晴锁门",
+            "options": [
+              {
+                "id": "confront",
+                "effects": {
+                  "flags": {
+                    "zhou_confronted": true
+                  },
+                  "rel": {
+                    "npc_story_zhou_wanqing": -10
+                  }
+                }
+              },
+              {
+                "id": "defer",
+                "effects": {
+                  "flags": {
+                    "zhou_deferred": true
+                  },
+                  "rel": {
+                    "npc_story_zhou_wanqing": 5
+                  }
+                }
+              },
+              {
+                "id": "cold",
+                "effects": {
+                  "flags": {
+                    "zhou_cold": true
+                  },
+                  "rel": {
+                    "npc_story_zhou_wanqing": -5
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "choice_id": "chc_ld_carrier",
+            "prompt": "小南处置",
+            "options": [
+              {
+                "id": "hide",
+                "effects": {
+                  "flags": {
+                    "carrier_hidden": true
+                  },
+                  "rel": {
+                    "npc_story_mai_qin": 15,
+                    "npc_story_he_yashan": 5
+                  }
+                }
+              },
+              {
+                "id": "reveal",
+                "effects": {
+                  "flags": {
+                    "carrier_revealed": true
+                  },
+                  "rel": {
+                    "npc_story_he_yashan": -5
+                  }
+                }
+              },
+              {
+                "id": "hand_over",
+                "effects": {
+                  "flags": {
+                    "carrier_handed_over": true
+                  },
+                  "rel": {
+                    "npc_story_mai_qin": -40,
+                    "npc_story_he_yashan": -20
+                  },
+                  "npc_alive": {
+                    "npc_story_xiao_nan": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "gameplay": [
+          "investigate",
+          "moral_choice",
+          "medical"
+        ],
+        "environment_narrative": [
+          "冷柜贴澄海标识",
+          "住院记录「痛阈异常」被红笔圈"
+        ],
+        "entry": {
+          "flags_required": [
+            "tower_perimeter_intel"
+          ]
+        },
+        "exit": {
+          "flags_any": [
+            "carrier_hidden",
+            "carrier_revealed",
+            "carrier_handed_over"
+          ]
+        },
+        "next_chapter_trigger": {
+          "chapter_id": "ch_04_cutroad",
+          "flags_any": [
+            "carrier_hidden",
+            "carrier_revealed",
+            "carrier_handed_over"
+          ]
+        },
+        "npc_ids": [
+          "npc_story_mai_qin",
+          "npc_story_zhou_wanqing",
+          "npc_story_xiao_nan"
+        ],
+        "map_content_gap": [
+          "hospital_archive"
+        ]
       }
     },
     {
       "id": "ch_04_cutroad",
       "domain": "story",
-      "version": 1,
-      "tags": ["chapter"],
+      "version": 2,
+      "tags": [
+        "chapter"
+      ],
       "data": {
         "title": "断路",
         "order": 4,
-        "goal": "面对路劫团：交易、绕行或强攻，保护载具线。",
-        "gameplay": ["vehicle", "combat_or_deal", "transport"],
-        "npc_ids": ["npc_story_root"],
-        "entry": {"flags_any": ["carrier_hidden", "carrier_revealed", "carrier_handed_over"]},
-        "exit": {"flags_any": ["cutroad_dealt", "cutroad_fought", "cutroad_fled"]}
+        "map_id": "hongkong_city",
+        "content_status": "authored_pending_poi",
+        "era_day": 55,
+        "locations": [
+          "cutroad_yard"
+        ],
+        "background": "无论名单如何处置，东环是通往码头与实验室的咽喉。根想做生意，铁眼想收血税。",
+        "why_enter": "护送/载具线必须过卡，或绕行风险更高。",
+        "goal": "达成 cutroad_dealt / cutroad_fought / cutroad_fled 之一，保护关键物资或人物通过。",
+        "quest_flow": [
+          {
+            "step": 1,
+            "desc": "接触根谈判"
+          },
+          {
+            "step": 2,
+            "desc": "可选揭发根卖人（若已有线索）"
+          },
+          {
+            "step": 3,
+            "desc": "交易零件/弹药，或强攻，或弃货逃离"
+          },
+          {
+            "step": 4,
+            "desc": "铁眼可能介入"
+          }
+        ],
+        "dialogues": [
+          {
+            "id": "dlg_cr_root",
+            "speaker": "npc_story_root",
+            "lines": [
+              "过路费不收笑脸。收电池、收子弹，收你还用得上的东西。",
+              "你要找船？那是喇叭的生意。我只卖路。"
+            ]
+          },
+          {
+            "id": "dlg_cr_tieyan",
+            "speaker": "npc_story_tieyan",
+            "condition": "fight_or_betray",
+            "lines": [
+              "货留下。人可以走。",
+              "不走？"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "choice_id": "chc_cr_approach",
+            "prompt": "过卡方式",
+            "options": [
+              {
+                "id": "deal",
+                "effects": {
+                  "flags": {
+                    "cutroad_dealt": true
+                  },
+                  "resources": {
+                    "ammo_or_parts": "pay"
+                  }
+                }
+              },
+              {
+                "id": "fight",
+                "effects": {
+                  "flags": {
+                    "cutroad_fought": true
+                  },
+                  "npc_alive_risk": [
+                    "npc_story_root",
+                    "npc_story_tieyan"
+                  ]
+                }
+              },
+              {
+                "id": "flee",
+                "effects": {
+                  "flags": {
+                    "cutroad_fled": true
+                  },
+                  "resources": {
+                    "cargo_lost": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "choice_id": "chc_cr_expose_root",
+            "prompt": "是否当众揭发根卖坐标",
+            "options": [
+              {
+                "id": "expose",
+                "effects": {
+                  "flags": {
+                    "root_exposed": true
+                  },
+                  "may_trigger": "tieyan_kill_root"
+                }
+              },
+              {
+                "id": "silent",
+                "effects": {
+                  "flags": {
+                    "root_silence": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "gameplay": [
+          "vehicle",
+          "combat_or_deal",
+          "transport"
+        ],
+        "entry": {
+          "flags_any": [
+            "carrier_hidden",
+            "carrier_revealed",
+            "carrier_handed_over"
+          ]
+        },
+        "exit": {
+          "flags_any": [
+            "cutroad_dealt",
+            "cutroad_fought",
+            "cutroad_fled"
+          ]
+        },
+        "next_chapter_trigger": {
+          "chapter_id": "ch_05_remnant",
+          "flags_any": [
+            "cutroad_dealt",
+            "cutroad_fought",
+            "cutroad_fled"
+          ]
+        },
+        "npc_ids": [
+          "npc_story_root",
+          "npc_story_tieyan"
+        ]
       }
     },
     {
       "id": "ch_05_remnant",
       "domain": "story",
-      "version": 1,
-      "tags": ["chapter"],
+      "version": 2,
+      "tags": [
+        "chapter"
+      ],
       "data": {
         "title": "残令",
         "order": 5,
-        "goal": "接触市政残部，取得或偷取弃城令证据。",
-        "gameplay": ["negotiate", "infiltrate"],
-        "npc_ids": ["npc_story_guan_bo"],
-        "entry": {"flags_any": ["cutroad_dealt", "cutroad_fought", "cutroad_fled"]},
-        "exit": {"flags_required": ["abandon_order_known"]},
-        "map_content_gap": ["dock_warehouse_band"]
+        "map_id": "hongkong_city",
+        "content_status": "authored_pending_poi",
+        "era_day": 58,
+        "locations": [
+          "dock_warehouse_band"
+        ],
+        "background": "关博用纪律维持仓库。弃城采样令在铁柜里。公开它会撕裂残部，也可能撕开澄海的合法外衣。",
+        "why_enter": "需要官方文件证明广播与封城同源罪恶。",
+        "goal": "取得或确认 abandon_order_known。",
+        "quest_flow": [
+          {
+            "step": 1,
+            "desc": "用物流工牌或周晚晴引荐进入外围"
+          },
+          {
+            "step": 2,
+            "desc": "谈判或潜入铁柜"
+          },
+          {
+            "step": 3,
+            "desc": "阅读弃城采样附件"
+          },
+          {
+            "step": 4,
+            "desc": "选择逼关博公开或先保密带走副本"
+          }
+        ],
+        "dialogues": [
+          {
+            "id": "dlg_rm_guan",
+            "speaker": "npc_story_guan_bo",
+            "lines": [
+              "这里还有秩序。你要是来抢粮，我开枪。",
+              "……附件？你以为我没看过？我看过。我还让一百人睡得着。",
+              "你公开它，明天仓库可能先打起来，空壳后到。"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "choice_id": "chc_rm_public",
+            "prompt": "弃城令处理",
+            "options": [
+              {
+                "id": "force_public",
+                "effects": {
+                  "flags": {
+                    "abandon_order_known": true,
+                    "abandon_order_public": true
+                  },
+                  "rel": {
+                    "npc_story_guan_bo": -15
+                  }
+                }
+              },
+              {
+                "id": "copy_secret",
+                "effects": {
+                  "flags": {
+                    "abandon_order_known": true,
+                    "abandon_order_secret_copy": true
+                  }
+                }
+              },
+              {
+                "id": "blackmail",
+                "effects": {
+                  "flags": {
+                    "abandon_order_known": true,
+                    "guan_bo_leveraged": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "gameplay": [
+          "negotiate",
+          "infiltrate"
+        ],
+        "entry": {
+          "flags_any": [
+            "cutroad_dealt",
+            "cutroad_fought",
+            "cutroad_fled"
+          ]
+        },
+        "exit": {
+          "flags_required": [
+            "abandon_order_known"
+          ]
+        },
+        "next_chapter_trigger": {
+          "chapter_id": "ch_06_echo",
+          "flags_required": [
+            "abandon_order_known"
+          ]
+        },
+        "npc_ids": [
+          "npc_story_guan_bo",
+          "npc_story_zhou_wanqing"
+        ],
+        "map_content_gap": [
+          "dock_warehouse_band"
+        ]
       }
     },
     {
       "id": "ch_06_echo",
       "domain": "story",
-      "version": 1,
-      "tags": ["chapter"],
+      "version": 2,
+      "tags": [
+        "chapter"
+      ],
       "data": {
         "title": "澄海回声",
         "order": 6,
-        "goal": "进入澄海遗迹，验证曦蚀规则与稳定剂真相。",
-        "gameplay": ["dungeon_lab", "lore_confirm", "boss_pressure"],
-        "npc_ids": ["npc_story_siheng", "npc_story_zhou_wanqing"],
-        "entry": {"flags_required": ["abandon_order_known"]},
-        "exit": {"flags_required": ["stabilizer_truth"]},
-        "map_content_gap": ["chenghai_lab_ruin"]
+        "map_id": "hongkong_city",
+        "content_status": "authored_pending_poi",
+        "era_day": 62,
+        "locations": [
+          "chenghai_lab_ruin"
+        ],
+        "background": "实验室废墟里，稳定剂真相与司衡本人等待对质。周晚晴可能同行。",
+        "why_enter": "验证曦蚀规则与稳定剂；面对灰航线核心。",
+        "goal": "获得 stabilizer_truth；与司衡首次正面对话。",
+        "quest_flow": [
+          {
+            "step": 1,
+            "desc": "进入废墟，对抗护卫与实验体压力"
+          },
+          {
+            "step": 2,
+            "desc": "读取对照实验日志"
+          },
+          {
+            "step": 3,
+            "desc": "与司衡对峙"
+          },
+          {
+            "step": 4,
+            "desc": "决定杀、俘、或暂时撤离保留交易可能"
+          }
+        ],
+        "dialogues": [
+          {
+            "id": "dlg_ec_log",
+            "speaker": "实验日志",
+            "lines": [
+              "稳定剂：推迟语言崩解，不逆转空壳。",
+              "对照需求：未感染基线 / 钝感携带者。",
+              "广播转化率低于预期，提高「自愿」话术。"
+            ]
+          },
+          {
+            "id": "dlg_ec_siheng",
+            "speaker": "npc_story_siheng",
+            "lines": [
+              "你以为毁一台喇叭，城就会好？",
+              "我在记账。以后的人需要可重复的模型。你站在样本这一侧，还是记录这一侧？",
+              "船是真的。名额不是为所有人准备的。这不是残忍，是算术。"
+            ]
+          },
+          {
+            "id": "dlg_ec_zhou",
+            "speaker": "npc_story_zhou_wanqing",
+            "condition": "zhou_present",
+            "lines": [
+              "算术把我签过的单变成刀。",
+              "沈渡，别只听他。也别只听恨。"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "choice_id": "chc_ec_siheng",
+            "prompt": "对司衡",
+            "options": [
+              {
+                "id": "spare",
+                "effects": {
+                  "flags": {
+                    "stabilizer_truth": true,
+                    "siheng_spared": true
+                  }
+                }
+              },
+              {
+                "id": "capture",
+                "effects": {
+                  "flags": {
+                    "stabilizer_truth": true,
+                    "siheng_captured": true
+                  }
+                }
+              },
+              {
+                "id": "kill",
+                "effects": {
+                  "flags": {
+                    "stabilizer_truth": true,
+                    "siheng_killed_early": true
+                  },
+                  "npc_alive": {
+                    "npc_story_siheng": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "gameplay": [
+          "dungeon_lab",
+          "lore_confirm",
+          "boss_pressure"
+        ],
+        "entry": {
+          "flags_required": [
+            "abandon_order_known"
+          ]
+        },
+        "exit": {
+          "flags_required": [
+            "stabilizer_truth"
+          ]
+        },
+        "next_chapter_trigger": {
+          "chapter_id": "ch_07_tide",
+          "flags_required": [
+            "stabilizer_truth"
+          ]
+        },
+        "npc_ids": [
+          "npc_story_siheng",
+          "npc_story_zhou_wanqing"
+        ],
+        "map_content_gap": [
+          "chenghai_lab_ruin"
+        ]
       }
     },
     {
       "id": "ch_07_tide",
       "domain": "story",
-      "version": 1,
-      "tags": ["chapter"],
+      "version": 2,
+      "tags": [
+        "chapter"
+      ],
       "data": {
         "title": "灰潮",
         "order": 7,
-        "goal": "据点保卫或大逃亡；关键人物生死分岔。",
-        "gameplay": ["defense", "escape", "character_fates"],
-        "npc_ids": ["npc_story_he_yashan", "npc_story_mai_qin", "npc_story_guan_bo"],
-        "entry": {"flags_required": ["stabilizer_truth"]},
-        "exit": {"flags_required": ["tide_survived"]}
+        "map_id": "hongkong_city",
+        "content_status": "authored_pending_poi",
+        "era_day": 65,
+        "locations": [
+          "ember_outpost_near",
+          "dock_warehouse_band",
+          "city_gate"
+        ],
+        "background": "真相扩散或封锁都会搅动人群。空壳潮被枪声与广播异常吸引，冲击据点。人物生死在此分岔。",
+        "why_enter": "不可逆的中期危机；为终局积攒存活者与资源。",
+        "goal": "存活并达成 tide_survived；关键 NPC 存活状态写入 story_progress。",
+        "quest_flow": [
+          {
+            "step": 1,
+            "desc": "选择死守餘火 / 撤向码头 / 分散逃"
+          },
+          {
+            "step": 2,
+            "desc": "保卫或撤离中的人物救助检定"
+          },
+          {
+            "step": 3,
+            "desc": "广播可能被司衡方加强干扰"
+          },
+          {
+            "step": 4,
+            "desc": "潮后清点：谁还活着"
+          }
+        ],
+        "dialogues": [
+          {
+            "id": "dlg_td_he",
+            "speaker": "npc_story_he_yashan",
+            "lines": [
+              "灶火可以灭，人不能灭完。",
+              "你带谁走，就等于宣判谁留下。别装看不见。"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "choice_id": "chc_td_plan",
+            "prompt": "灰潮策略",
+            "options": [
+              {
+                "id": "defend",
+                "effects": {
+                  "flags": {
+                    "tide_defend": true,
+                    "tide_survived": true
+                  },
+                  "risk": "npc_deaths_high"
+                }
+              },
+              {
+                "id": "evacuate_dock",
+                "effects": {
+                  "flags": {
+                    "tide_evac_dock": true,
+                    "tide_survived": true
+                  }
+                }
+              },
+              {
+                "id": "scatter",
+                "effects": {
+                  "flags": {
+                    "tide_scatter": true,
+                    "tide_survived": true
+                  },
+                  "rel": {
+                    "faction_ember": -10
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "gameplay": [
+          "defense",
+          "escape",
+          "character_fates"
+        ],
+        "entry": {
+          "flags_required": [
+            "stabilizer_truth"
+          ]
+        },
+        "exit": {
+          "flags_required": [
+            "tide_survived"
+          ]
+        },
+        "next_chapter_trigger": {
+          "chapter_id": "ch_finale",
+          "flags_required": [
+            "tide_survived"
+          ]
+        },
+        "npc_ids": [
+          "npc_story_he_yashan",
+          "npc_story_mai_qin",
+          "npc_story_guan_bo"
+        ]
       }
     },
     {
       "id": "ch_finale",
       "domain": "story",
-      "version": 1,
-      "tags": ["chapter", "finale"],
+      "version": 2,
+      "tags": [
+        "chapter",
+        "finale"
+      ],
       "data": {
         "title": "黎明选择",
         "order": 8,
-        "goal": "根据累计选择触发结局。",
-        "gameplay": ["finale_choice", "multi_ending"],
-        "npc_ids": ["npc_story_siheng"],
-        "entry": {"flags_required": ["tide_survived"]},
-        "exit": {"ending_id_set": true}
+        "map_id": "hongkong_city",
+        "content_status": "authored_pending_poi",
+        "era_day": 67,
+        "locations": [
+          "signal_tower_perimeter",
+          "dock_warehouse_band",
+          "chenghai_lab_ruin"
+        ],
+        "background": "所有伏笔结算。结局由累计 flags 与存活者决定，而非单次弹窗。",
+        "why_enter": "灰潮后窗口；必须对广播/船/真相作出不可逆行动。",
+        "goal": "写入 ending_id。",
+        "quest_flow": [
+          {
+            "step": 1,
+            "desc": "终局方案可用性检定（见 endings.json）"
+          },
+          {
+            "step": 2,
+            "desc": "执行断塔 / 夺船 / 公开 / 交易之一"
+          },
+          {
+            "step": 3,
+            "desc": "结算 NPC 与世界状态"
+          },
+          {
+            "step": 4,
+            "desc": "结局演出"
+          }
+        ],
+        "dialogues": [
+          {
+            "id": "dlg_fn_siheng",
+            "speaker": "npc_story_siheng",
+            "condition": "siheng_alive",
+            "lines": [
+              "选吧。毁我，或用我。别假装有第四种干净的路。"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "choice_id": "chc_fn_ending",
+            "prompt": "终局行动（受限可用性）",
+            "options": [
+              {
+                "id": "burn",
+                "requires": [
+                  "stabilizer_truth"
+                ],
+                "effects": {
+                  "ending_id": "end_burn_tower"
+                }
+              },
+              {
+                "id": "ship",
+                "requires": [
+                  "tide_survived"
+                ],
+                "effects": {
+                  "ending_id": "end_steal_ship"
+                }
+              },
+              {
+                "id": "truth",
+                "requires": [
+                  "abandon_order_known",
+                  "stabilizer_truth"
+                ],
+                "effects": {
+                  "ending_id": "end_broadcast_truth"
+                }
+              },
+              {
+                "id": "bargain",
+                "requires": [
+                  "siheng_spared"
+                ],
+                "effects": {
+                  "ending_id": "end_bargain"
+                }
+              }
+            ]
+          }
+        ],
+        "gameplay": [
+          "finale_choice",
+          "multi_ending"
+        ],
+        "entry": {
+          "flags_required": [
+            "tide_survived"
+          ]
+        },
+        "exit": {
+          "ending_id_set": true
+        },
+        "npc_ids": [
+          "npc_story_siheng",
+          "npc_story_zhou_wanqing",
+          "npc_story_he_yashan"
+        ]
       }
     }
   ]

@@ -1,48 +1,104 @@
 {
   "domain": "story",
-  "version": 1,
+  "version": 2,
   "entries": [
     {
       "id": "story.main_hook",
       "domain": "story",
-      "version": 1,
-      "tags": ["main", "hook"],
+      "version": 2,
+      "tags": [
+        "main",
+        "hook"
+      ],
       "data": {
         "hook": "信号塔广播承诺科学救援离港；餘火盟警告去者未归。",
         "core_question": "广播的安全船是希望还是收割？",
+        "logline": "被自己人锁在车库里活过灾难夜的物流外勤沈渡，在衛士城废墟中寻找失联调度周晚晴，逐步揭开澄海生物将「撤离」变成采样航线的真相，并在公开、交易、夺船与断讯之间做出不可逆选择。",
         "antagonist_id": "npc_story_siheng",
         "map_id": "hongkong_city",
-        "start_chapter_id": "ch_prologue"
+        "start_chapter_id": "ch_prologue",
+        "theme": [
+          "谁有权决定谁配活",
+          "表单理性 vs 社群伦理",
+          "希望武器化"
+        ],
+        "act_structure": {
+          "act1": [
+            "ch_prologue",
+            "ch_01_ember",
+            "ch_02_static"
+          ],
+          "act2": [
+            "ch_03_ledger",
+            "ch_04_cutroad",
+            "ch_05_remnant"
+          ],
+          "act3": [
+            "ch_06_echo",
+            "ch_07_tide",
+            "ch_finale"
+          ]
+        }
       }
     },
     {
       "id": "story.main_cast",
       "domain": "story",
-      "version": 1,
-      "tags": ["main", "cast"],
+      "version": 2,
+      "tags": [
+        "main",
+        "cast"
+      ],
       "data": {
+        "player_id": "npc_story_player",
         "npc_ids": [
           "npc_story_zhou_wanqing",
           "npc_story_he_yashan",
           "npc_story_mai_qin",
           "npc_story_guan_bo",
           "npc_story_siheng",
-          "npc_story_root"
+          "npc_story_root",
+          "npc_story_tieyan",
+          "npc_story_xiao_nan"
         ]
       }
     },
     {
       "id": "story.ending_catalog",
       "domain": "story",
-      "version": 1,
-      "tags": ["main", "endings"],
+      "version": 2,
+      "tags": [
+        "main",
+        "endings"
+      ],
       "data": {
+        "note": "Full conditions in endings.json",
         "endings": [
-          {"id": "end_burn_tower", "title": "断讯", "summary": "毁塔断采样，城内更难联络"},
-          {"id": "end_steal_ship", "title": "夺船", "summary": "撤离少数人，留下者命运分支"},
-          {"id": "end_broadcast_truth", "title": "公开", "summary": "公开真相，阵营动荡但可重建"},
-          {"id": "end_bargain", "title": "交易", "summary": "与司衡交易稳定剂，代价沉重"},
-          {"id": "end_fail_hollow", "title": "空壳", "summary": "失败结局；可读档重来"}
+          {
+            "id": "end_burn_tower",
+            "title": "断讯",
+            "summary": "毁塔断采样诱导，城内更难联络，澄海收割受挫"
+          },
+          {
+            "id": "end_steal_ship",
+            "title": "夺船",
+            "summary": "撤离少数人，留下者命运分支"
+          },
+          {
+            "id": "end_broadcast_truth",
+            "title": "公开",
+            "summary": "公开真相，阵营动荡但可重建信任基础"
+          },
+          {
+            "id": "end_bargain",
+            "title": "交易",
+            "summary": "与司衡交易稳定剂，代价沉重"
+          },
+          {
+            "id": "end_fail_hollow",
+            "title": "空壳",
+            "summary": "失败结局；可读档重来"
+          }
         ]
       }
     }

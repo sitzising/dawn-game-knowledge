@@ -1,70 +1,227 @@
 {
   "domain": "story",
-  "version": 1,
-  "note": "Story faction lore. Runtime reputation still pending; ids must stay stable.",
+  "version": 2,
+  "note": "Story faction lore. Reputation runtime may lag; ids stable.",
   "entries": [
     {
       "id": "faction_ember",
       "domain": "story",
-      "version": 1,
-      "tags": ["faction"],
+      "version": 2,
+      "tags": [
+        "faction"
+      ],
       "data": {
         "display_name": "餘火盟",
         "maps_to_catalog": "faction_survivors",
-        "ideal": "互助求生",
-        "method": "据点共享与护送",
+        "origin": "Day3 何崖山在旧中学食堂聚灶",
+        "structure": "仲裁人（何崖山）+ 医疗（麦琴）+ 班组护送；无正式军衔",
         "leader_ref": "npc_story_he_yashan",
+        "members_key": [
+          "npc_story_mai_qin",
+          "npc_story_xiao_nan"
+        ],
+        "ideal": "互助求生，外来者先证明",
+        "method": "据点共享、护送、工分条",
+        "resources": [
+          "共享灶火",
+          "少量弹药",
+          "钝感者名单副本",
+          "巷战地形熟"
+        ],
+        "control_areas": [
+          "ember_outpost_near",
+          "旧中学周边巷"
+        ],
+        "internal_conflict": "是否响应广播；是否交出钝感者换药",
         "secret": "钝感者名单",
-        "hostile_to": ["faction_cutroad", "faction_chenghai_echo"],
-        "player_default": "wary"
+        "hostile_to": [
+          "faction_cutroad",
+          "faction_chenghai_echo"
+        ],
+        "allied_to": [],
+        "player_default": "wary",
+        "player_impact": {
+          "ember_trusted": "开放据点仓储与支线",
+          "ember_refused": "仍可交易但无庇护",
+          "carrier_handed_over": "信任崩盘或内部分裂"
+        },
+        "development": "灰潮后或守或散；公开真相对其凝聚力是双刃剑"
       }
     },
     {
       "id": "faction_cutroad",
       "domain": "story",
-      "version": 1,
-      "tags": ["faction"],
+      "version": 2,
+      "tags": [
+        "faction"
+      ],
       "data": {
         "display_name": "路劫团",
         "maps_to_catalog": "faction_raiders",
+        "origin": "东环高架溃兵与黑帮残存合并",
+        "structure": "铁眼管打，根管谈；其余按枪分级",
+        "leader_ref": "npc_story_tieyan",
+        "broker_ref": "npc_story_root",
         "ideal": "谁强谁吃",
-        "method": "卡路与勒索",
-        "leader_ref": "npc_story_root",
+        "method": "卡路、勒索、卖坐标",
+        "resources": [
+          "路卡",
+          "零件库存",
+          "少量燃油"
+        ],
+        "control_areas": [
+          "东环高架卡口",
+          "cutroad_yard"
+        ],
+        "internal_conflict": "铁眼欲杀根独占澄海买路钱",
         "secret": "向澄海卖坐标",
-        "hostile_to": ["faction_ember", "faction_civic_remnant"],
-        "player_default": "hostile"
+        "hostile_to": [
+          "faction_ember",
+          "faction_civic_remnant"
+        ],
+        "player_default": "hostile",
+        "player_impact": {
+          "cutroad_dealt": "临时通行",
+          "cutroad_fought": "永久敌对加强",
+          "cutroad_fled": "被追讨「逃费」"
+        }
       }
     },
     {
       "id": "faction_civic_remnant",
       "domain": "story",
-      "version": 1,
-      "tags": ["faction"],
+      "version": 2,
+      "tags": [
+        "faction"
+      ],
       "data": {
         "display_name": "市政残部",
         "maps_to_catalog": "",
-        "ideal": "秩序残影",
-        "method": "仓库戒严与配给",
+        "origin": "Day10 市政厅失守后的仓库戒严部队",
+        "structure": "名义指挥失踪（陆钦失联）；关博实际管码头仓库",
         "leader_ref": "npc_story_guan_bo",
+        "members_key": [
+          "npc_story_zhou_wanqing",
+          "npc_story_lu_qin"
+        ],
+        "ideal": "秩序残影 / 配给公平的幻觉",
+        "method": "仓库戒严、配给、证件优先",
+        "resources": [
+          "发电机",
+          "部分库存粮",
+          "轻武"
+        ],
+        "control_areas": [
+          "dock_warehouse_band"
+        ],
+        "internal_conflict": "公开弃城令 vs 维持士气谎言",
         "secret": "弃城采样令",
-        "hostile_to": ["faction_cutroad"],
-        "player_default": "neutral"
+        "hostile_to": [
+          "faction_cutroad"
+        ],
+        "player_default": "neutral",
+        "player_impact": {
+          "abandon_order_known": "分裂：公开派 vs 封锁派",
+          "end_broadcast_truth": "残部合法性重写"
+        }
       }
     },
     {
       "id": "faction_chenghai_echo",
       "domain": "story",
-      "version": 1,
-      "tags": ["faction"],
+      "version": 2,
+      "tags": [
+        "faction"
+      ],
       "data": {
         "display_name": "澄海遗影",
         "maps_to_catalog": "",
-        "ideal": "完成对照实验",
-        "method": "广播诱捕与采样",
+        "origin": "澄海生物现场组在灾难后的延续",
+        "structure": "司衡为现场权威；武装护卫少量；广播组远程",
         "leader_ref": "npc_story_siheng",
+        "ideal": "完成对照实验「为以后的人类」",
+        "method": "广播诱捕、采样、稳定剂控制",
+        "resources": [
+          "采样站",
+          "稳定剂库存",
+          "信号塔脚本",
+          "实验室废墟数据"
+        ],
+        "control_areas": [
+          "signal_tower_perimeter",
+          "chenghai_lab_ruin",
+          "采样前哨"
+        ],
+        "internal_conflict": "继续收割 vs 携数据逃海上",
         "secret": "采样站即「撤离点」",
         "hostile_to": [],
-        "player_default": "unknown"
+        "player_default": "unknown",
+        "player_impact": {
+          "stabilizer_truth": "敌对或交易门打开",
+          "end_bargain": "暂时同盟",
+          "end_burn_tower": "能力重创"
+        }
+      }
+    },
+    {
+      "id": "faction_night_bazaar",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "faction",
+        "black_market"
+      ],
+      "data": {
+        "display_name": "夜市秤",
+        "maps_to_catalog": "",
+        "origin": "流动跳蚤摊在停电后固定到高架桥下",
+        "structure": "冯叔主持；摊主松散联盟",
+        "leader_ref": "npc_story_old_feng",
+        "ideal": "交易不停，摊在人在",
+        "method": "夜开昼散、信息费、禁抢规矩",
+        "resources": [
+          "情报",
+          "杂货",
+          "偶尔药品"
+        ],
+        "control_areas": [
+          "night_bazaar_bridge"
+        ],
+        "internal_conflict": "是否卖人情报给根",
+        "secret": "有一本「谁买过抗生素」的账",
+        "hostile_to": [],
+        "player_default": "neutral"
+      }
+    },
+    {
+      "id": "faction_white_tent",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "faction",
+        "medical"
+      ],
+      "data": {
+        "display_name": "白篷残余",
+        "maps_to_catalog": "",
+        "origin": "灾难初野战医疗帐篷崩溃后的游医网",
+        "structure": "无统一领袖；麦琴曾间接联系",
+        "leader_ref": "",
+        "ideal": "少死一个算一个",
+        "method": "流动清创点、隔离旗语",
+        "resources": [
+          "医术",
+          "极少药品"
+        ],
+        "control_areas": [
+          "临时白篷点（流动）"
+        ],
+        "internal_conflict": "安乐死权限",
+        "secret": "部分成员曾注射过澄海试验镇痛剂",
+        "hostile_to": [
+          "faction_chenghai_echo"
+        ],
+        "player_default": "neutral"
       }
     }
   ]

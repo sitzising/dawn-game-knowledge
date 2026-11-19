@@ -1,138 +1,679 @@
 {
   "domain": "story",
-  "version": 1,
-  "note": "Story cast profiles. World combat templates stay in npcs/catalog.json (npc_world_*).",
+  "version": 2,
+  "note": "Story cast. Combat templates remain in npcs/catalog.json (npc_world_*).",
   "entries": [
+    {
+      "id": "npc_story_player",
+      "domain": "story",
+      "version": 2,
+      "tags": [
+        "character",
+        "player"
+      ],
+      "data": {
+        "display_name": "沈渡",
+        "name_en": "Shen Du",
+        "age": 32,
+        "sex": "male",
+        "role": "市政物流外勤（玩家）",
+        "appearance": "偏瘦高；左眉有旧伤疤；常穿反光条已磨掉的深灰工装外套；腰挂市政物流工牌（过期）",
+        "personality": [
+          "克制",
+          "观察优先",
+          "守诺",
+          "对名单敏感"
+        ],
+        "background": "末日前负责城南至码头的夜间物资调度外勤。父亲早逝，母亲在外省养老院——开局时联系已断。与周晚晴是工作搭子，互称姓氏。",
+        "pre_apocalypse": "习惯按表单活：迟到扣分、缺货写报告。唯一「出格」是曾私留一箱婴儿奶粉给同事亲戚，被周晚晴口头警告后改写库存。",
+        "skills": [
+          "路网记忆",
+          "车辆基础维护",
+          "负重规划",
+          "对讲纪律"
+        ],
+        "trauma": "Day0 对讲里听见同事被围，车库门禁被调度系统锁死，他无法开门。",
+        "relationships": {
+          "npc_story_zhou_wanqing": "寻找中的调度；信任但带着未能开门的愧疚",
+          "npc_story_he_yashan": "潜在同盟；需证明自己不是广播信徒"
+        },
+        "goals": {
+          "short": "进城门方向，找到活人与情报",
+          "main": "找到周晚晴并弄清广播真伪",
+          "growth": "学会在没有表单时做不可逆决定"
+        },
+        "core_conflict": "救人 vs 保全情报；谁有权决定「谁配活」",
+        "final_choice_axes": [
+          "truth_vs_stability",
+          "few_vs_many",
+          "vengeance_vs_future"
+        ],
+        "faction_id": "",
+        "knowledge_tier": "street",
+        "knows": [
+          "story.world_overview",
+          "story.infection"
+        ],
+        "does_not_know": [
+          "story.secrets_layers:lab",
+          "story.secrets_layers:core",
+          "story.world_secret_harvest"
+        ],
+        "death_allowed": true,
+        "death_conditions": [
+          "player_dead",
+          "end_fail_hollow"
+        ],
+        "spawn_by_population": false,
+        "voice": {
+          "age_band": "adult",
+          "pace": "measured",
+          "pitch": "mid",
+          "style": "短句，少形容词，先报事实再表态"
+        }
+      }
+    },
     {
       "id": "npc_story_zhou_wanqing",
       "domain": "story",
-      "version": 1,
-      "tags": ["character", "main"],
+      "version": 2,
+      "tags": [
+        "character",
+        "main"
+      ],
       "data": {
         "display_name": "周晚晴",
         "age": 29,
+        "sex": "female",
         "role": "市政调度",
-        "faction_id": "faction_civic_remnant",
-        "personality": ["冷静", "内疚", "责任感"],
-        "goal_short": "确认撤离名单是否被篡改",
-        "goal_long": "带出仍在城内的物流同事",
+        "appearance": "短发；常戴单边耳机习惯性按耳；手指有长期敲键盘茧；灾难后工装袖口烧焦一截",
+        "personality": [
+          "冷静",
+          "内疚",
+          "责任感",
+          "话少时更危险"
+        ],
+        "background": "市政应急物流调度。灾难前最后一班：远程锁死部分车库门禁「防止物资流失」——间接困住沈渡等人。",
+        "survival": "Day0 后随市政残部撤到码头外围，后潜入医院档案寻找名单篡改证据，与餘火盟保持不稳定联络。",
+        "goals": {
+          "short": "确认撤离名单是否被篡改",
+          "long": "带出仍在城内的物流同事",
+          "hidden": "证明自己锁门不是故意杀人"
+        },
         "secret": "曾签署过一份「优先采样」调拨单，当时不知用途",
-        "fears": ["再次错判", "连累他人"],
+        "fears": [
+          "再次错判",
+          "连累他人",
+          "沈渡当面质问锁门"
+        ],
+        "morality": "秩序功利：宁可背骂名也要降低系统性死亡，但正在崩塌",
+        "attitude_to_player": "复杂愧疚；先试探是否仍执行「表单思维」",
+        "relations": {
+          "npc_story_player": "前工作搭子",
+          "npc_story_guan_bo": "同系统；不完全信任",
+          "npc_story_mai_qin": "医疗情报交换",
+          "npc_story_siheng": "敌意（逐渐确认）"
+        },
+        "event_cognition": {
+          "broadcast": "怀疑是筛选而非救援",
+          "abandon_order": "部分知情，未握原件"
+        },
+        "faction_id": "faction_civic_remnant",
         "knowledge_tier": "military",
-        "knows": ["story.timeline:tl_d1", "story.world_overview"],
-        "does_not_know": ["story.secrets_layers:core"],
-        "voice": {"age_band": "adult", "pace": "measured", "pitch": "mid"},
+        "knows": [
+          "story.timeline:tl_d1",
+          "story.world_overview",
+          "story.secrets_layers:military"
+        ],
+        "does_not_know": [
+          "story.secrets_layers:core",
+          "story.world_secret_harvest"
+        ],
+        "plot_beats": [
+          "ch_03_ledger",
+          "ch_06_echo",
+          "ch_finale"
+        ],
         "death_allowed": true,
+        "death_conditions": [
+          "zhou_sacrificed_lab",
+          "zhou_killed_tide",
+          "zhou_executed_if_betrayed"
+        ],
+        "survive_conditions": [
+          "zhou_extracted",
+          "zhou_with_player_ending"
+        ],
+        "endings_arcs": {
+          "end_broadcast_truth": "公开调拨单与弃城令，承担骂名",
+          "end_bargain": "可能被当作交易筹码",
+          "end_steal_ship": "可上船或留下重建",
+          "end_burn_tower": "支持断讯但担心孤岛化"
+        },
+        "voice": {
+          "age_band": "adult",
+          "pace": "measured",
+          "pitch": "mid",
+          "style": "先确认事实编号，再给情绪一句"
+        },
         "spawn_by_population": false
       }
     },
     {
       "id": "npc_story_he_yashan",
       "domain": "story",
-      "version": 1,
-      "tags": ["character", "main", "hub"],
+      "version": 2,
+      "tags": [
+        "character",
+        "main",
+        "hub"
+      ],
       "data": {
         "display_name": "何崖山",
         "age": 41,
-        "role": "餘火盟联络",
-        "faction_id": "faction_ember",
-        "personality": ["谨慎", "护短", "多疑"],
-        "goal_short": "验证玩家是否可靠",
-        "goal_long": "保住据点与钝感者名单",
+        "sex": "male",
+        "role": "餘火盟联络 / 据点实际仲裁",
+        "appearance": "矮壮；右耳听力差；颈侧旧烧伤；永远背一把缺了漆的短斧作工具",
+        "personality": [
+          "谨慎",
+          "护短",
+          "多疑",
+          "笑话很冷"
+        ],
+        "background": "前中学体育教师。Day3 用食堂灶火聚起第一批难民，订下「不抢自己人、外来者先干活」规矩。",
+        "survival": "守着旧中学据点与周边巷战缓冲带；藏钝感者名单副本。",
+        "goals": {
+          "short": "验证玩家是否可靠",
+          "long": "保住据点与钝感者",
+          "hidden": "用名单换时间，而非卖人——底线常被现实挤压"
+        },
         "secret": "藏着钝感携带者名单副本",
+        "fears": [
+          "据点被广播掏空",
+          "名单落入澄海"
+        ],
+        "morality": "社群优先；对外可撒谎，对内不偷物资",
+        "attitude_to_player": "默认怀疑广播信徒；完成护送/补给后转为有条件信任",
+        "relations": {
+          "npc_story_mai_qin": "战友式拌嘴",
+          "npc_story_root": "交易但不握手",
+          "npc_story_tieyan": "死敌"
+        },
+        "faction_id": "faction_ember",
         "knowledge_tier": "faction",
-        "knows": ["story.world_overview", "story.infection"],
-        "does_not_know": ["story.secrets_layers:lab", "story.secrets_layers:core"],
-        "voice": {"age_band": "adult", "pace": "slow", "pitch": "low"},
+        "knows": [
+          "story.world_overview",
+          "story.infection",
+          "story.secrets_layers:faction"
+        ],
+        "does_not_know": [
+          "story.secrets_layers:lab",
+          "story.secrets_layers:core"
+        ],
+        "plot_beats": [
+          "ch_prologue",
+          "ch_01_ember",
+          "ch_02_static",
+          "ch_07_tide"
+        ],
         "death_allowed": true,
+        "death_conditions": [
+          "he_yashan_dead_early",
+          "he_yashan_dead_tide"
+        ],
+        "survive_conditions": [
+          "ember_holds",
+          "ember_evacuates"
+        ],
+        "voice": {
+          "age_band": "adult",
+          "pace": "slow",
+          "pitch": "low",
+          "style": "问三句答一句；比喻用校园旧事"
+        },
         "spawn_by_population": false
       }
     },
     {
       "id": "npc_story_mai_qin",
       "domain": "story",
-      "version": 1,
-      "tags": ["character", "main", "medical"],
+      "version": 2,
+      "tags": [
+        "character",
+        "main",
+        "medical"
+      ],
       "data": {
         "display_name": "麦琴",
         "age": 34,
+        "sex": "female",
         "role": "野战医",
-        "faction_id": "faction_ember",
-        "personality": ["务实", "尖锐", "悲观中的坚持"],
-        "goal_short": "弄到抗生素与缝合线",
-        "goal_long": "证明稳定剂传言不全是骗局",
+        "appearance": "眼窝深；手套永远不够用；左腕系红绳（已褪色）；说话时盯伤口不盯脸",
+        "personality": [
+          "务实",
+          "尖锐",
+          "悲观中的坚持"
+        ],
+        "background": "急诊护士；曾在澄海外包诊所打临工，见过「不痛的病人」。",
+        "survival": "为餘火盟做清创与隔离判决；需要抗生素与缝合线。",
+        "goals": {
+          "short": "弄到抗生素与缝合线",
+          "long": "弄清稳定剂是不是全骗局",
+          "hidden": "确认自己没在诊所里「帮忙」扩大传播"
+        },
         "secret": "曾在澄海外包诊所打过临工",
+        "fears": [
+          "再次错过可救的人",
+          "稳定剂把人变成样本"
+        ],
+        "morality": "医疗功利：能救则救，救不了就隔离——讨厌被叫冷血",
+        "attitude_to_player": "用任务能力评价人；完成医疗物资线后软化",
+        "relations": {
+          "npc_story_he_yashan": "互相需要",
+          "npc_story_zhou_wanqing": "情报交换",
+          "npc_story_siheng": "专业层面的憎恶"
+        },
+        "faction_id": "faction_ember",
         "knowledge_tier": "district",
-        "knows": ["story.infection", "story.timeline:tl_d7"],
-        "does_not_know": ["story.secrets_layers:core"],
-        "voice": {"age_band": "adult", "pace": "fast", "pitch": "mid"},
+        "knows": [
+          "story.infection",
+          "story.timeline:tl_d7"
+        ],
+        "does_not_know": [
+          "story.secrets_layers:core"
+        ],
+        "plot_beats": [
+          "ch_01_ember",
+          "ch_03_ledger",
+          "ch_07_tide"
+        ],
         "death_allowed": true,
+        "death_conditions": [
+          "mai_qin_dead_tide",
+          "mai_qin_overdose_bargain"
+        ],
+        "voice": {
+          "age_band": "adult",
+          "pace": "fast",
+          "pitch": "mid",
+          "style": "医嘱口吻；脏话精准不浪"
+        },
         "spawn_by_population": false
       }
     },
     {
       "id": "npc_story_guan_bo",
       "domain": "story",
-      "version": 1,
-      "tags": ["character", "main"],
+      "version": 2,
+      "tags": [
+        "character",
+        "main"
+      ],
       "data": {
         "display_name": "关博",
         "age": 36,
-        "role": "市政残部下级军官",
-        "faction_id": "faction_civic_remnant",
-        "personality": ["纪律", "动摇", "羞愧"],
-        "goal_short": "维持码头仓库秩序",
-        "goal_long": "决定是否公开弃城令",
+        "sex": "male",
+        "role": "市政残部码头仓库实际指挥（名义上级失踪）",
+        "appearance": "制服肩章被撕掉一角；右手 Tremor 在压力下出现；永远擦枪",
+        "personality": [
+          "纪律",
+          "动摇",
+          "羞愧"
+        ],
+        "background": "城防辅助编制下级军官。见过弃城采样条款原件，未公开。",
+        "survival": "维持码头仓库戒严与配给；用纪律掩盖崩塌。",
+        "goals": {
+          "short": "维持仓库秩序",
+          "long": "决定是否公开弃城令",
+          "hidden": "想活，也想被当成「还是个人」"
+        },
         "secret": "见过弃城采样条款原件",
+        "fears": [
+          "士兵哗变",
+          "被澄海点名「合作过」"
+        ],
+        "morality": "服从惯性 vs 公开真相的罪疚",
+        "attitude_to_player": "若出示物流工牌会短暂松口；否则按外来者处理",
+        "relations": {
+          "npc_story_zhou_wanqing": "旧系统同僚",
+          "npc_story_lu_qin": "失踪的联络上级（档案）",
+          "npc_story_siheng": "恐惧与利用"
+        },
+        "faction_id": "faction_civic_remnant",
         "knowledge_tier": "military",
-        "knows": ["story.secrets_layers:military", "story.timeline:tl_d10"],
-        "does_not_know": ["story.secrets_layers:core"],
-        "voice": {"age_band": "adult", "pace": "clipped", "pitch": "mid"},
+        "knows": [
+          "story.secrets_layers:military",
+          "story.timeline:tl_d10"
+        ],
+        "does_not_know": [
+          "story.secrets_layers:core"
+        ],
+        "plot_beats": [
+          "ch_05_remnant",
+          "ch_07_tide",
+          "ch_finale"
+        ],
         "death_allowed": true,
+        "death_conditions": [
+          "guan_bo_mutiny",
+          "guan_bo_tide",
+          "guan_bo_suicide_if_truth_forced_badly"
+        ],
+        "voice": {
+          "age_band": "adult",
+          "pace": "clipped",
+          "pitch": "mid",
+          "style": "口令式；崩溃时句子变长"
+        },
         "spawn_by_population": false
       }
     },
     {
       "id": "npc_story_siheng",
       "domain": "story",
-      "version": 1,
-      "tags": ["character", "antagonist"],
+      "version": 2,
+      "tags": [
+        "character",
+        "antagonist"
+      ],
       "data": {
         "display_name": "司衡",
         "age": 48,
+        "sex": "male",
         "role": "澄海遗影负责人",
-        "faction_id": "faction_chenghai_echo",
-        "personality": ["理智外表", "工具人伦理", "绝不自认邪恶"],
-        "goal_short": "回收对照样本",
-        "goal_long": "完成稳定剂对照实验",
+        "appearance": "灰白寸头；实验室外套改短以便行动；眼镜片有裂纹仍戴；声音平稳得像播报",
+        "personality": [
+          "理智外表",
+          "工具人伦理",
+          "绝不自认邪恶"
+        ],
+        "background": "澄海生物再生项目伦理与现场负责人之一。灾难后接管采样站与广播脚本。",
+        "survival": "以稳定剂推迟自身团队感染风险；用「对照实验」合理化收割。",
+        "goals": {
+          "short": "回收对照样本",
+          "long": "完成稳定剂对照实验",
+          "hidden": "相信自己在为「以后的人类」记账"
+        },
         "secret": "广播撤离坐标通向采样站",
+        "fears": [
+          "实验数据全毁",
+          "被写成纯粹怪物而失去「必要恶」叙事"
+        ],
+        "morality": "后果主义极端版：少数人工具化换可重复的医疗模型",
+        "attitude_to_player": "可谈判；视玩家为潜在对照或潜在破坏者",
+        "relations": {
+          "npc_story_zhou_wanqing": "名单与调拨链上的棋子",
+          "npc_story_root": "收购情报贩子",
+          "npc_story_mai_qin": "同行憎恶"
+        },
+        "faction_id": "faction_chenghai_echo",
         "knowledge_tier": "core",
-        "knows": ["story.infection", "story.secrets_layers:lab", "story.secrets_layers:core"],
+        "knows": [
+          "story.infection",
+          "story.secrets_layers:lab",
+          "story.secrets_layers:core",
+          "story.world_secret_harvest"
+        ],
         "does_not_know": [],
-        "voice": {"age_band": "adult", "pace": "calm", "pitch": "low"},
+        "plot_beats": [
+          "ch_06_echo",
+          "ch_finale"
+        ],
         "death_allowed": true,
+        "death_conditions": [
+          "siheng_killed_finale",
+          "siheng_dies_lab_collapse"
+        ],
+        "survive_conditions": [
+          "end_bargain",
+          "siheng_escapes_if_tower_burned_poorly"
+        ],
+        "voice": {
+          "age_band": "adult",
+          "pace": "calm",
+          "pitch": "low",
+          "style": "像写实验记录；把人称作样本编号时会自我纠正一次"
+        },
         "spawn_by_population": false
       }
     },
     {
       "id": "npc_story_root",
       "domain": "story",
-      "version": 1,
-      "tags": ["character", "main"],
+      "version": 2,
+      "tags": [
+        "character",
+        "main"
+      ],
       "data": {
         "display_name": "根",
         "age": 27,
-        "role": "路劫中间人",
-        "faction_id": "faction_cutroad",
-        "personality": ["油滑", "怕死", "偶尔守信"],
-        "goal_short": "做成一单零件交易",
-        "goal_long": "离开卫士城",
+        "sex": "male",
+        "role": "路劫团对外中间人 / 交易头目",
+        "appearance": "瘦；门牙缺一；皮夹克反穿；手指常转一枚废弹壳",
+        "personality": [
+          "油滑",
+          "怕死",
+          "偶尔守信"
+        ],
+        "background": "修车学徒出身。铁眼负责打，他负责谈。向澄海卖过活人坐标，不知采样站全貌。",
+        "survival": "东环卡口外围跳蚤交易；两边收过路费信息。",
+        "goals": {
+          "short": "做成一单零件交易",
+          "long": "离开衛士城",
+          "hidden": "洗白「卖过人」的记忆"
+        },
         "secret": "向澄海卖过活人坐标（不知采样站全貌）",
+        "fears": [
+          "铁眼灭口",
+          "被餘火盟钉在墙上示众"
+        ],
+        "morality": "交易伦理：说好的货必须到，人命另算",
+        "attitude_to_player": "有利可图则笑；被揭发卖人则翻脸或求饶",
+        "relations": {
+          "npc_story_tieyan": "上司/危险合伙人",
+          "npc_story_he_yashan": "互相嫌弃的客户",
+          "npc_story_siheng": "上线买家"
+        },
+        "faction_id": "faction_cutroad",
         "knowledge_tier": "district",
-        "knows": ["story.world_overview"],
-        "does_not_know": ["story.secrets_layers:lab", "story.secrets_layers:core"],
-        "voice": {"age_band": "young_adult", "pace": "fast", "pitch": "mid"},
+        "knows": [
+          "story.world_overview",
+          "story.secrets_layers:district"
+        ],
+        "does_not_know": [
+          "story.secrets_layers:lab",
+          "story.secrets_layers:core"
+        ],
+        "plot_beats": [
+          "ch_04_cutroad"
+        ],
         "death_allowed": true,
+        "death_conditions": [
+          "root_killed_deal",
+          "root_killed_by_tieyan",
+          "root_killed_tide"
+        ],
+        "voice": {
+          "age_band": "young_adult",
+          "pace": "fast",
+          "pitch": "mid",
+          "style": "市井比喻；紧张时重复「我说真的」"
+        },
+        "spawn_by_population": false
+      }
+    },
+    {
+      "id": "npc_story_tieyan",
+      "domain": "story",
+      "version": 2,
+      "tags": [
+        "character",
+        "antagonist",
+        "supporting"
+      ],
+      "data": {
+        "display_name": "铁眼",
+        "age": 39,
+        "sex": "male",
+        "role": "路劫团武装头目",
+        "appearance": "左眼义眼反光；战术背心堆满空弹匣；说话极短",
+        "personality": [
+          "暴烈",
+          "简单",
+          "尊重勇气"
+        ],
+        "background": "前私人安保。视城为猎场。",
+        "goals": {
+          "short": "控卡口",
+          "long": "成为城东唯一税吏",
+          "hidden": "怕失明侧再废"
+        },
+        "secret": "正在计划杀掉根以独占澄海买路钱",
+        "faction_id": "faction_cutroad",
+        "knowledge_tier": "street",
+        "knows": [
+          "story.world_overview"
+        ],
+        "does_not_know": [
+          "story.secrets_layers:lab",
+          "story.secrets_layers:core"
+        ],
+        "death_allowed": true,
+        "death_conditions": [
+          "tieyan_killed_cutroad",
+          "tieyan_killed_player"
+        ],
+        "voice": {
+          "age_band": "adult",
+          "pace": "slow",
+          "pitch": "low",
+          "style": "三字到十字；绝不用「请」"
+        },
+        "spawn_by_population": false
+      }
+    },
+    {
+      "id": "npc_story_lu_qin",
+      "domain": "story",
+      "version": 2,
+      "tags": [
+        "character",
+        "supporting",
+        "archive"
+      ],
+      "data": {
+        "display_name": "陆钦",
+        "age": 44,
+        "sex": "female",
+        "role": "市政办公厅秘书（失踪）",
+        "appearance": "仅存证件照：金丝眼镜；深色套装",
+        "personality": [
+          "周密",
+          "政治本能"
+        ],
+        "background": "封城附件流转经手人之一。Day10 前后失联，可能已空壳或被采样。",
+        "status": "missing",
+        "faction_id": "faction_civic_remnant",
+        "knowledge_tier": "military",
+        "knows": [
+          "story.secrets_layers:military"
+        ],
+        "does_not_know": [],
+        "death_allowed": true,
+        "death_conditions": [
+          "lu_qin_presumed_dead"
+        ],
+        "appear_as": "录音/文件/环境叙事",
+        "spawn_by_population": false
+      }
+    },
+    {
+      "id": "npc_story_xiao_nan",
+      "domain": "story",
+      "version": 2,
+      "tags": [
+        "character",
+        "supporting",
+        "sidequest"
+      ],
+      "data": {
+        "display_name": "小南",
+        "age": 17,
+        "sex": "female",
+        "role": "餘火盟跑腿 / 钝感嫌疑者",
+        "appearance": "校服外套改短；手腕测温贴；说话先看麦琴眼色",
+        "personality": [
+          "机灵",
+          "怕连累别人",
+          "倔"
+        ],
+        "background": "发热后未进入攻击阶段；麦琴秘密观察。",
+        "secret": "可能是钝感携带者",
+        "faction_id": "faction_ember",
+        "knowledge_tier": "street",
+        "knows": [
+          "story.world_overview"
+        ],
+        "does_not_know": [
+          "story.secrets_layers:faction",
+          "story.secrets_layers:core"
+        ],
+        "plot_beats": [
+          "ch_03_ledger",
+          "quest_side_carrier_watch"
+        ],
+        "death_allowed": true,
+        "death_conditions": [
+          "xiao_nan_handed_over",
+          "xiao_nan_tide"
+        ],
+        "voice": {
+          "age_band": "teen",
+          "pace": "fast",
+          "pitch": "high",
+          "style": "短促；用「你们大人」拉开距离"
+        },
+        "spawn_by_population": false
+      }
+    },
+    {
+      "id": "npc_story_old_feng",
+      "domain": "story",
+      "version": 2,
+      "tags": [
+        "character",
+        "supporting",
+        "sidequest",
+        "black_market"
+      ],
+      "data": {
+        "display_name": "冯叔",
+        "age": 58,
+        "sex": "male",
+        "role": "黑市跳蚤点主持",
+        "appearance": "花白头发；永远戴口罩；秤从不离身",
+        "personality": [
+          "和气",
+          "记账冷酷",
+          "护摊"
+        ],
+        "faction_id": "faction_night_bazaar",
+        "knowledge_tier": "district",
+        "knows": [
+          "story.world_society",
+          "story.world_overview"
+        ],
+        "does_not_know": [
+          "story.secrets_layers:core"
+        ],
+        "death_allowed": true,
+        "voice": {
+          "age_band": "elder",
+          "pace": "slow",
+          "pitch": "mid",
+          "style": "讲价像讲家常，底线一句硬"
+        },
         "spawn_by_population": false
       }
     }

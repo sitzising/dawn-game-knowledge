@@ -1,0 +1,122 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "story.choices_catalog",
+      "domain": "story",
+      "version": 1,
+      "tags": [
+        "choices",
+        "index"
+      ],
+      "data": {
+        "merge_points": [
+          "After ch_01 both trust/refuse → ch_02",
+          "After carrier_* → ch_04",
+          "After cutroad_* → ch_05",
+          "Finale endings diverge then epilogue world_after only"
+        ],
+        "choices": [
+          {
+            "id": "chc_pr_listen_full",
+            "chapter": "ch_prologue",
+            "affects": [
+              "broadcast_recorded"
+            ],
+            "ending": false
+          },
+          {
+            "id": "chc_em_join",
+            "chapter": "ch_01_ember",
+            "affects": [
+              "ember_trusted",
+              "ember_refused",
+              "faction_ember"
+            ],
+            "ending": false
+          },
+          {
+            "id": "chc_st_share",
+            "chapter": "ch_02_static",
+            "affects": [
+              "tower_intel_shared",
+              "he_yashan_trust"
+            ],
+            "ending": "soft_end_broadcast"
+          },
+          {
+            "id": "chc_ld_zhou_blame",
+            "chapter": "ch_03_ledger",
+            "affects": [
+              "zhou_rel"
+            ],
+            "ending": false
+          },
+          {
+            "id": "chc_ld_carrier",
+            "chapter": "ch_03_ledger",
+            "affects": [
+              "xiao_nan_alive",
+              "mai_qin_rel",
+              "end_bargain_availability"
+            ],
+            "ending": true
+          },
+          {
+            "id": "chc_cr_approach",
+            "chapter": "ch_04_cutroad",
+            "affects": [
+              "resources",
+              "cutroad_flags"
+            ],
+            "ending": "soft_steal_ship"
+          },
+          {
+            "id": "chc_cr_expose_root",
+            "chapter": "ch_04_cutroad",
+            "affects": [
+              "root_alive"
+            ],
+            "ending": false
+          },
+          {
+            "id": "chc_rm_public",
+            "chapter": "ch_05_remnant",
+            "affects": [
+              "abandon_order_public",
+              "end_broadcast_truth"
+            ],
+            "ending": true
+          },
+          {
+            "id": "chc_ec_siheng",
+            "chapter": "ch_06_echo",
+            "affects": [
+              "siheng_alive",
+              "end_bargain"
+            ],
+            "ending": true
+          },
+          {
+            "id": "chc_td_plan",
+            "chapter": "ch_07_tide",
+            "affects": [
+              "npc_alive_many",
+              "ember_strength"
+            ],
+            "ending": true
+          },
+          {
+            "id": "chc_fn_ending",
+            "chapter": "ch_finale",
+            "affects": [
+              "ending_id"
+            ],
+            "ending": true
+          }
+        ]
+      }
+    }
+  ]
+}
