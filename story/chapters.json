@@ -55,28 +55,65 @@
             "id": "dlg_pr_radio_log",
             "speaker": "录音/同事",
             "lines": [
-              "调度，车库侧门还是锁的——外面在撞门。",
-              "沈渡？你要是听得到……别按表单了。开门。",
-              "……信号没了。"
-            ]
+              "調度，車庫側門還是鎖的——外面在撞門。",
+              "沈渡？你要是聽得到……別按表單了。開門。",
+              "……訊號沒了。"
+            ],
+            "lines_en": [
+              "Dispatch — the garage side door is still locked. Something's slamming it from outside.",
+              "Shen Du? If you can hear this… stop following the damn checklist. Open the door.",
+              "…Signal's gone."
+            ],
+            "lines_zh_tw": [
+              "調度，車庫側門還是鎖的——外面在撞門。",
+              "沈渡？你要是聽得到……別按表單了。開門。",
+              "……訊號沒了。"
+            ],
+            "emotion": "urgent",
+            "speaker_name_en": "Radio / Colleague",
+            "speaker_name_zh_tw": "錄音／同事"
           },
           {
             "id": "dlg_pr_broadcast",
             "speaker": "信号塔",
             "lines": [
-              "这里是澄海应急科学救援协调频道。",
-              "健康成年幸存者请前往指示集合点，准备有序离港。",
-              "请携带身份证明。重复。"
-            ]
+              "這裡是澄海應急科學救援協調頻道。",
+              "健康成年倖存者請前往指示集合點，準備有序離港。",
+              "請攜帶身分證明。重複。"
+            ],
+            "lines_en": [
+              "This is the Chenghai Emergency Science Rescue Coordination Channel.",
+              "Healthy adult survivors, proceed to the marked assembly points and prepare for orderly evacuation.",
+              "Bring identification. I repeat: bring identification."
+            ],
+            "lines_zh_tw": [
+              "這裡是澄海應急科學救援協調頻道。",
+              "健康成年倖存者請前往指示集合點，準備有序離港。",
+              "請攜帶身分證明。重複。"
+            ],
+            "emotion": "official",
+            "speaker_name_en": "Signal Tower",
+            "speaker_name_zh_tw": "訊號塔"
           },
           {
             "id": "dlg_pr_he_spot",
             "speaker": "npc_story_he_yashan",
             "condition": "optional_spot",
             "lines": [
-              "别往喇叭走。去的人，墙上有名。",
-              "你要找活人，跟灰烟走——别跟广播走。"
-            ]
+              "別往喇叭走。去的人，牆上有名。",
+              "你要找活人，跟灰煙走——別跟廣播走。"
+            ],
+            "lines_en": [
+              "Don't follow the loudspeaker. The names of people who did are already on the wall.",
+              "If you want the living, follow the gray smoke — not the broadcast."
+            ],
+            "lines_zh_tw": [
+              "別往喇叭走。去的人，牆上有名。",
+              "你要找活人，跟灰煙走——別跟廣播走。"
+            ],
+            "emotion": "warning",
+            "speaker_name_en": "He Yashan",
+            "speaker_name_zh_tw": "何崖山"
           }
         ],
         "choices": [
@@ -208,27 +245,62 @@
             "id": "dlg_em_he_intro",
             "speaker": "npc_story_he_yashan",
             "lines": [
-              "工牌还挂着。市政的人，锁过多少门？",
-              "这里规矩简单：先干活，再吃饭。广播的饭，我们不吃。",
-              "你要留下，去把巷口那箱药带回来——或者把老陈护到白篷点。选一个。"
-            ]
+              "工牌還掛著。市政的人，鎖過多少門？",
+              "這裡規矩簡單：先幹活，再吃飯。廣播的飯，我們不吃。",
+              "你要留下，去把巷口那箱藥帶回來——或者把老陳護到白篷點。選一個。"
+            ],
+            "lines_en": [
+              "Badge still on you. City hall man — how many doors did you lock?",
+              "Rules here are simple: work first, then eat. We don't eat broadcast rations.",
+              "If you're staying, bring the med crate from the alley — or get Old Chen to the white tent. Pick one."
+            ],
+            "lines_zh_tw": [
+              "工牌還掛著。市政的人，鎖過多少門？",
+              "這裡規矩簡單：先幹活，再吃飯。廣播的飯，我們不吃。",
+              "你要留下，去把巷口那箱藥帶回來——或者把老陳護到白篷點。選一個。"
+            ],
+            "emotion": "suspicious",
+            "speaker_name_en": "He Yashan",
+            "speaker_name_zh_tw": "何崖山"
           },
           {
             "id": "dlg_em_mai",
             "speaker": "npc_story_mai_qin",
             "lines": [
-              "发热不等于空壳。别一枪崩了还能说话的人。",
-              "深咬、清创、隔离。听不懂就别碰伤员。"
-            ]
+              "發熱不等於空殼。別一槍崩了還能說話的人。",
+              "深咬、清創、隔離。聽不懂就別碰傷員。"
+            ],
+            "lines_en": [
+              "A fever isn't an empty shell. Don't put a round into someone who can still talk.",
+              "Deep bites, clean wounds, isolate. If you don't get that, stay off the wounded."
+            ],
+            "lines_zh_tw": [
+              "發熱不等於空殼。別一槍崩了還能說話的人。",
+              "深咬、清創、隔離。聽不懂就別碰傷員。"
+            ],
+            "emotion": "stern",
+            "speaker_name_en": "Mai Qin",
+            "speaker_name_zh_tw": "麥琴"
           },
           {
             "id": "dlg_em_trust",
             "speaker": "npc_story_he_yashan",
             "condition": "trial_success",
             "lines": [
-              "你没把我们卖给喇叭。暂且算人。",
-              "墙那边的名字，别变成你的。"
-            ]
+              "你沒把我們賣給喇叭。暫且算人。",
+              "牆那邊的名字，別變成你的。"
+            ],
+            "lines_en": [
+              "You didn't sell us to the loudspeakers. For now, you're people.",
+              "Don't let your name end up on that wall."
+            ],
+            "lines_zh_tw": [
+              "你沒把我們賣給喇叭。暫且算人。",
+              "牆那邊的名字，別變成你的。"
+            ],
+            "emotion": "grudging",
+            "speaker_name_en": "He Yashan",
+            "speaker_name_zh_tw": "何崖山"
           }
         ],
         "choices": [
@@ -373,18 +445,40 @@
             "id": "dlg_st_log",
             "speaker": "文件",
             "lines": [
-              "脚本库：安抚-集合-分流。禁止提及采样。",
-              "配额上调。优先标记「低痛阈」个体。"
-            ]
+              "腳本庫：安撫－集合－分流。禁止提及採樣。",
+              "配額上調。優先標記「低痛閾」個體。"
+            ],
+            "lines_en": [
+              "Script library: calm — assemble — divert. Do not mention sampling.",
+              "Quota raised. Prioritize individuals marked low pain threshold."
+            ],
+            "lines_zh_tw": [
+              "腳本庫：安撫－集合－分流。禁止提及採樣。",
+              "配額上調。優先標記「低痛閾」個體。"
+            ],
+            "emotion": "clinical",
+            "speaker_name_en": "File",
+            "speaker_name_zh_tw": "文件"
           },
           {
             "id": "dlg_st_he",
             "speaker": "npc_story_he_yashan",
             "condition": "ember_trusted",
             "lines": [
-              "我说过。墙不是吓你。",
-              "你要是还想往里走，先想清楚你带回来的是火还是引线。"
-            ]
+              "我說過。牆不是嚇你。",
+              "你要是還想往裡走，先想清楚你帶回來的是火還是引線。"
+            ],
+            "lines_en": [
+              "I told you. The wall isn't just there to scare you.",
+              "If you're still walking deeper, decide whether you're bringing back fire — or a fuse."
+            ],
+            "lines_zh_tw": [
+              "我說過。牆不是嚇你。",
+              "你要是還想往裡走，先想清楚你帶回來的是火還是引線。"
+            ],
+            "emotion": "grave",
+            "speaker_name_en": "He Yashan",
+            "speaker_name_zh_tw": "何崖山"
           }
         ],
         "choices": [
@@ -495,34 +589,80 @@
             "id": "dlg_ld_zhou",
             "speaker": "npc_story_zhou_wanqing",
             "lines": [
-              "沈渡。你还活着——好。",
-              "车库门禁……是我签的远程锁。我以为能少死些抢物资的人。",
-              "名单被人改过。有些名字后面多了采样标记。我需要原件。"
-            ]
+              "沈渡。你還活著——好。",
+              "車庫門禁……是我簽的遠端鎖。我以為能少死些搶物資的人。",
+              "名單被人改過。有些名字後面多了採樣標記。我需要原件。"
+            ],
+            "lines_en": [
+              "Shen Du. You're alive — good.",
+              "The garage lock… I signed the remote seal. I thought fewer people would die fighting over supplies.",
+              "The list was altered. Some names got sampling marks. I need the original."
+            ],
+            "lines_zh_tw": [
+              "沈渡。你還活著——好。",
+              "車庫門禁……是我簽的遠端鎖。我以為能少死些搶物資的人。",
+              "名單被人改過。有些名字後面多了採樣標記。我需要原件。"
+            ],
+            "emotion": "guilt",
+            "speaker_name_en": "Zhou Wanqing",
+            "speaker_name_zh_tw": "周晚晴"
           },
           {
             "id": "dlg_ld_player_opts",
             "speaker": "npc_story_player",
             "lines": [
-              "（选项A）你锁门的时候，对讲里有人在叫我的名字。",
-              "（选项B）先说名单。门的事……我们活着再说。",
-              "（选项C）我来是找你，不是来听解释。"
-            ]
+              "（選項A）你鎖門的時候，對講裡有人在叫我的名字。",
+              "（選項B）先說名單。門的事……我們活著再說。",
+              "（選項C）我來是找你，不是來聽解釋。"
+            ],
+            "lines_en": [
+              "(Option A) When you locked that door, someone on the radio was calling my name.",
+              "(Option B) The list first. The door… we talk about that if we're still alive.",
+              "(Option C) I came looking for you — not for excuses."
+            ],
+            "lines_zh_tw": [
+              "（選項A）你鎖門的時候，對講裡有人在叫我的名字。",
+              "（選項B）先說名單。門的事……我們活著再說。",
+              "（選項C）我來是找你，不是來聽解釋。"
+            ],
+            "emotion": "tense",
+            "speaker_name_en": "Shen Du",
+            "speaker_name_zh_tw": "沈渡"
           },
           {
             "id": "dlg_ld_mai_xiao",
             "speaker": "npc_story_mai_qin",
             "lines": [
-              "小南发热过，没攻人。你要是把她送去喇叭，我就当没救过你。"
-            ]
+              "小南發熱過，沒攻人。你要是把她送去喇叭，我就當沒救過你。"
+            ],
+            "lines_en": [
+              "Xiao Nan had a fever. She never attacked. Send her to the loudspeakers and I'll pretend I never saved you."
+            ],
+            "lines_zh_tw": [
+              "小南發熱過，沒攻人。你要是把她送去喇叭，我就當沒救過你。"
+            ],
+            "emotion": "protective",
+            "speaker_name_en": "Mai Qin",
+            "speaker_name_zh_tw": "麥琴"
           },
           {
             "id": "dlg_ld_xiao",
             "speaker": "npc_story_xiao_nan",
             "lines": [
-              "别用看标本的眼神看我。",
-              "我可以跑。你们别为了我打架。"
-            ]
+              "別用看標本的眼神看我。",
+              "我可以跑。你們別為了我打架。"
+            ],
+            "lines_en": [
+              "Don't look at me like a specimen.",
+              "I can run. Don't start a fight over me."
+            ],
+            "lines_zh_tw": [
+              "別用看標本的眼神看我。",
+              "我可以跑。你們別為了我打架。"
+            ],
+            "emotion": "fear",
+            "speaker_name_en": "Xiao Nan",
+            "speaker_name_zh_tw": "小南"
           }
         ],
         "choices": [
@@ -691,18 +831,40 @@
             "id": "dlg_cr_root",
             "speaker": "npc_story_root",
             "lines": [
-              "过路费不收笑脸。收电池、收子弹，收你还用得上的东西。",
-              "你要找船？那是喇叭的生意。我只卖路。"
-            ]
+              "過路費不收笑臉。收電池、收子彈，收你還用得上的東西。",
+              "你要找船？那是喇叭的生意。我只賣路。"
+            ],
+            "lines_en": [
+              "Toll doesn't take smiles. Batteries, bullets — anything you still need.",
+              "Looking for a ship? That's loudspeaker business. I only sell the road."
+            ],
+            "lines_zh_tw": [
+              "過路費不收笑臉。收電池、收子彈，收你還用得上的東西。",
+              "你要找船？那是喇叭的生意。我只賣路。"
+            ],
+            "emotion": "mercenary",
+            "speaker_name_en": "Root",
+            "speaker_name_zh_tw": "根"
           },
           {
             "id": "dlg_cr_tieyan",
             "speaker": "npc_story_tieyan",
             "condition": "fight_or_betray",
             "lines": [
-              "货留下。人可以走。",
+              "貨留下。人可以走。",
               "不走？"
-            ]
+            ],
+            "lines_en": [
+              "Leave the goods. You can walk.",
+              "Not walking?"
+            ],
+            "lines_zh_tw": [
+              "貨留下。人可以走。",
+              "不走？"
+            ],
+            "emotion": "threatening",
+            "speaker_name_en": "Tieyan",
+            "speaker_name_zh_tw": "鐵眼"
           }
         ],
         "choices": [
@@ -845,10 +1007,23 @@
             "id": "dlg_rm_guan",
             "speaker": "npc_story_guan_bo",
             "lines": [
-              "这里还有秩序。你要是来抢粮，我开枪。",
-              "……附件？你以为我没看过？我看过。我还让一百人睡得着。",
-              "你公开它，明天仓库可能先打起来，空壳后到。"
-            ]
+              "這裡還有秩序。你要是來搶糧，我開槍。",
+              "……附件？你以為我沒看過？我看過。我還讓一百人睡得著。",
+              "你公開它，明天倉庫可能先打起來，空殼後到。"
+            ],
+            "lines_en": [
+              "There's still order here. Come for the grain and I shoot.",
+              "…The attachment? You think I never read it? I did. And a hundred people still sleep at night because of that.",
+              "You go public with it, and tomorrow the warehouse burns before the empty shells even arrive."
+            ],
+            "lines_zh_tw": [
+              "這裡還有秩序。你要是來搶糧，我開槍。",
+              "……附件？你以為我沒看過？我看過。我還讓一百人睡得著。",
+              "你公開它，明天倉庫可能先打起來，空殼後到。"
+            ],
+            "emotion": "defensive",
+            "speaker_name_en": "Guan Bo",
+            "speaker_name_zh_tw": "關博"
           }
         ],
         "choices": [
@@ -962,28 +1137,65 @@
             "id": "dlg_ec_log",
             "speaker": "实验日志",
             "lines": [
-              "稳定剂：推迟语言崩解，不逆转空壳。",
-              "对照需求：未感染基线 / 钝感携带者。",
-              "广播转化率低于预期，提高「自愿」话术。"
-            ]
+              "穩定劑：推遲語言崩解，不逆轉空殼。",
+              "對照需求：未感染基線／鈍感攜帶者。",
+              "廣播轉化率低於預期，提高「自願」話術。"
+            ],
+            "lines_en": [
+              "Stabilizer: delays language collapse. Does not reverse empty-shell conversion.",
+              "Controls needed: uninfected baseline / dulled carriers.",
+              "Broadcast conversion below target. Increase voluntary language in scripts."
+            ],
+            "lines_zh_tw": [
+              "穩定劑：推遲語言崩解，不逆轉空殼。",
+              "對照需求：未感染基線／鈍感攜帶者。",
+              "廣播轉化率低於預期，提高「自願」話術。"
+            ],
+            "emotion": "clinical",
+            "speaker_name_en": "Lab Log",
+            "speaker_name_zh_tw": "實驗日誌"
           },
           {
             "id": "dlg_ec_siheng",
             "speaker": "npc_story_siheng",
             "lines": [
-              "你以为毁一台喇叭，城就会好？",
-              "我在记账。以后的人需要可重复的模型。你站在样本这一侧，还是记录这一侧？",
-              "船是真的。名额不是为所有人准备的。这不是残忍，是算术。"
-            ]
+              "你以為毀一台喇叭，城就會好？",
+              "我在記帳。以後的人需要可重複的模型。你站在樣本這一側，還是記錄這一側？",
+              "船是真的。名額不是為所有人準備的。這不是殘忍，是算術。"
+            ],
+            "lines_en": [
+              "You think smashing one loudspeaker saves the city?",
+              "I'm keeping the books. The next people need a repeatable model. Are you standing on the sample side — or the record side?",
+              "The ship is real. The seats aren't for everyone. That isn't cruelty. It's arithmetic."
+            ],
+            "lines_zh_tw": [
+              "你以為毀一台喇叭，城就會好？",
+              "我在記帳。以後的人需要可重複的模型。你站在樣本這一側，還是記錄這一側？",
+              "船是真的。名額不是為所有人準備的。這不是殘忍，是算術。"
+            ],
+            "emotion": "cold",
+            "speaker_name_en": "Siheng",
+            "speaker_name_zh_tw": "司衡"
           },
           {
             "id": "dlg_ec_zhou",
             "speaker": "npc_story_zhou_wanqing",
             "condition": "zhou_present",
             "lines": [
-              "算术把我签过的单变成刀。",
-              "沈渡，别只听他。也别只听恨。"
-            ]
+              "算術把我簽過的單變成刀。",
+              "沈渡，別只聽他。也別只聽恨。"
+            ],
+            "lines_en": [
+              "His arithmetic turned every form I signed into a blade.",
+              "Shen Du — don't only listen to him. Don't only listen to hate either."
+            ],
+            "lines_zh_tw": [
+              "算術把我簽過的單變成刀。",
+              "沈渡，別只聽他。也別只聽恨。"
+            ],
+            "emotion": "anguish",
+            "speaker_name_en": "Zhou Wanqing",
+            "speaker_name_zh_tw": "周晚晴"
           }
         ],
         "choices": [
@@ -1098,9 +1310,20 @@
             "id": "dlg_td_he",
             "speaker": "npc_story_he_yashan",
             "lines": [
-              "灶火可以灭，人不能灭完。",
-              "你带谁走，就等于宣判谁留下。别装看不见。"
-            ]
+              "灶火可以滅，人不能滅完。",
+              "你帶誰走，就等於宣判誰留下。別裝看不見。"
+            ],
+            "lines_en": [
+              "You can kill a cookfire. You don't get to erase every person with it.",
+              "Who you take with you is a sentence on who you leave. Don't pretend you don't see that."
+            ],
+            "lines_zh_tw": [
+              "灶火可以滅，人不能滅完。",
+              "你帶誰走，就等於宣判誰留下。別裝看不見。"
+            ],
+            "emotion": "weary",
+            "speaker_name_en": "He Yashan",
+            "speaker_name_zh_tw": "何崖山"
           }
         ],
         "choices": [
@@ -1216,8 +1439,17 @@
             "speaker": "npc_story_siheng",
             "condition": "siheng_alive",
             "lines": [
-              "选吧。毁我，或用我。别假装有第四种干净的路。"
-            ]
+              "選吧。毀我，或用我。別假裝有第四種乾淨的路。"
+            ],
+            "lines_en": [
+              "Choose. Destroy me — or use me. Don't pretend there's a fourth clean road."
+            ],
+            "lines_zh_tw": [
+              "選吧。毀我，或用我。別假裝有第四種乾淨的路。"
+            ],
+            "emotion": "final",
+            "speaker_name_en": "Siheng",
+            "speaker_name_zh_tw": "司衡"
           }
         ],
         "choices": [
