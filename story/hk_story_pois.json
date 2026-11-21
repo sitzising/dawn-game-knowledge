@@ -1,0 +1,112 @@
+{
+  "domain": "story",
+  "version": 1,
+  "entries": [
+    {
+      "id": "story.hk_story_pois",
+      "domain": "story",
+      "version": 1,
+      "tags": ["hkmap", "poi", "anchors"],
+      "data": {
+        "content_status": "wired_offsets_from_live_anchors",
+        "notes": "Offsets are metres from live HK garage spawn / CityGateInteractable. Do not invent absolute coords. radio_discover remains unmapped interact.",
+        "pois": [
+          {
+            "id": "city_gate_approach",
+            "region_id": "city_gate",
+            "offset_from": "city_gate",
+            "offset": [0.0, 0.0, 22.0],
+            "area_radius": 20.0,
+            "area_flag": "reached_city_gate_approach",
+            "marker_kind": "extract",
+            "label_en": "City Gate",
+            "label_zh_tw": "城門接近點",
+            "unlock_flag": "region_seen_city_gate"
+          },
+          {
+            "id": "ember_hub",
+            "region_id": "ember_outpost_near",
+            "offset_from": "garage",
+            "offset": [-8.0, 0.0, -55.0],
+            "marker_kind": "mission",
+            "label_en": "Ember Hub",
+            "label_zh_tw": "餘火據點",
+            "unlock_flag": "region_seen_ember_outpost_near"
+          },
+          {
+            "id": "ember_clinic",
+            "region_id": "ember_outpost_near",
+            "offset_from": "garage",
+            "offset": [-18.0, 0.0, -62.0],
+            "marker_kind": "mission",
+            "label_en": "Ember Clinic",
+            "label_zh_tw": "餘火診療"
+          },
+          {
+            "id": "civic_dock_edge",
+            "region_id": "dock_warehouse_band",
+            "offset_from": "city_gate",
+            "offset": [40.0, 0.0, -80.0],
+            "marker_kind": "mission",
+            "label_en": "Civic Dock Edge",
+            "label_zh_tw": "市政碼頭邊"
+          },
+          {
+            "id": "civic_archive",
+            "region_id": "hospital_archive",
+            "offset_from": "city_gate",
+            "offset": [-55.0, 0.0, -120.0],
+            "marker_kind": "mission",
+            "label_en": "Hospital Archive",
+            "label_zh_tw": "醫院檔案層"
+          },
+          {
+            "id": "chenghai_shadow",
+            "region_id": "chenghai_lab_ruin",
+            "offset_from": "city_gate",
+            "offset": [90.0, 0.0, -200.0],
+            "marker_kind": "mission",
+            "label_en": "Chenghai Lab Ruin",
+            "label_zh_tw": "澄海實驗廢墟"
+          },
+          {
+            "id": "cutroad_checkpoint",
+            "region_id": "cutroad_yard",
+            "offset_from": "city_gate",
+            "offset": [120.0, 0.0, -40.0],
+            "marker_kind": "mission",
+            "label_en": "Cutroad Checkpoint",
+            "label_zh_tw": "東環卡口"
+          },
+          {
+            "id": "night_market_scale",
+            "region_id": "night_bazaar_bridge",
+            "offset_from": "garage",
+            "offset": [70.0, 0.0, -150.0],
+            "marker_kind": "mission",
+            "label_en": "Night Bazaar",
+            "label_zh_tw": "高架橋下夜市"
+          },
+          {
+            "id": "signal_tower_perimeter",
+            "region_id": "signal_tower_perimeter",
+            "offset_from": "city_gate",
+            "offset": [-30.0, 0.0, -90.0],
+            "marker_kind": "mission",
+            "label_en": "Signal Tower Perimeter",
+            "label_zh_tw": "訊號塔外圍"
+          },
+          {
+            "id": "garage_safezone",
+            "region_id": "garage_safezone",
+            "offset_from": "garage",
+            "offset": [0.0, 0.0, 0.0],
+            "marker_kind": "safehouse",
+            "label_en": "Municipal Garage",
+            "label_zh_tw": "市政車庫"
+          }
+        ]
+      }
+    }
+  ]
+}

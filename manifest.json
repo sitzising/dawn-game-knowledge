@@ -287,6 +287,12 @@
       "path": "story/all_npc_dialogue_master.json",
       "sha256": "a048d57abcea68b93830877b6a1bb692503e8fc1737bd5bea820eacceca9c410",
       "bytes": 30681
+    },
+    {
+      "path": "story/hk_story_pois.json",
+      "sha256": "be037a2bbfaaf001ec7c2424238745620838297d48ef97c5fd5e516206830237",
+      "bytes": 3812,
+      "required": false
     }
   ]
 }
